@@ -1,0 +1,55 @@
+@media (max-width: 768px){
+    .right{
+        display: none;
+    }
+
+    .ctr{
+        width: 100% !important;
+    }
+    
+    body{
+        overflow-x: hidden;
+        align-items: center;
+        width: 100%;
+    }
+
+    .body.menu-active{
+        margin-left: 0 !important;
+    }
+
+    .body{
+        margin-left: 0;
+    }
+
+    .movil{
+        visibility: visible;
+    }
+
+    .formulario{
+        width: 500px !important;
+    }
+
+    .Cpost{
+        width: 100% !important;
+    }
+
+    /*menus*/
+    .menu{
+        display: block;
+    }
+
+    
+}
+
+/*cosas de escritorio*/
+
+@media (min-width: 769px){
+    .menu{
+        display: none;
+    }
+
+    .hamburger{
+        display: none;
+    }
+}
+    
