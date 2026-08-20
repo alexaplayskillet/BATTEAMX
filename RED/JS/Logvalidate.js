@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const validarCampo = (expresion, input, campo) => {
-    const validationsDiv = input.nextElementSibling;
+   const validationsDiv = input.parentElement.nextElementSibling;
     const pls = validationsDiv?.querySelector(".pls");
     const error = validationsDiv?.querySelector(".error");
 
@@ -98,14 +98,14 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("blur", validarFormulario);
   });
 
-  function validarFormulario(e) {
-    const campo = e.target.name;
-    if (campo === "user") {
-      validarCampo(expresiones.usuario, e.target, "usuario");
-    } else if (campo === "password") {
-      validarCampo(expresiones.password, e.target, "password");
-    }
+function validarFormulario(e) {
+  const campo = e.target.name;
+  if (campo === "usuario") {
+    validarCampo(expresiones.usuario, e.target, "usuario");
+  } else if (campo === "password") {
+    validarCampo(expresiones.password, e.target, "password");
   }
+}
 
   form.addEventListener("submit", e => {
     inputs.forEach(input => validarFormulario({ target: input }));
