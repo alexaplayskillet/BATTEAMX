@@ -20,6 +20,29 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.menuhor{
+ /* display: flex;*/
+  list-style-type: none;
+  margin: 2px;
+ /*background-color: red;*/
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: nowrap;
+  gap: clamp(8px, 2vw, 12px);
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.menuhor li{
+  flex-shrink: 0; /* que cada item mantenga su tamaño natural */
+  white-space: nowrap;
+}
+
+.menuhor li:hover{
+  background-color: aqua;
+}
+
 /*cuestiones del menu sin activar*/
 .menu {
   background-color: #686869;

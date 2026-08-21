@@ -1,4 +1,10 @@
 /*etiquetas completas*/
+
+/*para reiniciar los margenes de toda la pagina
+html, body{
+  margin: 0;
+}*/
+
 body{
   background-color: aliceblue;
 }
@@ -13,10 +19,22 @@ body{
   position: fixed;
   top: 0;
   left: 0;
+  padding-left: 5px;
   width: 100%;
   background-color: green;
   z-index: 1000;
+  gap: 10px;
+
 }
+
+.title h1{
+  flex-shrink: 0; /* que el titulo nunca se comprima */
+}
+
+.title .profile{
+  flex-shrink: 0; /* que el boton nunca se comprima ni se mueva */
+}
+
 
 /*contenedor principal*/
 .body{
@@ -26,17 +44,24 @@ body{
   transition: margin-left 0.5s ease;
 }
 
-/*contenido del centro*/
-.ctr{
-  /*width: 80%;*/
-  min-width: 500px;
+/*contenedor auxiliar para repartir elementos*/
+.contenedor{
   text-align: center;
-  border: 2px solid red;
 }
 
+/*contenido del centro*/
+.ctr{
+  min-width: 500px;
+  /*order: 2px solid red;*/
+  margin-left: 0;
+  padding-bottom: 20px;
+}
+
+/*contenedor de la derecha*/
 .right{
-  display: flexbox;
   visibility: visible;
+  text-align: center;
+  justify-content: center;
 }
 
 /*estilos que definen el grosor del contenido*/
@@ -48,10 +73,18 @@ body{
   width: 100%;
 }
 
+.w50{
+  width: 50%;
+  /*border: 5px solid black;*/
+}
+
+/*cuestiones sin usar*/
+
+/*
 .movil{
   visibility: hidden;
 }
-
+*/
 /*cuestiones de la configuracion*/
 .dual{
   display: flex;
