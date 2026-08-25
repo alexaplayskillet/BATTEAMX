@@ -1,42 +1,68 @@
+<!DOCTYPE HTML>
 <HTML>
     <HEAD>
-        <title>Configuración del perfil</title>
+        <title>Mi Perfil</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
-        <!--aqui van las ligas externas-->
-            <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <!--links iconos y tipografias -->
+        
+            <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
 			<link rel="preconnect" href="https://fonts.googleapis.com">
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-            
-        <!--Aqui iran las ligas de los elementos de css-->
+        <!--links css-->
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
-        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/login.css">
-        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/validaciones.css">
-        
-        
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/perfil.css">
     </HEAD>
     <BODY>
-        <!--Acomodamos los menus antes que el contenido que siempre se vera-->
-        <DIV CLASS="menu">
+        <!--FONDO FIJO-->
+        <div class="fondo-fijo">
+            <div class="glow"></div>
+            <div class="grano"></div>
+
+            <div class="lineas">
+                <div class="linea l-verde l1"></div>
+                <div class="linea l-verde l7"></div>
+                <div class="linea l-roja  l2"></div>
+                <div class="linea l-roja  l3"></div>
+                <div class="linea l-azul  l4"></div>
+                <div class="linea l-azul  l5"></div>
+                <div class="linea l-roja  l6"></div>
+                <div class="linea l-verde l8"></div>
+            </div>
+
+            <div class="vineta"></div>
+
+            <div class="particulas">
+                <div class="particula" style="width:3px; height:3px; top:78%; left:12%; animation-duration:6s;   animation-delay:0s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:65%; left:22%; animation-duration:7.5s; animation-delay:1.2s;"></div>
+                <div class="particula" style="width:4px; height:4px; top:90%; left:35%; animation-duration:5.5s; animation-delay:.5s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:60%; left:8%;  animation-duration:8s;   animation-delay:2s;"></div>
+                <div class="particula" style="width:3px; height:3px; top:70%; left:48%; animation-duration:6.5s; animation-delay:.8s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:50%; left:60%; animation-duration:7s;   animation-delay:1.6s;"></div>
+                <div class="particula" style="width:3px; height:3px; top:95%; left:65%; animation-duration:6s;   animation-delay:3s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:80%; left:75%; animation-duration:9s;   animation-delay:.2s;"></div>
+            </div>
+        </div>
+
+         <DIV CLASS="menu">
             <ul class="menulist">
-                <li>Inicio</li>
-                <li>Buscar</li>
-                <li>Videos</li>
-                <li>Mensajes</li>
-                <li>Notificaciones</li>
-                <li>Guardados</li>
-                <li>Solicitudes de amistad</li>
-                <!--opciones disponibles solo en modo de movil-->
-                <li class="movil">Noticias</li>
-                
+                <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
+                <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
+                <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
+                <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
+                <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
+                <li><a href="minijuego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
+                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
         </DIV>
         
@@ -48,113 +74,113 @@
             AQUI VAN LAS CONFIGURACIONES DEL PERFIL
         </DIV>
 
-        <!--colocar la barra principal-->
+        <!-- barra principal-->
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
-            <h1>PRUEBA</h1>
-            <button class="profile">Configuracion</button>
+            <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen">
+
+             <ul class="menuhor">
+                <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
+                <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
+                <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
+                <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
+                <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
+                <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
+                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+            </ul>
+
+           <div class="theme-toggle">
+                <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
+                <label for="themeSwitch" class="theme-toggle-track">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                        </svg>
+                    </span>
+                    <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
+                    <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
+                </label>
+            </div>
+
+        <a href="config.html" class="profile">
+                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
+            </a>
+        <!-- cerrado provicional
+            <button class="profile">
+                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
+            </button>-->
+
         </DIV>
+
         <DIV CLASS="body">
-            <DIV CLASS="ctr w100">
-                <DIV CLASS="dual">
-                    <DIV CLASS="Cpost">
-                        <div CLASS="username">
-                            <H3>USERNAME</H3>
-                            <label>@User</label>
-                        </div>
-                    </DIV>
-                    <DIV CLASS="Cpost">
-                        <form>
-                            <label for="foto">Subir fotografía</label><br/>
-                            <input type="file" class="inp" id="foto" name="foto">
-                        </form>
-                    </DIV>
-                    <DIV CLASS="Cpost">
-                        <form class="form-identidad">
-                            <label for="usuario">Usuario</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Usuario" class="inp">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa el usuario</small>
-                                <small class="error">El usuario debe tener al menos 4 caracteres, puede incluir numeros y guiones bajos</small>
-                            </DIV>
-                            <label for="@user">Usuario</label>
-                            <input type="text" name="@user" id="@user" placeholder="@Usuario" class="inp">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa el tag de usuario</small>
-                                <small class="error">El tag de usuario debe tener al menos 4 caracteres, puede incluir numeros y guiones bajos</small>
-                            </DIV>
-                            <BR>
-                            <DIV CLASS="enviar2">
-                                <input type="submit" class="btn" tabindex="0" value="Confirmar">
-                            </DIV>
-                        </form>
-                    </DIV>
-                    <DIV CLASS="Cpost">
-                        <!--<DIV CLASS="formulario">-->
-                        <H2>Configuración de datos</H2>
-                        <FORM class="form-configuracion">
-                            <INPUT TYPE="TEXT" NAME="nombre" CLASS="inp" PLACEHOLDER="Nombre completo" REQUIRED tabindex="0">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa nombre</small>
-                                <small class="error">El usuario debe tener al menos 4 caracteres, NO DEBE incluir numeros y guiones bajos</small>
-                            </DIV>
-                            <LABEL><SMALL>Fecha de nacimiento</SMALL></LABEL>
-                            <INPUT TYPE="date" NAME="Fecha" CLASS="inp" PLACEHOLDER="Fecha de nacimiento" REQUIRED tabindex="0">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa la fecha de nacimiento</small>
-                                <small class="error">El usuario tiene que ser de mayor a 12 años</small>
-                            </DIV>
-                            <LABEL><SMALL>Género</SMALL></LABEL><BR>
-                            <DIV CLASS="enviar2">
-                                <INPUT TYPE="radio" NAME="gender" VALUE="male" ID="male" REQUIRED>
-                                <LABEL for="male"><small>Hombre</small></LABEL><BR>
-                                <INPUT TYPE="radio" NAME="gender" VALUE="female" ID="female" REQUIRED>
-                                <LABEL for="female"><small>Mujer</small></LABEL><BR>
-                                <INPUT TYPE="radio" NAME="gender" VALUE="other" ID="other" REQUIRED>
-                                <LABEL for="other"><small>Otro</small></LABEL><BR>
-                            </DIV>
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor elija una de las opciones</small>
-                            </DIV>
-                            <INPUT TYPE="email" NAME="email" CLASS="inp" placeholder="Correo" id="Correo" REQUIRED tabindex="0">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa correo</small>
-                                <small class="error">El correo debe tener al menos 4 caracteres antes del @, puede incluir numeros y guiones bajos</small>
-                            </DIV>
-                            <BR>
-                            <INPUT TYPE="password" NAME="password" CLASS="inp" PLACEHOLDER="Contraseña" REQUIRED tabindex="0">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa password</small>
-                                <small class="error">El password debe tener al menos 4 caracteres, puede incluir numeros y guiones bajos</small>
-                            </DIV>
-                            <BR>
-                            <INPUT TYPE="password" NAME="password2" CLASS="inp" PLACEHOLDER="Confirmar Contraseña" REQUIRED tabindex="0">
-                            <DIV CLASS="validations">
-                                <small class="pls">Por favor ingresa password</small>
-                                <small class="error">El password debe tener al menos 4 caracteres, puede incluir numeros y guiones bajos</small>
-                                <small class="notsame">Las contraseñas no coinciden</small>
-                            </DIV>
-                            <DIV CLASS="enviar2">
-                                <INPUT TYPE="submit" CLASS="btn" tabindex="0" VALUE="Enviar">
-                            </DIV>
-                        </FORM>
+            <DIV CLASS="perfil-layout">
+
+                <!-- IZQUIERDA: Mi perfil -->
+                <DIV class="perfil-card">
+                    <h2 class="perfil-titulo">MI PERFIL</h2>
+
+                    <img src="./resources/usuario.png" alt="Foto de perfil" class="perfil-avatar">
+
+                    <h3 class="perfil-nombre">NOMBRE USUARIO</h3>
+
+                    <DIV class="perfil-botones-fila">
+                        <button class="btn-perfil btn-perfil-verde">
+                            <i class="icon ion-md-cloud-upload"></i> CARGAR IMAGEN
+                        </button>
+                        <button class="btn-perfil btn-perfil-verde">
+                            <i class="icon ion-md-camera"></i> CAMBIAR FOTO DE PERFIL
+                        </button>
                     </DIV>
 
-                    <!--</DIV>-->
-                    
+                    <DIV class="perfil-botones-fila">
+                        <button class="btn-perfil btn-perfil-rojo">
+                            <i class="icon ion-md-log-out"></i> CERRAR SESIÓN
+                        </button>
+                        <button class="btn-perfil btn-perfil-outline">
+                            <i class="icon ion-md-qr-scanner"></i> ESCANEAR
+                        </button>
+                    </DIV>
+
+                
                 </DIV>
+
+                <!-- DERECHA: Mis tarjetas coleccionadas -->
+                <DIV class="tarjetas-card">
+                    <h2 class="tarjetas-titulo">MIS TARJETAS COLECCIONADAS</h2>
+
+                    <DIV class="tarjetas-carrusel-contenedor">
+                        <button class="carrusel-flecha flecha-izq"><i class="icon ion-md-arrow-back"></i></button>
+
+                        <DIV class="tarjetas-track">
+                            <DIV class="tarjeta-coleccion">
+                                <img src="./resources/historiaSarape.png" alt="Sultán">
+                            </DIV>
+                            <DIV class="tarjeta-coleccion tarjeta-coleccion-grande">
+                                <img src="./resources/historiaToros.png" alt="Saraperos">
+                            </DIV>
+                            <DIV class="tarjeta-coleccion">
+                                <img src="./resources/historiaSulta.png" alt="Toros">
+                            </DIV>
+                            
+                        </DIV>
+
+                        <button class="carrusel-flecha flecha-der"><i class="icon ion-md-arrow-forward"></i></button>
+                    </DIV>
+
+                    <DIV class="tarjetas-dots">
+                        <span class="dot dot-activo"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </DIV>
+                </DIV>
+
             </DIV>
-            <!--
-            <DIV CLASS="right">
-                <DIV>
-                    AQUI VAN LAS SUGERENCIAS Y NOTICIAS RELEVANTES
-                </DIV>
-            </DIV>-->
         </DIV>
     </BODY>
     <FOOTER>
-        <!--colocar los scripts-->
+        <!-- scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
-        <SCRIPT src="./JS/Confvalidate.js"></SCRIPT>
     </FOOTER>
 </HTML>

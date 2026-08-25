@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>Reproductor de Video</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800&display=swap" rel="stylesheet">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo2.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/reproductor.css">
+    </HEAD>
+    <BODY class="pagina-reproductor">
+
+        <!-- Fondo 2 -->
+        <div class="fondo-difuminado"></div>
+
+        <button class="btn-volver" onclick="window.history.back()">
+            <i class="icon ion-md-arrow-back"></i> VOLVER
+        </button>
+
+        <DIV class="reproductor-layout">
+
+            
+            <DIV class="reproductor-izquierda">
+                <DIV class="video-wrapper">
+                    <video id="mainVideo" class="video-principal" poster="./resources/videos/thumb1.jpg">
+                        <source src="./resources/videos/partido1.mp4" type="video/mp4">
+                    </video>
+
+                    <DIV class="video-controles">
+                        <button id="btnPlayPause" class="ctrl-play"><i class="icon ion-md-play"></i></button>
+                        <button id="btnMute" class="ctrl-vol"><i class="icon ion-md-volume-high"></i></button>
+
+                        <span id="tiempoActual" class="ctrl-tiempo">0:00</span>
+                        <input type="range" id="barraProgreso" class="ctrl-progreso" value="0" min="0" max="100" step="0.1">
+                        <span id="tiempoTotal" class="ctrl-tiempo">0:00</span>
+
+                        <button id="btnFullscreen" class="ctrl-fullscreen"><i class="icon ion-md-expand"></i></button>
+                    </DIV>
+                </DIV>
+
+                <h2 class="video-titulo">LEONES VS EL ÁGUILA</h2>
+                <p class="video-descripcion">
+                    Baseball began as a community sport before becoming a national symbol. 
+                    Through organized leagues and professional clubs, it spread across continents, 
+                    evolving rules, equipment, and culture.
+                </p>
+            </DIV>
+
+           
+            <DIV class="reproductor-derecha">
+                <h2 class="filtros-titulo">FILTROS</h2>
+
+                <DIV class="filtros-separador">
+                    <span class="linea-sep"></span>
+                    <i class="icon ion-md-baseball"></i>
+                    <span class="linea-sep"></span>
+                </DIV>
+
+                <button class="btn-filtro">FILTRO 1</button>
+                <button class="btn-filtro">FILTRO 2</button>
+                <button class="btn-filtro">FILTRO 3</button>
+                <button class="btn-filtro">FILTRO 4</button>
+
+                <hr class="filtros-hr">
+
+                <button class="btn-limpiar">LIMPIAR</button>
+            </DIV>
+
+        </DIV>
+
+    </BODY>
+    <FOOTER>
+        <SCRIPT SRC="./JS/reproductor.js"></SCRIPT>
+    </FOOTER>
+</HTML>

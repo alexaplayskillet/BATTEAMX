@@ -1,0 +1,204 @@
+.resultado-contenedor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px;
+}
+
+.resultado-tarjeta {
+    background-color: #0c2b0c;
+    border: 2px solid #8e8b3a;
+    border-radius: 20px;
+    width: 300px;
+    min-height: 420px;
+    padding: 35px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* mira para ver el modelo en AR */
+.resultado-visor-ar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mascota-imagen {
+    width: 200px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/*aro decorativo mascota -- no es necesario para el final */
+.resultado-aro-brillo {
+    position: absolute;
+    bottom: 10px;
+    width: 140px;
+    height: 24px;
+    background: radial-gradient(ellipse at center, rgba(230, 220, 90, 0.8) 0%, rgba(230, 220, 90, 0) 70%);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.resultado-nombre {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #c4c3d2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.resultado-nombre i {
+    color: #8e8b3a;
+    font-size: 18px;
+}
+
+.resultado-equipo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #8e8b3a;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.resultado-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-resultado {
+    background-color: transparent;
+    border: 2px solid #8e8b3a;
+    color: #c4c3d2;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-resultado:hover {
+    background-color: #8e8b3a;
+    color: #001c00;
+    transform: scale(1.03);
+}
+
+.btn-resultado i {
+    font-size: 16px;
+}
+
+/*result escaneo*/
+
+.coincidencias-titulo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.coincidencias-titulo-wrap i {
+    color: #8e8b3a;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.linea-sep-dorada {
+    flex: 1;
+    max-width: 200px;
+    height: 1px;
+    background-color: #8e8b3a;
+}
+
+.coincidencias-titulo {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.coincidencias-titulo-chico {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-top: 60px;
+}
+
+/* tarjeta historioa*/
+.historia-mascota-card {
+    background-color: #0c2b0c;
+    border: 2px solid #8e8b3a;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.historia-mascota-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.historia-mascota-titulo {
+    font-family: 'VarsityTeam', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: #c4c3d2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+}
+
+.dorado-texto {
+    color: #8e8b3a;
+}
+
+.historia-mascota-estrella {
+    color: #8e8b3a;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.historia-mascota-descripcion {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+    line-height: 1.7;
+    text-align: justify;
+    max-width: 500px;
+}
+
+.historia-mascota-imagen {
+    width: 220px;
+    height: auto;
+    flex-shrink: 0;
+}
+

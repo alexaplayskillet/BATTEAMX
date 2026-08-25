@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <HTML>
     <HEAD>
-        <title>Pagina Principal</title>
+        <title>Trivia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
         <!--aqui van las ligas externas-->
@@ -15,16 +15,16 @@
 			<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-            
-        <!--Aqui iran las ligas de los elementos de css-->
+        
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
+         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/trivia.css">
     </HEAD>
     <BODY>
-        <!--FONDO FIJO: franjas, grano y particulas detras de toda la pagina-->
+     
         <div class="fondo-fijo">
             <div class="glow"></div>
             <div class="grano"></div>
@@ -54,8 +54,8 @@
             </div>
         </div>
 
-        <!--Acomodamos los menus antes que el contenido que siempre se vera-->
-            <DIV CLASS="menu">
+       
+     <DIV CLASS="menu">
             <ul class="menulist">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
                 <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
@@ -67,13 +67,20 @@
             </ul>
         </DIV>
         
-  
+        <DIV CLASS="menu2">
+            <ul class="menulist">
+                <li>Perfil</li>
+                <li>Configuracion</li>
+            </ul>
+            AQUI VAN LAS CONFIGURACIONES DEL PERFIL
+        </DIV>
 
         <!--colocar la barra principal-->
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
             <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen">
-            <ul class="menuhor">
+
+             <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
                 <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
@@ -82,21 +89,21 @@
                 <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
                 <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
+
+            
            <div class="theme-toggle">
-    <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
-    <label for="themeSwitch" class="theme-toggle-track">
+                <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
+                <label for="themeSwitch" class="theme-toggle-track">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                        </svg>
+                    </span>
+                    <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
+                    <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
+                </label>
+            </div>
 
-        <span class="theme-toggle-thumb">
-            <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-            </svg>
-        </span>
-
-        <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
-        <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
-
-    </label>
-        </div>
             <a href="config.html" class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </a>
@@ -104,82 +111,68 @@
             <button class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </button>-->
-        </DIV>
-<!--principal-->
-        <DIV CLASS="body">
 
-                <DIV CLASS="ctr w100">
-            <DIV class="hero-flex">
-                <DIV class="hero-texto">
-                    <h1 class="titulo-principal">
-                        ¡BIENVENIDO A <span class="verde">BAT</span><span>TEA</span><span class="rojo">MX</span><span>!</span>
-                    </h1>
-                    <DIV CLASS="ctr w80">
-                        poner la informacion del inicio: Baseball began as a community sport before becoming a national symbol. 
-                        Through organized leagues and professional clubs, it spread across continents, evolving rules, equipment, and culture. 
-                        Baseball began as a community sport before becoming a national symbol. Through organized leagues and professional clubs, 
-                        it spread across continents, evolving rules, equipment, and culture.
-                    </DIV>
+        </DIV>
+
+      <DIV CLASS="body">
+    <DIV CLASS="ctr w100">
+
+        <img src="./resources/jugadorTrivia.png" alt="" class="trivia-jugador">
+
+        <h1 class="titulo-historia titulo-centrado">
+            DEMUE<span class="verde">STRA</span> QUE <span class="rojo">TAN</span>TO<br>
+            <span class="rojo">CONO</span>CES SOBRE <span class="verde">BÉIS</span><span class="rojo">BOL</span>
+        </h1>
+
+        <p class="trivia-subtitulo">¡Contesta nuestra trivia y averigua tu puntuación!</p>
+
+        <!-- Barra de puntaje / progreso -->
+        <DIV class="trivia-scorebar">
+            <DIV class="trivia-puntaje">
+                <i class="icon ion-md-trophy"></i>
+                <DIV>
+                    <span class="label-chico">TU PUNTAJE</span><br>
+                    <span id="puntajeActual" class="valor-grande">0/10</span>
                 </DIV>
-
-                <img src="./resources/feedJugador.png" alt="Jugador de beisbol" class="hero-imagen">
-            </DIV>
-               
-                <DIV class="contenedor">
-        <DIV CLASS="w50">
-            <DIV class="historia-header">
-                <h2 class="titulo-historia">
-                    HISTORIA <span class="verde">DEL</span> <span class="rojo">BE</span>IS<span class="verde">BOL</span>
-                </h2>
             </DIV>
 
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
-                ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 
-                Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but
-                also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently
-                with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
+            <DIV class="trivia-separador-v"></DIV>
 
-            <DIV class="historia-imagenes">
-                <img src="./resources/fotoE1.jpg" alt="Imagen 1" class="img-abajo borde-neon">
-                <img src="./resources/fotoE2.jpg" alt="Imagen 2" class="img-abajo borde-neon">
+            <DIV class="trivia-progreso">
+                <span id="preguntaContador" class="label-chico">PREGUNTA <b>1</b> DE <b>10</b></span>
+                <DIV id="progresoIconos" class="progreso-iconos">
+                    <!-- Se generan dinámicamente con JS, uno por pregunta -->
+                </DIV>
             </DIV>
         </DIV>
-          <img src="./resources/fotoL1.jpg" alt="Imagen historia" class="img-lateral borde-neon">
 
-          <DIV CLASS="seccion-equipos">
-    <h2 class="titulo-historia titulo-centrado">
-        CONOCE LA HISTORIA DE <span class="verde">NUESTROS EQUIPOS</span>
-    </h2>
+        <!-- tarjeta pregunta  -->
+        <DIV class="trivia-card">
+            <h2 id="preguntaTexto" class="trivia-pregunta">
+                Cargando pregunta...
+            </h2>
 
-    <DIV class="equipos-grid">
-        <DIV class="equipo-card">
-            <img src="./resources/historiaSulta.png" alt="Sultanes de Monterrey" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
+            <DIV id="opcionesContenedor" class="trivia-opciones">
+                <!-- Los 4 botones de opciones se generan dinamicamente con JS -->
+            </DIV>
+
+            <button id="btnSiguiente" class="btn-siguiente" disabled>SIGUIENTE</button>
+
+            <DIV class="trivia-separador-final">
+                <span class="linea-sep"></span>
+                <i class="icon ion-md-baseball"></i>
+                <span class="linea-sep"></span>
+            </DIV>
         </DIV>
 
-        <DIV class="equipo-card">
-            <img src="./resources/historiaSarape.png" alt="Saraperos de Saltillo" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
-
-        <DIV class="equipo-card">
-            <img src="./resources/historiaToros.png" alt="Toros de Tijuana" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
-
-        <DIV class="equipo-card">
-            <img src="./resources/hisotriaUnion.png" alt="Nombre del equipo" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
     </DIV>
 </DIV>
-        </DIV>
-                
-            </DIV>
-        </DIV>
+      
+
     </BODY>
     <FOOTER>
         <!--colocar los scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
+         <SCRIPT SRC="./JS/Trivia.js"></SCRIPT>
     </FOOTER>
 </HTML>

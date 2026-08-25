@@ -23,7 +23,7 @@
         margin-right: 0;
         padding: 0;
         left: 0;
-        /*overflow-x: scroll;*/
+     
     }
 
     .movil{
@@ -48,7 +48,7 @@
     }
 
 
-     /*cosas de las estadisticas de los recuadros*/
+    
     .contenedor{
        display: block;
     }
@@ -59,9 +59,13 @@
     }
 
     .contenedor .right{
-        width: 100%;
-        display: block;
+        width: 50%;
+        
     }
+
+    .seccion-equipos{
+    display: none;  
+}
     
 }
 
@@ -80,15 +84,14 @@
         display: flex;
     }
 
-    /*cosas de las estadisticas de los recuadros*/
-
+  
     .contenedor{
         display: flex;
     }
 
    .contenedor .right{
         width: 50%;
-        /*border: 5px solid red;*/
+      
    }
 }
     

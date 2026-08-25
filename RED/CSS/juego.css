@@ -4,3 +4,146 @@
     min-height: 80vh;
     background-color: aquamarine;
 }
+.minijuego-titulo {
+    margin-top: 130px;
+    margin-bottom: 5px;
+}
+
+.minijuego-instrucciones {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* caja de bateo*/
+.minijuego-campo {
+    position: relative;
+    max-width: 800px;
+    aspect-ratio: 16 / 10;
+    margin: 0 auto 30px auto;
+    border: 3px solid #8e8b3a;
+    border-radius: 15px;
+    overflow: hidden;
+    background-image: url('./resources/minijuego/campo-bateo.jpg'); /* imagen del bateador/pitcher */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Marcador de intentos */
+.minijuego-intentos {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+}
+
+.intento-pelota {
+    font-size: 28px;
+    color: #ffffff;
+    background-color: #001c00;
+    border-radius: 50%;
+    padding: 4px;
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
+    transition: opacity 0.3s ease;
+}
+
+.intento-pelota.usado {
+    opacity: 0.25;
+}
+
+
+.minijuego-resultado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resultado-texto {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #c4c3d2;
+}
+
+/* Botones */
+.minijuego-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn-minijuego {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-minijuego:hover {
+    transform: scale(1.05);
+}
+
+.btn-jugar {
+    background-color: #48ad49;
+    border: 2px solid #7ee881;
+    color: #ffffff;
+}
+
+.btn-jugar:hover {
+    background-color: #3a9a3b;
+}
+
+.btn-reiniciar-juego {
+    background-color: #8e8b3a;
+    border: 2px solid #a6a248;
+    color: #001c00;
+}
+
+.btn-reiniciar-juego:hover {
+    background-color: #a6a248;
+}
+
+/*provicional imagen*/
+.minijuego-imagen-placeholder {
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    z-index: 3;
+}
+
+/* zona bateo */
+.minijuego-zona-golpeo {
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid #ed1c24;
+    background-color: rgba(237, 28, 36, 0.15);
+    cursor: pointer;
+    z-index: 4;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.minijuego-zona-golpeo:hover {
+    background-color: rgba(237, 28, 36, 0.3);
+}
+
+.minijuego-zona-golpeo:active {
+    transform: translate(-50%, 50%) scale(0.9);
+}

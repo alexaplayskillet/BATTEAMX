@@ -1,0 +1,226 @@
+/* imagen decorativa del jugador, de fondo */
+.trivia-jugador {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    height: 600px;
+    width: auto;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* subtitulo bajo el titulo */
+.trivia-subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* barra de puntaje */
+.trivia-scorebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #0c2b0c;
+    border: 2px solid #8e8b3a;
+    border-radius: 15px;
+    max-width: 650px;
+    margin: 0 auto 25px auto;
+    padding: 15px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.trivia-puntaje {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trivia-puntaje i {
+    font-size: 28px;
+    color: #8e8b3a;
+}
+
+.label-chico {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #8e8b3a;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-grande {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #c4c3d2;
+    font-weight: 700;
+}
+
+.trivia-separador-v {
+    width: 1px;
+    height: 40px;
+    background-color: #3a5c3a;
+}
+
+.trivia-progreso {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.progreso-iconos {
+    display: flex;
+    gap: 6px;
+}
+
+.progreso-iconos .icono-pregunta {
+    font-size: 16px;
+    color: #3a5c3a; /* pendiente / sin contestar */
+}
+
+.progreso-iconos .icono-pregunta.actual {
+    color: #8e8b3a; /* pregunta actual */
+}
+
+.progreso-iconos .icono-pregunta.contestada {
+    color: #48ad49; /* ya contestada */
+}
+
+/* tarjeta principal de la pregunta */
+.trivia-card {
+    background-color: #0c2b0c;
+    border: 2px solid #8e8b3a;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.trivia-pregunta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #c4c3d2;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.trivia-opciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-opcion {
+    background-color: #2f7a34;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+    padding: 16px 18px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-opcion:hover {
+    background-color: #48ad49;
+    transform: scale(1.02);
+}
+
+/* estados una vez contestada la pregunta */
+.btn-opcion.correcta {
+    background-color: #2f7a34;
+    border-color: #7ee881;
+    box-shadow: 0 0 12px rgba(126, 232, 129, 0.6);
+}
+
+.btn-opcion.incorrecta {
+    background-color: #7a2f2f;
+    border-color: #ed1c24;
+    box-shadow: 0 0 12px rgba(237, 28, 36, 0.5);
+}
+
+.btn-opcion:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+.btn-siguiente {
+    background-color: #ed1c24;
+    border: none;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-siguiente:hover:not(:disabled) {
+    background-color: #bf0f15;
+    transform: scale(1.05);
+}
+
+.btn-siguiente:disabled {
+    background-color: #5c3a3a;
+    cursor: not-allowed;
+}
+
+.trivia-separador-final {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    color: #8e8b3a;
+}
+
+.trivia-separador-final .linea-sep {
+    flex: 1;
+    height: 1px;
+    background-color: #8e8b3a;
+}
+
+.btn-reiniciar {
+    background-color: #48ad49;
+    border: 2px solid #7ee881;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-reiniciar:hover {
+    background-color: #3a9a3b;
+    transform: scale(1.05);
+}
+
+.btn-reiniciar i {
+    font-size: 18px;
+}
