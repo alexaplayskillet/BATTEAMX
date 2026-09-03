@@ -11,30 +11,59 @@ body{
 
 /*barra principal*/
 .title{
-  display: flex;
+ display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   padding-left: 5px;
   width: 100%;
-  background-color: green;
+  background-color: #001c00;
   z-index: 1000;
   gap: 10px;
 
 }
 
 .title h1{
-  flex-shrink: 0; /* que el titulo nunca se comprima */
+  flex-shrink: 0; 
 }
 
 .title .profile{
-  flex-shrink: 0; /* que el boton nunca se comprima ni se mueva */
+  flex-shrink: 0; 
 }
 
+/*btn perfil*/
+.profile {
+     order: 1; 
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid #225e24;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: translateX(-30px);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+
+.profile:hover {
+    transform: scale(1.08) translateX(-30px); 
+    box-shadow: 0 0 10px #8e8b3a;
+}
 
 /*contenedor principal*/
 .body{
@@ -46,15 +75,19 @@ body{
 
 /*contenedor auxiliar para repartir elementos*/
 .contenedor{
-  text-align: center;
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+
 }
 
 /*contenido del centro*/
 .ctr{
-  min-width: 500px;
-  /*order: 2px solid red;*/
-  margin-left: 0;
-  padding-bottom: 20px;
+   min-width: 500px;
+    margin-left: 0;
+    padding-bottom: 20px;
+    margin-top: -30px;
 }
 
 /*contenedor de la derecha*/
@@ -66,16 +99,30 @@ body{
 
 /*estilos que definen el grosor del contenido*/
 .w80{
-  width: 80%;
+      font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+     text-align: justify;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-top: 0;
+    margin-left: 85px;
 }
 
 .w100{
   width: 100%;
 }
 
+
 .w50{
-  width: 50%;
-  /*border: 5px solid black;*/
+  font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+     text-align: justify;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-top: 120px;
+    margin-left: 85px;
 }
 
 /*cuestiones sin usar*/
@@ -112,4 +159,279 @@ body{
   position: relative;
   height: auto;
 
+}
+@font-face {
+    font-family: 'VarsityTeam';
+    src: url('../resources/varsity_team/VarsityTeam-Bold.otf') format('opentype');
+   font-weight: bold;
+    font-style: normal;
+}
+
+.titulo-principal {
+    font-family: 'VarsityTeam', sans-serif;
+
+    font-size: clamp(4rem, 7vw, 7rem);
+
+    line-height: 0.9;
+
+    text-transform: uppercase;
+
+    margin-top: 220px;
+    margin-left: 85px;
+  margin-bottom: 30px;
+    width: 80%;
+
+    letter-spacing: 2px;
+
+    color: #c4c3d2;
+
+    text-align: left;
+}
+
+
+
+
+.titulo-principal .verde {
+    background: linear-gradient(90deg, #48ad49 0%, #42c936 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-principal .rojo {
+    background: linear-gradient(90deg, #ed1c24 0%, #bf0f15 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+/* titulos videos*/
+.titulo-videos {
+    font-family: 'VarsityTeam', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c4c3d2;
+    text-align: left;
+    margin-top: 140px;      
+    margin-left: 85px;
+    margin-bottom: 20px;
+}
+
+.parrafo-videos {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+    text-align: left;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-left: 85px;
+    margin-bottom: 40px;
+}
+.titulo-videos .dorado {
+    background: linear-gradient(90deg, #8e8b3a 0%, #a6a248 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-videos .verde {
+    background: linear-gradient(90deg, #48ad49 0%, #42c936 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-videos .rojo {
+    background: linear-gradient(90deg, #ed1c24 0%, #bf0f15 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-imagen{
+  width: 240px;
+  height: auto;
+  display: block;
+  transform: translateX(40px);
+}
+.profile {
+  order: 1; 
+   text-decoration: none;  
+}
+
+.titulo-historia {
+    font-family: 'VarsityTeam', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c4c3d2;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+
+.titulo-centrado {
+    text-align: center;
+    color: #c2c2d0;      
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+
+.historia-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.historia-header .titulo-historia {
+    margin: 0; 
+    flex: 1;
+}
+
+.img-lateral {
+  position: absolute;
+    top: 160px;
+    right: 45px;     
+    width: auto;     
+    height: 395px;
+    border-radius: 5px;
+}
+.historia-imagenes {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.img-abajo {
+    flex: 1;
+    top: 40px;
+    width: 100%;
+    height: 200px;     
+    object-fit: cover;
+    border-radius: 5px;
+}
+.right {
+    width: 100%;
+     text-align: center;
+}
+
+
+.titulo-historia .verde {
+    background: linear-gradient(
+        90deg,
+        #48ad49 0%,
+        #42c936 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-historia .rojo {
+    background: linear-gradient(
+        90deg,
+        #ed1c24 0%,
+        #bf0f15 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: flex-start;   
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;          
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-imagen {
+    max-width: 350px;      
+    height: auto;
+    margin-right: 60px;    
+    margin-top: 100px;     
+    flex-shrink: 0;
+}
+
+.borde-neon {
+    border: 1px solid #8e8b3a;
+    box-shadow:
+        0 0 5px #8e8b3a,
+        0 0 10px #8e8b3a,
+        0 0 20px #8e8b3a,
+        0 0 35px rgba(142, 139, 58, 0.6);
+}
+
+/*Tarjetas historia equipos*/
+.equipos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.equipo-card {
+    background-color: #012601;
+    border: 1px solid #3a5c3a;
+    border-radius: 15px;
+    padding: 25px 20px;
+    width: 220px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(142, 139, 58, 0.4);
+}
+
+.equipo-img {
+    width: 260px;
+    height: 287px;
+    object-fit: contain;
+}
+
+
+.btn-historia {
+    background-color: transparent;
+    border: 2px solid #48ad49;
+    color: #c4c3d2;
+    padding: 8px 18px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    margin-top: -5px;
+}
+
+.btn-historia:hover {
+    background-color: #48ad49;
+    color: #001c00;
+    transform: scale(1.05);
 }

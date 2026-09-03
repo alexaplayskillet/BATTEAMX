@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>Escaneo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800&display=swap" rel="stylesheet">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo2.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/escaneo.css">
+    </HEAD>
+    <BODY class="pagina-escaneo">
+
+        <!-- Fondo 2 -->
+        <div class="fondo-difuminado"></div>
+
+        <button class="btn-volver" onclick="window.history.back()">
+            <i class="icon ion-md-arrow-back"></i> VOLVER
+        </button>
+
+        <DIV class="escaneo-contenedor">
+
+            <DIV class="escaneo-tarjeta">
+
+                <DIV class="escaneo-visor">
+                    <!-- Activar camara -->
+                    <video id="videoCamara" class="video-camara" playsinline autoplay muted></video>
+
+                 
+                    <span class="esquina esquina-tl"></span>
+                    <span class="esquina esquina-tr"></span>
+                    <span class="esquina esquina-bl"></span>
+                    <span class="esquina esquina-br"></span>
+                </DIV>
+
+                <DIV id="resultadoEscaneo" class="escaneo-resultado">
+                    Apunta la cámara hacia la tarjeta
+                </DIV>
+
+            </DIV>
+
+            <button id="btnActivarCamara" class="btn-activar-camara">
+                <i class="icon ion-md-camera"></i> ACTIVAR CÁMARA
+            </button>
+
+            <!-- Boton prueba de resultados -->
+            <a href="resultado.html" class="btn-escanear-provisional">
+                <i class="icon ion-md-qr-scanner"></i> ESCANEAR
+            </a>
+
+        </DIV>
+
+      
+        <canvas id="canvasProcesamiento" style="display:none;"></canvas>
+
+    </BODY>
+    <FOOTER>
+        <!-- libreria para leer el qr -->
+        <SCRIPT SRC="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></SCRIPT>
+        <SCRIPT SRC="./JS/escaneo.js"></SCRIPT>
+    </FOOTER>
+</HTML>

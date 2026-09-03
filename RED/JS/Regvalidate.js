@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtener el tamaño actual de fuente desde la variable CSS
+
   const getFontSize = () =>
     parseFloat(getComputedStyle(document.documentElement)
       .getPropertyValue('--font-size'));
 
-  // Escuchar las teclas arriba y abajo
+  
   document.addEventListener('keydown', (e) => {
     const target = e.target;
     const isTyping = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable;
@@ -24,10 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const inputs = document.querySelectorAll(".inp");
   
-  /*const fechaInput = document.querySelector('input[name="Fecha"]');
-  const passwordInput = document.querySelector('input[name="password"]');
-  const password2Input = document.querySelector('input[name="password2"]');
-*/
   const fechaInput = document.getElementById("fecha");
   const passwordInput = document.getElementById("password");
   const password2Input = document.getElementById("password2");

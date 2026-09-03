@@ -1,0 +1,94 @@
+/* wrapper del titulo con lineas y pelotas a los lados */
+.coincidencias-titulo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.coincidencias-titulo-wrap i {
+    color: #8e8b3a;
+    font-size: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linea-sep-dorada {
+    flex: 1;
+    max-width: 200px;
+    height: 1px;
+    background-color: #8e8b3a;
+}
+
+.coincidencias-titulo {
+    margin: 0 !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.coincidencias-titulo-chico {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.coincidencias-titulo-wrap-abajo {
+    margin-top: 80px;
+}
+
+/* tarjeta de historia + imagen */
+.historia-mascota-card {
+    background-color: #0c2b0c;
+    border: 2px solid #8e8b3a;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.historia-mascota-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.historia-mascota-titulo {
+    font-family: 'VarsityTeam', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: #c4c3d2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+}
+
+.dorado-texto {
+    color: #8e8b3a;
+}
+
+.historia-mascota-estrella {
+    color: #8e8b3a;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.historia-mascota-descripcion {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+    line-height: 1.7;
+    text-align: justify;
+    max-width: 500px;
+}
+
+.historia-mascota-imagen {
+    width: 220px;
+    height: auto;
+    flex-shrink: 0;
+}

@@ -1,11 +1,7 @@
 :root {
   --dark-mode-width: 100px;
   --dark-mode-height: 48px;
-
-  /*tamaño de la fuente*/
   --font-size: 1em;
-
-  /*tipo de letra*/
    --font-family: "Open Sans", sans-serif;
 }
 
@@ -69,7 +65,7 @@ body{
 .cabecera::after {
     content: "";
     flex: 1;               
-    height: 2px;           /* grosor de la línea */
+    height: 2px;           
     background-color: #8e8b3a;
 }
 
@@ -194,7 +190,7 @@ body{
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    color: #c2c2d0; /* mismo color que placeholder */
+    color: #c2c2d0; 
     font-size: 1.2em;
 }
 
@@ -214,14 +210,14 @@ body{
     opacity: 1;
 }
 
-/* Estado correcto */
+
 .inp.correcto {
     border: 2px solid #4CAF50;   
     outline: 2px solid #4CAF50; 
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
 }
 
-/* Estado incorrecto */
+
 .inp.incorrecto {
     border: 2px solid #f44336; 
     outline: 2px solid #f44336;  

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ============================
-  // VALIDACIÓN FORMULARIO IDENTIDAD
-  // ============================
+ 
   const formIdentidad = document.querySelector(".form-identidad");
   if (formIdentidad) {
     const inputsIdentidad = formIdentidad.querySelectorAll(".inp");
@@ -55,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ============================
-  // VALIDACIÓN FORMULARIO CONFIGURACIÓN
-  // ============================
+  
+  // validacion
+  
   const formConfig = document.querySelector(".form-configuracion");
   if (formConfig) {
     const inputsConfig = formConfig.querySelectorAll(".inp");
