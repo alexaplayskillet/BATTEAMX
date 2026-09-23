@@ -52,7 +52,7 @@ body.pagina-escaneo {
     z-index: 1;
     padding: 40px 20px;
 }
-
+/*
 .escaneo-tarjeta {
     background-color: #0c2b0c;
     border: 2px solid #8e8b3a;
@@ -72,7 +72,52 @@ body.pagina-escaneo {
     border-radius: 12px;
     overflow: hidden;
     background-color: #06180a;
+}*/
+
+/*añadido por ale para el ar, porque no carga la camara
+.escaneo-visor {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: transparent; /* antes: #06180a 
+    isolation: isolate; 
 }
+
+.escaneo-visor {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    background-color: transparent;
+}*/
+
+.escaneo-visor {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    background-color: transparent;
+    box-shadow: 0 0 0 9999px rgba(9, 38, 9, 1.00);
+    z-index: -1;
+    /* el color debe ser el mismo que uses en .fondo-difuminado / .escaneo-tarjeta para que se vea continuo */
+}
+.escaneo-tarjeta {
+    /*background-color: #0c2b0c; /* esta la puedes dejar */
+    /* pero asegúrate de que .escaneo-visor, adentro, quede sin fondo sólido */
+}
+
+.escaneo-visor video,
+.escaneo-visor canvas.a-canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* recorta manteniendo proporción, sin deformar */
+}
+
 
 .video-camara {
     width: 100%;

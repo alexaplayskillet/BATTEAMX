@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>Escaneo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    </HEAD>
+    <BODY class="pagina-escaneo">
+        <a-scene arjs>
+                        <a-marker preset="hiro"><!--guia para que el modelo 3d se renderice en camara-->
+                            <a-entity position="0 0 0" scale="0.1 0.1 0.1">
+                                <a-sphere color="yellow" radius="5"></a-sphere>
+                            </a-entity>
+
+                        </a-marker>
+                        <!--camara-->
+                        <a-entity camera position="0 0 0"></a-entity>
+
+                    </a-scene>
+
+    </BODY>
+    <FOOTER>
+        <!-- libreria para leer el qr -->
+        <!--<SCRIPT SRC="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></SCRIPT>-->
+        <SCRIPT SRC="./JS/escaneo.js"></SCRIPT>
+
+        <script src="./LIBS/aframe.min.js"></script>
+        <SCRIPT SRC="./LIBS/aframe-ar.js"></SCRIPT>
+    </FOOTER>
+</HTML>

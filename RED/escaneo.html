@@ -24,9 +24,29 @@
 
                 <DIV class="escaneo-visor">
                     <!-- Activar camara -->
-                    <video id="videoCamara" class="video-camara" playsinline autoplay muted></video>
+                    <!--<video id="videoCamara" class="video-camara" playsinline autoplay muted></video>-->
 
-                 
+                    <a-scene
+                        arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: true;"
+                        vr-mode-ui="enabled: false"
+                    >
+                    <a-light type="ambient" color="#ffffff" intensity="0.6"></a-light>
+                    <a-light type="directional" color="#ffffff" intensity="0.8" position="1 1 1"></a-light>
+                    <!--cambio el a marker por el nft-->
+                    <a-nft type="nft" url="/RED/MARKERS/saraperos" smooth="true" smoothCount="40" smoothTolerance="0.04" smoothThreshold="25">
+                        <a-entity position="300 0 10" scale="12 12 12" rotation="90 90 270" gltf-model="url(./ASSETS/conejo2.glb)" material="side: front">
+
+                        </a-entity>
+                        <!--<a-entity position="1 1 1" scale="20 20 20" rotation="0 0 0" gltf-model="url(./ASSETS/kubo.glb)" material="side: front">
+
+                        </a-entity>-->
+                       <!--<a-sphere color="yellow" radius="15" position="250 0 10"></a-sphere>-->
+
+                    </a-nft>
+
+                        <a-entity camera position="0 0 0" ></a-entity>
+                    </a-scene>
+                
                     <span class="esquina esquina-tl"></span>
                     <span class="esquina esquina-tr"></span>
                     <span class="esquina esquina-bl"></span>
@@ -52,11 +72,16 @@
 
       
         <canvas id="canvasProcesamiento" style="display:none;"></canvas>
-
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     </BODY>
     <FOOTER>
         <!-- libreria para leer el qr -->
-        <SCRIPT SRC="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></SCRIPT>
+        <!--<SCRIPT SRC="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></SCRIPT>-->
         <SCRIPT SRC="./JS/escaneo.js"></SCRIPT>
+
+        <script src="./LIBS/aframe.min.js"></script>
+        <!--<SCRIPT SRC="./LIBS/aframe-ar.js"></SCRIPT>-->
+        <script src="./LIBS/aframe-ar-nft.js"></script>
+        <script src="./JS/confeti.js"></script>
     </FOOTER>
 </HTML>
