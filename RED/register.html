@@ -27,7 +27,8 @@
             </div>
 
             <!--formulario-->
-            <form action="login.html">
+            <!--<form action="login.html">-->
+                <form action="PHP/register.php" method="post" novalidate>
                 <!-- Usuario -->
                 <div class="input-grupo">
                     <i class="icon ion-md-person"></i>
@@ -60,7 +61,7 @@
 
                 <!-- Botón -->
                 <div class="enviar">
-                    <input type="submit" class="btn btn-green" value="Registrar">
+                    <input type="submit" class="btn btn-green" value="Registrar" name="Registrar">
                 </div>
             </form>
                 <a href="login.html">
@@ -68,8 +69,6 @@
 </a>
         </div>
     </div>
-</body>
-<footer>
     <script src="./JS/Regvalidate.js"></script>
-</footer>
+</body>
 </html>

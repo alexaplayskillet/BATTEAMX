@@ -115,3 +115,12 @@ function validarFormulario(e) {
     }
   });
 });
+
+  //errores que manda login.php
+  const params = new URLSearchParams(window.location.search);
+  const errorServidor = params.get("error");
+  if (errorServidor === "incorrecto") {
+    alert("Usuario o contraseña incorrectos.");
+  } else if (errorServidor) {
+    alert("Por favor completa todos los campos.");
+  }
