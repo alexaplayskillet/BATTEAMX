@@ -119,7 +119,24 @@ body{
 .btn:hover {
     background-color: #b71c1c;
 }
+.btn-link {
+    display: block;
+    width: 70%;
+    margin: 20px auto 0 auto;   
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    color: white !important;       
+}
 
+.btn-link:visited {
+    color: white !important;       
+}
+
+.btn-link:hover {
+    color: white !important;
+    text-decoration: none;
+}
 .formulario input{
     z-index: 1001;
     margin-bottom: 0.9em;
