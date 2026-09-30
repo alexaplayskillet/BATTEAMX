@@ -29,7 +29,7 @@
             <div class="cabecera">
                 <h1>Iniciar Sesión</h1>
             </div>
-            <form action="index.html">
+            <form action="PHP/login.php" method="post" novalidate>
                 <!-- Usuario -->
                 <div class="input-grupo">
                     <i class="icon ion-md-person"></i>
@@ -43,7 +43,7 @@
                 <!-- Contraseña -->
                 <div class="input-grupo">
                     <i class="icon ion-md-lock"></i>
-                    <input type="password" id="password" class="inp" placeholder="Contraseña" required tabindex="0">
+                    <input type="password" id="password" name="password" class="inp" placeholder="Contraseña" required tabindex="0">
                 </div>
                 <div class="validations">
                     <small class="pls">Por favor ingresa contraseña</small>
@@ -52,13 +52,7 @@
 
                 <!-- Botón -->
                 <div class="enviar">
-                    <!-- Boton original comentado, provisional -->
-                    <!--
-                    <input type="submit" class="btn" tabindex="0" value="INGRESAR">
-                    -->
-
-                    <!-- Link provisional mientras se conecta la validacion real -->
-                    <a href="index.html" class="btn btn-link">INGRESAR</a>
+                    <input type="submit" class="btn" tabindex="0" value="INGRESAR" name="INGRESAR">
                 </div>
             </form>
            <a href="register.html">

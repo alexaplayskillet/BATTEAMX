@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
 
   const getFontSize = () =>
     parseFloat(getComputedStyle(document.documentElement)
@@ -172,4 +172,105 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Por favor completa correctamente todos los campos.");
     }
   });
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const getFontSize = () =>
+    parseFloat(getComputedStyle(document.documentElement)
+      .getPropertyValue('--font-size'));
+
+  document.addEventListener('keydown', (e) => {
+    const target = e.target;
+    const isTyping = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable;
+    if (isTyping) return;
+
+    let fontSize = getFontSize();
+
+    if (e.key === '+') {
+      document.documentElement.style.setProperty('--font-size', `${fontSize * 1.1}em`);
+    }
+
+    if (e.key === '-') {
+      document.documentElement.style.setProperty('--font-size', `${fontSize * 0.9}em`);
+    }
+  });
+
+  const form = document.querySelector("form");
+  const inputs = document.querySelectorAll(".inp");
+
+  const usuarioInput = document.getElementById("usuario");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+
+  const expresiones = {
+    usuario: /^[a-zA-Z0-9_-]{4,16}$/,
+    password: /^[a-zA-Z0-9_-]{4,16}$/,
+    email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  };
+
+  const campos = {
+    usuario: false,
+    email: false,
+    password: false
+  };
+
+  const aplicarClase = (input, estado) => {
+    input.classList.remove("correcto", "incorrecto");
+    input.classList.add(estado ? "correcto" : "incorrecto");
+  };
+
+  const validarCampo = (expresion, input, campo) => {
+    //los mensajes están en el div .validations que va después de .input-grupo, no después del input
+    const validationsDiv = input.closest(".input-grupo").nextElementSibling;
+    const pls = validationsDiv?.querySelector(".pls");
+    const error = validationsDiv?.querySelector(".error");
+    const valor = input.value.trim();
+
+    if (valor === "") {
+      if (pls) pls.style.display = "block";
+      if (error) error.style.display = "none";
+      campos[campo] = false;
+      aplicarClase(input, false);
+    } else if (!expresion.test(valor)) {
+      if (pls) pls.style.display = "none";
+      if (error) error.style.display = "block";
+      campos[campo] = false;
+      aplicarClase(input, false);
+    } else {
+      if (pls) pls.style.display = "none";
+      if (error) error.style.display = "none";
+      campos[campo] = true;
+      aplicarClase(input, true);
+    }
+  };
+
+  inputs.forEach(input => {
+    const campo = input.id;
+    if (expresiones[campo]) {
+      input.addEventListener("keyup", () => validarCampo(expresiones[campo], input, campo));
+      input.addEventListener("blur", () => validarCampo(expresiones[campo], input, campo));
+    }
+  });
+
+  form.addEventListener("submit", e => {
+    //reviso todos los campos al enviar para que salgan los mensajes de los que estén vacíos
+    validarCampo(expresiones.usuario, usuarioInput, "usuario");
+    validarCampo(expresiones.email, emailInput, "email");
+    validarCampo(expresiones.password, passwordInput, "password");
+
+    if (!campos.usuario || !campos.email || !campos.password) {
+      e.preventDefault();
+      alert("Por favor completa correctamente todos los campos.");
+    }
+  });
+
+  //errores que manda register.php cuando algo falla en el servidor
+  const params = new URLSearchParams(window.location.search);
+  const errorServidor = params.get("error");
+  if (errorServidor === "existe") {
+    alert("El usuario o el correo ya están registrados.");
+  } else if (errorServidor) {
+    alert("Revisa que todos los campos estén completos y correctos.");
+  }
 });
