@@ -248,3 +248,21 @@
     z-index: 1;
     margin-bottom: 5px;
 }
+
+.input-oculto {
+    display: none;
+}
+
+label.btn-perfil {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.ima{
+  /*background-color: red;*/
+  display: flex;
+  gap: 20px;
+}

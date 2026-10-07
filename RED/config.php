@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
 <HTML>
     <HEAD>
-        <title>Pagina Principal</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Perfil</title>
         <meta charset="UTF-8">
-
-        <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
-        <!--aqui van las ligas externas-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--links iconos y tipografias -->
+        
             <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
 			<link rel="preconnect" href="https://fonts.googleapis.com">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,16 +16,16 @@
 			<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-            
-        <!--Aqui iran las ligas de los elementos de css-->
+        <!--links css-->
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/perfil.css">
     </HEAD>
     <BODY>
-        <!--FONDO FIJO: franjas, grano y particulas detras de toda la pagina-->
+        <!--FONDO FIJO-->
         <div class="fondo-fijo">
             <div class="glow"></div>
             <div class="grano"></div>
@@ -56,8 +55,7 @@
             </div>
         </div>
 
-        <!--Acomodamos los menus antes que el contenido que siempre se vera-->
-            <DIV CLASS="menu">
+         <DIV CLASS="menu">
             <ul class="menulist">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
                 <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
@@ -69,13 +67,20 @@
             </ul>
         </DIV>
         
-  
+        <DIV CLASS="menu2">
+            <ul class="menulist">
+                <li>Perfil</li>
+                <li>Configuracion</li>
+            </ul>
+            AQUI VAN LAS CONFIGURACIONES DEL PERFIL
+        </DIV>
 
-        <!--colocar la barra principal-->
+        <!-- barra principal-->
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
             <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen">
-            <ul class="menuhor">
+
+             <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
                 <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
@@ -84,104 +89,111 @@
                 <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
                 <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
+
            <div class="theme-toggle">
-    <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
-    <label for="themeSwitch" class="theme-toggle-track">
+                <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
+                <label for="themeSwitch" class="theme-toggle-track">
+                    <span class="theme-toggle-thumb">
+                        <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                        </svg>
+                    </span>
+                    <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
+                    <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
+                </label>
+            </div>
 
-        <span class="theme-toggle-thumb">
-            <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-            </svg>
-        </span>
-
-        <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
-        <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
-
-    </label>
-        </div>
-            <a href="config.php" class="profile">
+        <a href="config.html" class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </a>
         <!-- cerrado provicional
             <button class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </button>-->
-        </DIV>
-<!--principal-->
-        <DIV CLASS="body">
 
-                <DIV CLASS="ctr w100">
-            <DIV class="hero-flex">
-                <DIV class="hero-texto">
-                    <h1 class="titulo-principal">
-                        ¡BIENVENIDO A <span class="verde">BAT</span><span>TEA</span><span class="rojo">MX</span><span>!</span>
-                    </h1>
-                    <DIV CLASS="ctr w80">
-                        poner la informacion del inicio: Baseball began as a community sport before becoming a national symbol. 
-                        Through organized leagues and professional clubs, it spread across continents, evolving rules, equipment, and culture. 
-                        Baseball began as a community sport before becoming a national symbol. Through organized leagues and professional clubs, 
-                        it spread across continents, evolving rules, equipment, and culture.
+        </DIV>
+
+        <DIV CLASS="body">
+            <DIV CLASS="perfil-layout">
+
+                <!-- IZQUIERDA: Mi perfil -->
+                <DIV class="perfil-card">
+                    <h2 class="perfil-titulo">MI PERFIL</h2>
+
+                    <img src="./PHP/foto.php" alt="Foto de perfil" class="perfil-avatar">
+
+                    <h3 class="perfil-nombre">NOMBRE USUARIO</h3>
+
+                    <DIV class="perfil-botones-fila">
+                        <form action="PHP/subirfoto.php" method="POST" enctype="multipart/form-data" class="ima">
+                        <!--<button type="submit" class="btn-perfil btn-perfil-verde" name="CARGAR">
+                            <i class="icon ion-md-cloud-upload"></i> CARGAR IMAGEN
+                        </button>
+                        <input type="file" class="btn-perfil btn-perfil-verde" name="imagen" id="imagen" accept="image/*">
+                        -->
+                        <input type="file" name="imagen" id="imagen" accept="image/*" class="input-oculto">
+
+                        <label for="imagen" class="btn-perfil btn-perfil-verde">
+                            <i class="icon ion-md-cloud-upload"></i>
+                            <span id="nombre-archivo">CARGAR IMAGEN</span>
+                        </label>
+                        <button class="btn-perfil btn-perfil-verde" name="CARGAR" type="submit">
+                            <i class="icon ion-md-camera"></i> CAMBIAR FOTO DE PERFIL
+                        </button>
+                    </form>
+                        
+                    </DIV>
+
+                    <DIV class="perfil-botones-fila">
+                        <button class="btn-perfil btn-perfil-rojo">
+                            <i class="icon ion-md-log-out"></i> CERRAR SESIÓN
+                        </button>
+                        <button class="btn-perfil btn-perfil-outline">
+                            <i class="icon ion-md-qr-scanner"></i> ESCANEAR
+                        </button>
+                    </DIV>
+
+                
+                </DIV>
+
+                <!-- DERECHA: Mis tarjetas coleccionadas -->
+                <DIV class="tarjetas-card">
+                    <h2 class="tarjetas-titulo">MIS TARJETAS COLECCIONADAS</h2>
+
+                    <DIV class="tarjetas-carrusel-contenedor">
+                        <button class="carrusel-flecha flecha-izq"><i class="icon ion-md-arrow-back"></i></button>
+
+                        <DIV class="tarjetas-track">
+                            <DIV class="tarjeta-coleccion">
+                                <img src="./resources/historiaSarape.png" alt="Sultán">
+                            </DIV>
+                            <DIV class="tarjeta-coleccion tarjeta-coleccion-grande">
+                                <img src="./resources/historiaToros.png" alt="Saraperos">
+                            </DIV>
+                            <DIV class="tarjeta-coleccion">
+                                <img src="./resources/historiaSulta.png" alt="Toros">
+                            </DIV>
+                            
+                        </DIV>
+
+                        <button class="carrusel-flecha flecha-der"><i class="icon ion-md-arrow-forward"></i></button>
+                    </DIV>
+
+                    <DIV class="tarjetas-dots">
+                        <span class="dot dot-activo"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </DIV>
                 </DIV>
 
-                <img src="./resources/feedJugador.png" alt="Jugador de beisbol" class="hero-imagen">
-            </DIV>
-               
-                <DIV class="contenedor">
-        <DIV CLASS="w50">
-            <DIV class="historia-header">
-                <h2 class="titulo-historia">
-                    HISTORIA <span class="verde">DEL</span> <span class="rojo">BE</span>IS<span class="verde">BOL</span>
-                </h2>
-            </DIV>
-
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
-                ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 
-                Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but
-                also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently
-                with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
-
-            <DIV class="historia-imagenes">
-                <img src="./resources/fotoE1.jpg" alt="Imagen 1" class="img-abajo borde-neon">
-                <img src="./resources/fotoE2.jpg" alt="Imagen 2" class="img-abajo borde-neon">
-            </DIV>
-        </DIV>
-          <img src="./resources/fotoL1.jpg" alt="Imagen historia" class="img-lateral borde-neon">
-
-          <DIV CLASS="seccion-equipos">
-    <h2 class="titulo-historia titulo-centrado">
-        CONOCE LA HISTORIA DE <span class="verde">NUESTROS EQUIPOS</span>
-    </h2>
-
-    <DIV class="equipos-grid">
-        <DIV class="equipo-card">
-            <img src="./resources/historiaSulta.png" alt="Sultanes de Monterrey" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
-
-        <DIV class="equipo-card">
-            <img src="./resources/historiaSarape.png" alt="Saraperos de Saltillo" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
-
-        <DIV class="equipo-card">
-            <img src="./resources/historiaToros.png" alt="Toros de Tijuana" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
-
-        <DIV class="equipo-card">
-            <img src="./resources/hisotriaUnion.png" alt="Nombre del equipo" class="equipo-img">
-            <button class="btn-historia">VER HISTORIA <i class="icon ion-md-arrow-forward"></i></button>
-        </DIV>
-    </DIV>
-</DIV>
-        </DIV>
-                
             </DIV>
         </DIV>
     </BODY>
-    <FOOTER>
-        <!--colocar los scripts-->
+     <!-- scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
+    <FOOTER>
+       
     </FOOTER>
 </HTML>
