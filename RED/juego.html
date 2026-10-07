@@ -2,6 +2,7 @@
 <HTML>
     <HEAD>
         <title>Minijuego</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
         <!--aqui van las ligas externas-->
@@ -22,6 +23,7 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/juego.css">
+        <link rel="stylesheet" href="./CSS/juego-bateo.css">
 
     </HEAD>
     <BODY>
@@ -128,18 +130,24 @@
         <!-- caja de bateo-->
         <DIV class="minijuego-campo">
 
-            <!-- Marcador de intentos -->
-            <DIV class="minijuego-intentos">
-                <i class="icon ion-md-baseball intento-pelota"></i>
-                <i class="icon ion-md-baseball intento-pelota"></i>
-                <i class="icon ion-md-baseball intento-pelota"></i>
-            </DIV>
+        <div id="caja-bateo" style="background-image: url('./resources/imagenProv.png')">
+    <canvas id="lienzo-bateo" width="900" height="560"></canvas>
 
-            
-            <img src="./resources/imagenProv.png" alt="Pelota" class="minijuego-imagen-placeholder">
-                    </DIV>
-                    <!-- zona de golpeo -->
-                    <button id="btnGolpear" class="minijuego-zona-golpeo"></button>
+    <div class="hud">
+        <span id="puntos">PUNTOS: 0</span>
+        <div id="vidas"></div>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <div id="pantalla">
+        <h2 id="pantalla-titulo">CAJA DE BATEO</h2>
+        <p id="pantalla-texto">Presiona clic, toque o la barra espaciadora cuando el aro rojo toque el círculo. Tienes 3 vidas.</p>
+        <button id="btn-jugar" class="bateo-btn">JUGAR</button>
+    </div>
+</div>
+        </DIV>
+                 
 
         <!-- puntaje -->
         <DIV class="minijuego-resultado">
@@ -164,5 +172,6 @@
     <FOOTER>
         <!--colocar los scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
+        <script src="./JS/juego-bateo.js"></script>
     </FOOTER>
 </HTML>

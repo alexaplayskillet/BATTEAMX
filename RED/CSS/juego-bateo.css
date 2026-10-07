@@ -1,0 +1,139 @@
+#caja-bateo {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    aspect-ratio: 900 / 560;
+    background-color: #0b2a0f;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #b5a642;
+    border-radius: 20px;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#lienzo-bateo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+/* ---- marcador ---- */
+#caja-bateo .hud {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+#puntos {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+#vidas {
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.vida {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #c1121f;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.vida.perdida {
+    opacity: 0.25;
+    filter: grayscale(1);
+}
+
+/* ---- mensaje de resultado ---- */
+#mensaje {
+    position: absolute;
+    top: 38%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+#mensaje.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#mensaje.bien { color: #3ddc84; }
+#mensaje.mal { color: #ff4d5a; }
+
+/* ---- pantalla de inicio / fin ---- */
+#pantalla {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    text-align: center;
+    background: rgba(5, 25, 8, 0.82);
+    color: #fff;
+}
+
+#pantalla.oculta {
+    display: none;
+}
+
+#pantalla-titulo {
+    margin: 0;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+}
+
+#pantalla-texto {
+    margin: 0;
+    max-width: 460px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.bateo-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background: #2e7d32;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+.bateo-btn:hover { background: #388e3c; }
+.bateo-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
