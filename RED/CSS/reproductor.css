@@ -214,3 +214,359 @@ body.pagina-reproductor {
     color: #001c00;
     transform: scale(1.03);
 }
+
+
+/* ==========================================
+   REPRODUCTOR - MODO CLARO
+========================================== */
+
+/* BOTON VOLVER */
+
+body.modo-claro.pagina-reproductor .btn-volver {
+    background: transparent;
+    border: none;
+    color: #14552b;
+}
+
+body.modo-claro.pagina-reproductor .btn-volver i {
+    border: 2px solid #218b32;
+    color: #218b32;
+}
+
+body.modo-claro.pagina-reproductor .btn-volver:hover {
+    color: #218b32;
+}
+
+body.modo-claro.pagina-reproductor .btn-volver:hover i {
+    background-color: #14552b;
+    border-color: #14552b;
+    color: #ffffff;
+}
+
+/* CONTENEDOR DEL VIDEO */
+
+body.modo-claro.pagina-reproductor .video-wrapper {
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 8px rgba(33, 139, 50, 0.4),
+        0 0 20px rgba(33, 139, 50, 0.2);
+}
+
+/* CONTROLES DEL REPRODUCTOR */
+
+body.modo-claro.pagina-reproductor .video-controles {
+    background: linear-gradient(
+        to top,
+        rgba(20, 85, 43, 0.95),
+        rgba(20, 85, 43, 0.65) 65%,
+        transparent
+    );
+}
+
+/* BOTONES DE REPRODUCCION */
+
+body.modo-claro.pagina-reproductor .video-controles button {
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-reproductor .video-controles button:hover {
+    color: #8cdb8b;
+}
+
+/* TIEMPOS DEL VIDEO */
+
+body.modo-claro.pagina-reproductor .ctrl-tiempo {
+    color: #ffffff;
+}
+
+/* BARRA DE PROGRESO */
+
+body.modo-claro.pagina-reproductor .ctrl-progreso {
+    accent-color: #8cdb8b;
+}
+
+/* TITULO DEL VIDEO */
+
+body.modo-claro.pagina-reproductor .video-titulo {
+    color: #103b1b;
+}
+
+/* DESCRIPCION DEL VIDEO */
+
+body.modo-claro.pagina-reproductor .video-descripcion {
+    color: #244c2b;
+}
+
+/* PANEL DERECHO */
+
+body.modo-claro.pagina-reproductor .reproductor-derecha {
+    background-color: #14552b;
+    border: 1px solid #218b32;
+
+    box-shadow:
+        0 0 5px rgba(20, 85, 43, 0.5),
+        0 0 12px rgba(20, 85, 43, 0.4),
+        0 0 22px rgba(20, 85, 43, 0.25);
+}
+
+/* TITULO FILTROS */
+
+body.modo-claro.pagina-reproductor .filtros-titulo {
+    color: #ffffff;
+}
+
+/* SEPARADOR DECORATIVO */
+
+body.modo-claro.pagina-reproductor .filtros-separador {
+    color: #8cdb8b;
+}
+
+body.modo-claro.pagina-reproductor
+.filtros-separador .linea-sep {
+    background-color: #397d3e;
+}
+
+/* BOTONES DE FILTROS */
+
+body.modo-claro.pagina-reproductor .btn-filtro {
+    background-color: #1b6835;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+/* HOVER BOTONES DE FILTROS */
+
+body.modo-claro.pagina-reproductor .btn-filtro:hover {
+    background-color: #8cdb8b;
+    border-color: #48ad49;
+    color: #14552b;
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+/* FILTRO ACTIVO */
+
+body.modo-claro.pagina-reproductor .btn-filtro.activo {
+    background-color: #8cdb8b;
+    border-color: #ffffff;
+    color: #14552b;
+
+    box-shadow:
+        0 0 12px rgba(140, 219, 139, 0.6);
+}
+
+/* LINEA HORIZONTAL */
+
+body.modo-claro.pagina-reproductor .filtros-hr {
+    border-top: 1px solid #397d3e;
+}
+
+/* BOTON LIMPIAR */
+
+body.modo-claro.pagina-reproductor .btn-limpiar {
+    background-color: transparent;
+    border: 2px solid #8cdb8b;
+    color: #8cdb8b;
+}
+
+/* HOVER BOTON LIMPIAR */
+
+body.modo-claro.pagina-reproductor .btn-limpiar:hover {
+    background-color: #8cdb8b;
+    border-color: #8cdb8b;
+    color: #14552b;
+    transform: scale(1.03);
+}
+
+
+/* REPRODUCTOR DE YOUTUBE */
+
+.pagina-reproductor .video-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.pagina-reproductor .youtube-contenedor {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 3;
+}
+
+.pagina-reproductor .youtube-contenedor iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pagina-reproductor .video-wrapper.video-youtube .youtube-contenedor {
+    display: block;
+}
+
+.pagina-reproductor .video-wrapper.video-youtube .video-principal,
+.pagina-reproductor .video-wrapper.video-youtube .video-controles {
+    display: none;
+}
+
+
+
+/* AJUSTE DE DISTRIBUCION DEL REPRODUCTOR */
+
+.pagina-reproductor .reproductor-layout {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.pagina-reproductor .reproductor-izquierda {
+    flex: 1.8;
+    min-width: 0;
+}
+
+.pagina-reproductor .reproductor-derecha {
+    flex: 1;
+    min-width: 280px;
+    box-sizing: border-box;
+}
+
+.pagina-reproductor .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.pagina-reproductor .youtube-contenedor {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pagina-reproductor .youtube-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+/* ADAPTACION A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 850px) {
+
+    .pagina-reproductor .reproductor-layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .pagina-reproductor .reproductor-izquierda,
+    .pagina-reproductor .reproductor-derecha {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+
+    .pagina-reproductor .btn-volver {
+        padding: 20px 20px 0;
+    }
+
+}
+
+
+
+/* ==========================================
+   FILTROS VISUALES DEL REPRODUCTOR
+========================================== */
+
+/* TRANSICION DE LOS EFECTOS */
+
+.pagina-reproductor .youtube-contenedor iframe,
+.pagina-reproductor .video-principal {
+    transition: filter 0.4s ease;
+}
+
+/* FILTRO 1: DESENFOQUE */
+
+.pagina-reproductor .video-wrapper.filtro-desenfoque
+.youtube-contenedor iframe,
+
+.pagina-reproductor .video-wrapper.filtro-desenfoque
+.video-principal {
+    filter: blur(4px);
+}
+
+/* FILTRO 2: TERMICO */
+
+.pagina-reproductor .video-wrapper.filtro-termico
+.youtube-contenedor iframe,
+
+.pagina-reproductor .video-wrapper.filtro-termico
+.video-principal {
+    filter:
+        invert(1)
+        hue-rotate(180deg)
+        saturate(4)
+        contrast(1.8);
+}
+
+/* FILTRO 3: VISION VERDE */
+
+.pagina-reproductor .video-wrapper.filtro-verde
+.youtube-contenedor iframe,
+
+.pagina-reproductor .video-wrapper.filtro-verde
+.video-principal {
+    filter:
+        sepia(1)
+        hue-rotate(65deg)
+        saturate(4)
+        brightness(0.85)
+        contrast(1.3);
+}
+
+/* FILTRO 4: RETRO */
+
+.pagina-reproductor .video-wrapper.filtro-retro
+.youtube-contenedor iframe,
+
+.pagina-reproductor .video-wrapper.filtro-retro
+.video-principal {
+    filter:
+        sepia(0.7)
+        saturate(1.5)
+        contrast(1.15)
+        brightness(0.95);
+}
+
+/* BOTON DE FILTRO SELECCIONADO */
+
+.pagina-reproductor .btn-filtro.activo {
+    background-color: #8e8b3a;
+    border-color: #d2c45c;
+    color: #001c00;
+    box-shadow: 0 0 12px rgba(210, 196, 92, 0.4);
+}
+
+/* BOTON ACTIVO EN MODO CLARO */
+
+body.modo-claro.pagina-reproductor .btn-filtro.activo {
+    background-color: #8cdb8b;
+    border-color: #ffffff;
+    color: #14552b;
+    box-shadow: 0 0 12px rgba(140, 219, 139, 0.6);
+}

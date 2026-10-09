@@ -1,0 +1,251 @@
+#caja-bateo {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    aspect-ratio: 900 / 560;
+    background-color: #0b2a0f;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #b5a642;
+    border-radius: 20px;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#lienzo-bateo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+/* ---- marcador ---- */
+#caja-bateo .hud {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+#puntos {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+#vidas {
+    display: flex;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.vida {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #c1121f;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.vida.perdida {
+    opacity: 0.25;
+    filter: grayscale(1);
+}
+
+/* ---- mensaje de resultado ---- */
+#mensaje {
+    position: absolute;
+    top: 38%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+#mensaje.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#mensaje.bien { color: #3ddc84; }
+#mensaje.mal { color: #ff4d5a; }
+
+/* ---- pantalla de inicio / fin ---- */
+#pantalla {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    text-align: center;
+    background: rgba(5, 25, 8, 0.82);
+    color: #fff;
+}
+
+#pantalla.oculta {
+    display: none;
+}
+
+#pantalla-titulo {
+    margin: 0;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+}
+
+#pantalla-texto {
+    margin: 0;
+    max-width: 460px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.bateo-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background: #2e7d32;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+.bateo-btn:hover { background: #388e3c; }
+.bateo-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+
+/* ==========================================
+   JUEGO DE BATEO - MODO CLARO
+========================================== */
+
+/* CAJA PRINCIPAL */
+
+body.modo-claro.pagina-minijuego #caja-bateo {
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 8px rgba(20, 85, 43, 0.3),
+        0 0 18px rgba(20, 85, 43, 0.2);
+}
+
+
+/* MARCADOR DE PUNTOS */
+
+body.modo-claro.pagina-minijuego #puntos {
+    background: rgba(20, 85, 43, 0.92);
+    color: #ffffff;
+    border: 1px solid #48ad49;
+}
+
+
+/* CONTENEDOR DE VIDAS */
+
+body.modo-claro.pagina-minijuego #vidas {
+    background: rgba(20, 85, 43, 0.92);
+    border: 1px solid #48ad49;
+}
+
+
+/* INDICADORES DE VIDA */
+
+body.modo-claro.pagina-minijuego .vida {
+    background-color: #ffffff;
+    border: 2px solid #d1263a;
+}
+
+body.modo-claro.pagina-minijuego .vida.perdida {
+    opacity: 0.25;
+    filter: grayscale(1);
+}
+
+
+/* MENSAJE DE ACIERTO */
+
+body.modo-claro.pagina-minijuego #mensaje.bien {
+    color: #8cdb8b;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
+}
+
+
+/* MENSAJE DE FALLO */
+
+body.modo-claro.pagina-minijuego #mensaje.mal {
+    color: #ff6472;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
+}
+
+
+/* PANTALLA DE INICIO Y FIN */
+
+body.modo-claro.pagina-minijuego #pantalla {
+    background: rgba(20, 85, 43, 0.94);
+    color: #ffffff;
+}
+
+
+/* TITULO DE LA PANTALLA */
+
+body.modo-claro.pagina-minijuego #pantalla-titulo {
+    color: #ffffff;
+}
+
+
+/* INSTRUCCIONES DE BATEO */
+
+body.modo-claro.pagina-minijuego #pantalla-texto {
+    color: #e1f5df;
+}
+
+
+/* BOTON JUGAR */
+
+body.modo-claro.pagina-minijuego .bateo-btn {
+    background-color: #218b32;
+    border: 2px solid #8cdb8b;
+    color: #ffffff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+body.modo-claro.pagina-minijuego .bateo-btn:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 10px rgba(140, 219, 139, 0.5);
+}
+
+body.modo-claro.pagina-minijuego .bateo-btn:focus-visible {
+    outline: 3px solid #d7f4d0;
+    outline-offset: 3px;
+}

@@ -71,7 +71,13 @@
 
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
-            <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen">
+           <img src="./resources/Logo.png"
+     alt="Logo BatteaMx"
+     class="titulo-imagen logo-oscuro">
+
+<img src="./resources/logoModoclaro.png"
+     alt="Logo BatteaMx"
+     class="titulo-imagen logo-claro">
 
              <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
@@ -83,18 +89,48 @@
                 <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
             
-           <div class="theme-toggle">
-                <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
-                <label for="themeSwitch" class="theme-toggle-track">
-                    <span class="theme-toggle-thumb">
-                        <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                        </svg>
-                    </span>
-                    <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
-                    <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
-                </label>
-            </div>
+           
+<div class="theme-toggle">
+
+    <input type="checkbox"
+           id="themeSwitch"
+           class="theme-toggle-input">
+
+    <label for="themeSwitch" class="theme-toggle-track">
+
+        <span class="theme-toggle-thumb">
+
+            <svg class="theme-toggle-icon icon-luna"
+                 viewBox="0 0 24 24"
+                 fill="currentColor">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
+
+            <svg class="theme-toggle-icon icon-sol"
+                 viewBox="0 0 24 24"
+                 fill="currentColor">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-linecap="round"/>
+            </svg>
+
+        </span>
+
+        <span class="theme-toggle-texto texto-claro">
+            MODO OSCURO
+        </span>
+
+        <span class="theme-toggle-texto texto-oscuro">
+            MODO CLARO
+        </span>
+
+    </label>
+
+</div>
+
             
          <a href="config.html" class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
@@ -244,5 +280,7 @@
     </BODY>
     <FOOTER>
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
+        <SCRIPT SRC="./JS/tema.js"></SCRIPT>
+        
     </FOOTER>
 </HTML>

@@ -147,3 +147,96 @@
 .minijuego-zona-golpeo:active {
     transform: translate(-50%, 50%) scale(0.9);
 }
+
+
+/* ==========================================
+   MINIJUEGO - MODO CLARO
+========================================== */
+
+/* TITULO PRINCIPAL */
+
+body.modo-claro.pagina-minijuego .minijuego-titulo {
+    color: #103b1b;
+}
+
+body.modo-claro.pagina-minijuego .minijuego-titulo .verde {
+    color: #218b32;
+}
+
+body.modo-claro.pagina-minijuego .minijuego-titulo .rojo {
+    color: #d1263a;
+}
+
+
+/* INSTRUCCIONES */
+
+body.modo-claro.pagina-minijuego .minijuego-instrucciones {
+    color: #244c2b;
+}
+
+
+/* CONTENEDOR DEL CAMPO */
+
+body.modo-claro.pagina-minijuego .minijuego-campo {
+    border: 3px solid #218b32;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 6px rgba(20, 85, 43, 0.35),
+        0 0 15px rgba(20, 85, 43, 0.25),
+        0 0 25px rgba(20, 85, 43, 0.15);
+}
+
+
+/* MARCADOR DE INTENTOS */
+
+body.modo-claro.pagina-minijuego .intento-pelota {
+    background-color: #14552b;
+    color: #ffffff;
+}
+
+
+/* RESULTADO DEL JUEGO */
+
+body.modo-claro.pagina-minijuego .resultado-texto {
+    color: #14552b;
+}
+
+
+/* BOTON JUGAR */
+
+body.modo-claro.pagina-minijuego .btn-jugar {
+    background-color: #14552b;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-minijuego .btn-jugar:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+}
+
+
+/* BOTON VOLVER A JUGAR */
+
+body.modo-claro.pagina-minijuego .btn-reiniciar-juego {
+    background-color: #14552b;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+body.modo-claro.pagina-minijuego .btn-reiniciar-juego:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}

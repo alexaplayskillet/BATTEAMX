@@ -224,3 +224,332 @@
 .btn-reiniciar i {
     font-size: 18px;
 }
+
+
+/* ==========================================
+   TRIVIA - MODO CLARO
+========================================== */
+
+/* TITULO PRINCIPAL */
+
+body.modo-claro.pagina-trivia .titulo-historia {
+    color: #103b1b;
+}
+
+body.modo-claro.pagina-trivia .titulo-historia .verde {
+    color: #218b32;
+    -webkit-text-fill-color: #218b32;
+}
+
+body.modo-claro.pagina-trivia .titulo-historia .rojo {
+    color: #c51d28;
+    -webkit-text-fill-color: #c51d28;
+}
+
+/* SUBTITULO */
+
+body.modo-claro.pagina-trivia .trivia-subtitulo {
+    color: #244c2b;
+}
+
+/* IMAGEN DECORATIVA */
+
+body.modo-claro.pagina-trivia .trivia-jugador {
+    opacity: 0.35;
+}
+
+/* BARRA DE PUNTAJE */
+
+body.modo-claro.pagina-trivia .trivia-scorebar {
+    background-color: #14552b;
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 5px rgba(20, 85, 43, 0.5),
+        0 0 12px rgba(20, 85, 43, 0.4),
+        0 0 22px rgba(20, 85, 43, 0.25);
+}
+
+/* ICONO DEL TROFEO */
+
+body.modo-claro.pagina-trivia .trivia-puntaje i {
+    color: #8cdb8b;
+}
+
+/* ETIQUETAS */
+
+body.modo-claro.pagina-trivia .label-chico {
+    color: #8cdb8b;
+}
+
+/* PUNTAJE */
+
+body.modo-claro.pagina-trivia .valor-grande {
+    color: #ffffff;
+}
+
+/* SEPARADOR VERTICAL */
+
+body.modo-claro.pagina-trivia .trivia-separador-v {
+    background-color: #397d3e;
+}
+
+/* INDICADORES DE PREGUNTAS */
+
+body.modo-claro.pagina-trivia
+.progreso-iconos .icono-pregunta {
+    color: #668d69;
+}
+
+body.modo-claro.pagina-trivia
+.progreso-iconos .icono-pregunta.actual {
+    color: #e1d45b;
+}
+
+body.modo-claro.pagina-trivia
+.progreso-iconos .icono-pregunta.contestada {
+    color: #8cdb8b;
+}
+
+/* TARJETA PRINCIPAL */
+
+body.modo-claro.pagina-trivia .trivia-card {
+    background-color: #14552b;
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 5px rgba(20, 85, 43, 0.5),
+        0 0 12px rgba(20, 85, 43, 0.4),
+        0 0 22px rgba(20, 85, 43, 0.25);
+}
+
+/* TEXTO DE LA PREGUNTA */
+
+body.modo-claro.pagina-trivia .trivia-pregunta {
+    color: #ffffff;
+}
+
+/* BOTONES DE RESPUESTA */
+
+body.modo-claro.pagina-trivia .btn-opcion {
+    background-color: #1b6835;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+/* HOVER DE RESPUESTAS */
+
+body.modo-claro.pagina-trivia
+.btn-opcion:hover:not(:disabled) {
+    background-color: #8cdb8b;
+    color: #14552b;
+    border-color: #48ad49;
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+/* RESPUESTA CORRECTA */
+
+body.modo-claro.pagina-trivia .btn-opcion.correcta,
+body.modo-claro.pagina-trivia .btn-opcion.correcta:disabled {
+    background-color: #267a3a;
+    border-color: #8cdb8b;
+    color: #ffffff;
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.6),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+/* RESPUESTA INCORRECTA */
+
+body.modo-claro.pagina-trivia .btn-opcion.incorrecta,
+body.modo-claro.pagina-trivia .btn-opcion.incorrecta:disabled {
+    background-color: #872b35;
+    border-color: #ed1c24;
+    color: #ffffff;
+
+    box-shadow:
+        0 0 8px rgba(237, 28, 36, 0.5),
+        0 0 15px rgba(237, 28, 36, 0.25);
+}
+
+/* BOTON SIGUIENTE */
+
+body.modo-claro.pagina-trivia .btn-siguiente {
+    background-color: #c51d28;
+    color: #ffffff;
+}
+
+/* HOVER BOTON SIGUIENTE */
+
+body.modo-claro.pagina-trivia
+.btn-siguiente:hover:not(:disabled) {
+    background-color: #a91524;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 10px rgba(197, 29, 40, 0.4);
+}
+
+/* BOTON SIGUIENTE DESACTIVADO */
+
+body.modo-claro.pagina-trivia .btn-siguiente:disabled {
+    background-color: #607565;
+    color: #d7e2d8;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* SEPARADOR INFERIOR */
+
+body.modo-claro.pagina-trivia .trivia-separador-final {
+    color: #8cdb8b;
+}
+
+body.modo-claro.pagina-trivia
+.trivia-separador-final .linea-sep {
+    background-color: #397d3e;
+}
+
+/* BOTON REINICIAR */
+
+body.modo-claro.pagina-trivia .btn-reiniciar {
+    background-color: #1b6835;
+    border: 2px solid #8cdb8b;
+    color: #ffffff;
+}
+
+/* HOVER BOTON REINICIAR */
+
+body.modo-claro.pagina-trivia .btn-reiniciar:hover {
+    background-color: #8cdb8b;
+    border-color: #48ad49;
+    color: #14552b;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+
+
+/* RESULTADOS DE LA TRIVIA */
+
+.pagina-trivia .trivia-resultado {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #c4c3d2;
+    margin: 15px 0;
+}
+
+.pagina-trivia .trivia-resultado strong {
+    display: block;
+    font-size: 42px;
+    color: #8e8b3a;
+    margin-top: 8px;
+}
+
+.pagina-trivia .trivia-mensaje {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #c1c0cd;
+    margin: 15px 0 25px;
+}
+
+body.modo-claro.pagina-trivia .trivia-resultado,
+body.modo-claro.pagina-trivia .trivia-mensaje {
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-trivia .trivia-resultado strong {
+    color: #8cdb8b;
+}
+
+@media (max-width: 600px) {
+    .pagina-trivia .trivia-opciones {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-trivia .trivia-card {
+        padding: 25px 18px;
+    }
+
+    .pagina-trivia .trivia-scorebar {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .pagina-trivia .trivia-resultado strong {
+        font-size: 34px;
+    }
+}
+
+
+/* ==========================================
+   PANTALLA DE BIENVENIDA - TRIVIA
+========================================== */
+
+.pagina-trivia .trivia-bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.pagina-trivia .trivia-icono-bienvenida {
+    font-size: 55px;
+    color: #8e8b3a;
+    margin-bottom: 20px;
+}
+
+.pagina-trivia .trivia-bienvenida .trivia-pregunta {
+    margin-bottom: 15px;
+}
+
+.pagina-trivia .trivia-bienvenida .trivia-mensaje {
+    max-width: 480px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.pagina-trivia .trivia-instrucciones {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8e8b3a;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.pagina-trivia .trivia-bienvenida .btn-reiniciar {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* MODO CLARO */
+
+body.modo-claro.pagina-trivia .trivia-icono-bienvenida {
+    color: #8cdb8b;
+}
+
+body.modo-claro.pagina-trivia .trivia-instrucciones {
+    color: #8cdb8b;
+}
+
+body.modo-claro.pagina-trivia .trivia-bienvenida .trivia-mensaje {
+    color: #ffffff;
+}

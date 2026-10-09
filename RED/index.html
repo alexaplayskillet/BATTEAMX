@@ -24,6 +24,8 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
+
     </HEAD>
     <BODY>
         <!--FONDO FIJO: franjas, grano y particulas detras de toda la pagina-->
@@ -74,7 +76,9 @@
         <!--colocar la barra principal-->
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
-            <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen">
+            <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen logo-oscuro">
+            <img src="./resources/logomodoclaro.png" alt="Logo BatteaMx" class="titulo-imagen logo-claro">  
+           
             <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
                 <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
@@ -88,18 +92,24 @@
     <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
     <label for="themeSwitch" class="theme-toggle-track">
 
-        <span class="theme-toggle-thumb">
-            <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
+       <span class="theme-toggle-thumb">
+
+            <svg class="theme-toggle-icon icon-luna" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
             </svg>
+
+            <svg class="theme-toggle-icon icon-sol" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm0 5a5 5 0 100 10 5 5 0 000-10zm9 4h-2a1 1 0 100 2h2a1 1 0 100-2zM5 11H3a1 1 0 100 2h2a1 1 0 100-2zm13.36-5.78a1 1 0 00-1.42 1.42l1.42 1.42a1 1 0 001.42-1.42zM6.64 16.95a1 1 0 00-1.42 1.42l1.42 1.42a1 1 0 001.42-1.42zM18.36 16.95a1 1 0 00-1.42 1.42l1.42 1.42a1 1 0 001.42-1.42zM6.64 7.05a1 1 0 001.42-1.42L6.64 4.22a1 1 0 00-1.42 1.42zM12 19a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z"/>
+            </svg>
+
         </span>
 
-        <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
-        <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
+        <span class="theme-toggle-texto texto-claro">MODO OSCURO</span>
+        <span class="theme-toggle-texto texto-oscuro">MODO CLARO</span>
 
     </label>
         </div>
-            <a href="config.html" class="profile">
+            <a href="config.php" class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </a>
         <!-- cerrado provicional
@@ -117,14 +127,21 @@
                         ¡BIENVENIDO A <span class="verde">BAT</span><span>TEA</span><span class="rojo">MX</span><span>!</span>
                     </h1>
                     <DIV CLASS="ctr w80">
-                        poner la informacion del inicio: Baseball began as a community sport before becoming a national symbol. 
-                        Through organized leagues and professional clubs, it spread across continents, evolving rules, equipment, and culture. 
-                        Baseball began as a community sport before becoming a national symbol. Through organized leagues and professional clubs, 
-                        it spread across continents, evolving rules, equipment, and culture.
+                        ¡Explora el emocionante mundo del béisbol con BatteaMX!
+                        Colecciona tus tarjetas favoritas, escanéalas y descubre
+                        las sorpresas que tenemos para ti. Disfruta de contenido
+                        exclusivo, imágenes, videos y conoce más sobre los equipos
+                        de la Zona Norte del béisbol mexicano. Crea tu propia colección
+                        y vive la pasión del béisbol de una forma única, divertida
+                        e interactiva.
                     </DIV>
                 </DIV>
 
-                <img src="./resources/feedJugador.png" alt="Jugador de beisbol" class="hero-imagen">
+                <div class="hero-animacion">
+                    <img src="./resources/feedJugador1.png" alt="Jugador bateando" class="hero-imagen jugador-animado">
+                    
+                </div>
+
             </DIV>
                
                 <DIV class="contenedor">
@@ -135,11 +152,19 @@
                 </h2>
             </DIV>
 
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
-                ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 
-                Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but
-                also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently
-                with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
+            <p>  El béisbol llegó a México durante la segunda mitad del siglo XIX, principalmente a través del contacto con Estados Unidos, 
+                comenzando a ganar popularidad en las regiones del norte y en los puertos del país. Ciudades como Nuevo Laredo, Monterrey y Veracruz 
+                fueron parte de los primeros lugares donde este deporte comenzó a practicarse, dando paso a la formación de equipos y a la organización 
+                de encuentros que despertaron el interés de los aficionados.  <br><br>
+
+                Con el paso del tiempo, el béisbol se extendió a diferentes estados del país, convirtiéndose en una actividad deportiva cada vez más importante.
+                 En 1925 se fundó la Liga Mexicana de Béisbol (LMB), marcando el inicio de una nueva etapa para el desarrollo profesional de este deporte. 
+                 La creación de esta liga permitió organizar competencias y fortalecer la presencia del béisbol en México. <br><br>
+
+                A lo largo de los años, surgieron equipos que se convirtieron en símbolos de sus ciudades, creando grandes rivalidades y reuniendo a miles de 
+                aficionados en los estadios. Actualmente, el béisbol es una parte importante de la cultura deportiva mexicana, especialmente en la Zona Norte, 
+                donde equipos como Sultanes de Monterrey, Saraperos de Saltillo, Toros de Tijuana y Algodoneros de Unión Laguna mantienen viva esta pasión de 
+                generación en generación.</p>
 
             <DIV class="historia-imagenes">
                 <img src="./resources/fotoE1.jpg" alt="Imagen 1" class="img-abajo borde-neon">
@@ -205,8 +230,130 @@
             </DIV>
         </DIV>
     </BODY>
-    <FOOTER>
+
+    
+<FOOTER class="footer-battea">
+
+    <DIV class="footer-contenido">
+
+        <DIV class="footer-columna footer-info">
+
+            <h2 class="footer-logo">
+                BATTEA<span>MX</span>
+            </h2>
+
+            <DIV class="footer-redes">
+
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="icon ion-logo-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="icon ion-logo-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="icon ion-logo-youtube"></i>
+                </a>
+
+            </DIV>
+              
+<DIV class="footer-contacto">
+
+    <h3 class="footer-titulo-contacto">CONTÁCTANOS</h3>
+
+    <DIV class="footer-integrante">
+
+        <h4>Arantza De La Vega</h4>
+        <span class="footer-rol">Diseñadora UI/UX y Artista 3D</span>
+
+        <a href="arantza.deg@unal.edu.mx">
+            <i class="icon ion-md-mail"></i>
+           arantza.deg@uanl.edu.mx
+        </a>
+
+        <a href="tel:+528343094868">
+            <i class="icon ion-md-call"></i>
+            +52 83 4309 4868
+        </a>
+
+    </DIV>
+
+    <DIV class="footer-integrante">
+
+        <h4>Alexandra Cardenas</h4>
+        <span class="footer-rol">Desarrolladora Web y Artista 3D</span>
+
+        <a href="correo2@ejemplo.com">
+            <i class="icon ion-md-mail"></i>
+            correo2@ejemplo.com
+        </a>
+
+        <a href="tel:+528100000002">
+            <i class="icon ion-md-call"></i>
+            +52 81 0000 0002
+        </a>
+
+    </DIV>
+
+
+</DIV>
+
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">EXPLORA</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="juego.html">Minijuego</a></li>
+            </ul>
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">MÁS SOBRE BATTEAMX</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Historia del béisbol</a></li>
+                <li><a href="estadisticas.html">Equipos mexicanos</a></li>
+                <li><a href="escaneo.html">Escaneo</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+
+        </DIV>
+
+    </DIV>
+
+    <DIV class="footer-inferior">
+
+        <p>© 2026 BatteaMX. Todos los derechos reservados.</p>
+
+    </DIV>
+
+    <button class="footer-subir"
+            id="btnSubir"
+            aria-label="Volver arriba">
+        <i class="icon ion-md-arrow-up"></i>
+    </button>
         <!--colocar los scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
-    </FOOTER>
+        <SCRIPT SRC="./JS/tema.js"></SCRIPT> 
+</FOOTER>
+
 </HTML>

@@ -22,7 +22,7 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
     </HEAD>
-    <BODY>
+    <BODY CLASS="pagina-videos">
        
         <div class="fondo-fijo">
             <div class="glow"></div>
@@ -77,7 +77,13 @@
         <!-- barra principal-->
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
-            <img src="./resources/Logo.png" alt="Logo BatteaMx" class="titulo-imagen">
+           <img src="./resources/Logo.png"
+            alt="Logo BatteaMx"
+            class="titulo-imagen logo-oscuro">
+
+            <img src="./resources/logoModoclaro.png"
+                alt="Logo BatteaMx"
+                class="titulo-imagen logo-claro">
 
              <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
@@ -90,18 +96,48 @@
             </ul>
 
 
-           <div class="theme-toggle">
-                <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
-                <label for="themeSwitch" class="theme-toggle-track">
-                    <span class="theme-toggle-thumb">
-                        <svg class="theme-toggle-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                        </svg>
-                    </span>
-                    <span class="theme-toggle-texto texto-claro">MODO CLARO</span>
-                    <span class="theme-toggle-texto texto-oscuro">MODO OSCURO</span>
-                </label>
-            </div>
+          
+                <div class="theme-toggle">
+
+                    <input type="checkbox"
+                        id="themeSwitch"
+                        class="theme-toggle-input">
+
+                    <label for="themeSwitch" class="theme-toggle-track">
+
+                        <span class="theme-toggle-thumb">
+
+                            <svg class="theme-toggle-icon icon-luna"
+                                viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                            </svg>
+
+                            <svg class="theme-toggle-icon icon-sol"
+                                viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <circle cx="12" cy="12" r="4"/>
+                                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                    stroke-linecap="round"/>
+                            </svg>
+
+                        </span>
+
+                        <span class="theme-toggle-texto texto-claro">
+                            MODO OSCURO
+                        </span>
+
+                        <span class="theme-toggle-texto texto-oscuro">
+                            MODO CLARO
+                        </span>
+
+                    </label>
+
+                </div>
+
              <a href="config.html" class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </a>
@@ -122,8 +158,10 @@
         </h1>
 
         <p class="parrafo-videos">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since 1966.
+          Revive las jugadas, victorias y momentos que han marcado la historia del béisbol mexicano. Desde batazos inolvidables 
+            hasta partidos llenos de emoción, descubre los acontecimientos más destacados de equipos como Sultanes de Monterrey, Saraperos de Saltillo, 
+            Toros de Tijuana y Algodoneros de Unión Laguna. Explora nuestra colección de videos y vuelve a disfrutar de la pasión, el talento y las emociones
+             que se viven dentro del diamante.
         </p>
 
         <!-- carrusel videos  -->
@@ -131,54 +169,311 @@
             <button class="carrusel-flecha flecha-izq"><i class="icon ion-md-arrow-back"></i></button>
 
             <DIV class="carrusel-track">
-                <DIV class="video-card">
-                    <video class="video-media" src="./resources/videos/video1.mp4" muted preload="metadata"></video>
-                    <button class="play-btn"><i class="icon ion-md-play"></i></button>
-                    <DIV class="video-progress">
-                        <span class="progress-dot" style="left: 20%;"></span>
-                    </DIV>
-                </DIV>
+                
+                    <!-- 1. TOROS - CAMPEONATO 2021 -->
+                   
+                    <div class="video-card" title="Toros de Tijuana - Campeonato 2021">
 
-                <DIV class="video-card">
-                    <video class="video-media" src="./resources/videos/video2.mp4" muted preload="metadata"></video>
-                    <button class="play-btn"><i class="icon ion-md-play"></i></button>
-                    <DIV class="video-progress">
-                        <span class="progress-dot" style="left: 35%;"></span>
-                    </DIV>
-                </DIV>
-                    <DIV class="video-card video-card-grande">
-                        <video class="video-media" src="./resources/videos/video3.mp4" muted preload="metadata"></video>
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/TkjgRKC6O9Q/hqdefault.jpg"
+                            alt="Toros de Tijuana campeones 2021">
 
-                        <!-- Boton original comentado, provisional -->
-                        <!--
-                        <button class="play-btn"><i class="icon ion-md-play"></i></button>
-                        -->
+                        <div class="video-info">
+                            <span class="video-equipo">TOROS DE TIJUANA</span>
+                            <h3 class="video-titulo">Campeonato 2021</h3>
+                            <p class="video-descripcion">
+                                Revive uno de los momentos más importantes
+                                en la historia del equipo.
+                            </p>
+                        </div>
 
-                        <!-- prueba unicamente para ir a filtros -->
-                        <a href="filtros.html" class="play-btn">
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=TkjgRKC6O9Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Ver campeonato de Toros 2021">
                             <i class="icon ion-md-play"></i>
                         </a>
 
-                        <DIV class="video-progress">
-                            <span class="progress-dot" style="left: 50%;"></span>
-                        </DIV>
-                    </DIV>
+                    </div>
 
-                <DIV class="video-card">
-                    <video class="video-media" src="./resources/videos/video4.mp4" muted preload="metadata"></video>
-                    <button class="play-btn"><i class="icon ion-md-play"></i></button>
-                    <DIV class="video-progress">
-                        <span class="progress-dot" style="left: 25%;"></span>
-                    </DIV>
-                </DIV>
 
-                <DIV class="video-card">
-                    <video class="video-media" src="./resources/videos/video5.mp4" muted preload="metadata"></video>
-                    <button class="play-btn"><i class="icon ion-md-play"></i></button>
-                    <DIV class="video-progress">
-                        <span class="progress-dot" style="left: 40%;"></span>
-                    </DIV>
-                </DIV>
+                    <!-- 2. SULTANES - SERIE DEL REY 2022 -->
+                    <div class="video-card" title="Sultanes - Serie del Rey 2022, Juego 5">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/edlICqWt7Ww/hqdefault.jpg"
+                            alt="Sultanes de Monterrey Serie del Rey 2022">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SULTANES DE MONTERREY</span>
+                            <h3 class="video-titulo">Serie del Rey 2022</h3>
+                            <p class="video-descripcion">
+                                Juego 5 de la final contra Leones de Yucatán.
+                            </p>
+                        </div>
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=edlICqWt7Ww"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver Sultanes Serie del Rey 2022">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 3. ALGODONEROS - SERIE DEL REY 2023 -->
+                    <div class="video-card video-card-grande" title="Algodoneros - Serie del Rey 2023, Juego 5">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/WrbC-dlFscc/hqdefault.jpg"
+                            alt="Algodoneros Unión Laguna Serie del Rey 2023">
+
+                        <div class="video-info">
+                            <span class="video-equipo">ALGODONEROS UNIÓN LAGUNA</span>
+                            <h3 class="video-titulo">Serie del rey 2023</h3>
+                            <p class="video-descripcion">
+                                Emoción y grandes jugadas durante la final.
+                            </p>
+                        </div>
+
+                            
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=WrbC-dlFscc"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver Algodoneros Serie del Rey 2023">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 4. SARAPEROS - VICTORIA SOBRE SULTANES -->
+                    <div class="video-card" title="Saraperos vencen a Sultanes - 2025">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/NP4Ena_0elw/hqdefault.jpg"
+                            alt="Saraperos de Saltillo vencen a Sultanes">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SARAPEROS DE SALTILLO</span>
+                            <h3 class="video-titulo">Duelo contra Sultanes</h3>
+                            <p class="video-descripcion">
+                                Un enfrentamiento entre dos equipos del norte.
+                            </p>
+                        </div>
+
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=NP4Ena_0elw"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver Saraperos contra Sultanes">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 5. TOROS - SERIE DEL REY 2021, JUEGO 6 -->
+                    <div class="video-card" title="Toros - Serie del Rey 2021, Juego 6">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/RGYF-9z3nhI/hqdefault.jpg"
+                            alt="Toros de Tijuana Serie del Rey Juego 6">
+
+                        <div class="video-info">
+                            <span class="video-equipo">TOROS DE TIJUANA</span>
+                            <h3 class="video-titulo">Serie del Rey 2021</h3>
+                            <p class="video-descripcion">
+                                Uno de los juegos decisivos de la final.
+                            </p>
+                        </div>
+
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=RGYF-9z3nhI"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver remontada de Toros 2021">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 6. SULTANES - SERIE DEL REY 2022, JUEGO 2 -->
+                    <div class="video-card" title="Sultanes - Serie del Rey 2022, Juego 2">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/DBQ4zsYzbjg/hqdefault.jpg"
+                            alt="Sultanes contra Leones 2022">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SULTANES DE MONTERREY</span>
+                            <h3 class="video-titulo">Final de 2022</h3>
+                            <p class="video-descripcion">
+                                Juego 2 de la Serie del Rey.
+                            </p>
+                        </div>
+
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=DBQ4zsYzbjg"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver Sultanes contra Leones">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 7. SULTANES - VICTORIA SOBRE SARAPEROS -->
+                    <div class="video-card" title="Sultanes vencen a Saraperos - 2025">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/HVAoQrLhZ7A/hqdefault.jpg"
+                            alt="Sultanes vencen a Saraperos">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SULTANES DE MONTERREY</span>
+                            <h3 class="video-titulo">Victoria sobre Saraperos</h3>
+                            <p class="video-descripcion">
+                               Jugadas destacadas del enfrentamiento de 2025.
+                            </p>
+                        </div>
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=HVAoQrLhZ7A"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver victoria de Sultanes">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 8. SARAPEROS - VICTORIA SOBRE RIELEROS -->
+                    <div class="video-card" title="Saraperos vencen a Rieleros - 2025">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/ISAHilze5Vw/hqdefault.jpg"
+                            alt="Saraperos vencen a Rieleros">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SARAPEROS DE SALTILLO</span>
+                            <h3 class="video-titulo">Victoria sobre Reileros</h3>
+                            <p class="video-descripcion">
+                                Los mejores momentos del encuentro de 2025.
+                            </p>
+                        </div>
+
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=ISAHilze5Vw"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver victoria de Saraperos">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 9. SULTANES - REMONTADA SOBRE ACEREROS -->
+                    <div class="video-card" title="Sultanes remontan a Acereros - 2025">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/cW-9lNeG6Bc/hqdefault.jpg"
+                            alt="Sultanes remontan a Acereros">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SULTANES DE MONTERREY</span>
+                            <h3 class="video-titulo">Remontada ante Acereros</h3>
+                            <p class="video-descripcion">
+                                Una emocionante recuperación en el marcador.
+                            </p>
+                        </div>
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=cW-9lNeG6Bc"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver remontada de Sultanes">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 10. SULTANES - AVANZAN A SERIE DE CAMPEONATO -->
+                    <div class="video-card" title="Sultanes avanzan a Serie de Campeonato - 2025">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/rzR8_xEWmPA/hqdefault.jpg"
+                            alt="Sultanes avanzan a la Serie de Campeonato">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SULTANES DE MONTERREY</span>
+                            <h3 class="video-titulo">Serie de Campeonato</h3>
+                            <p class="video-descripcion">
+                                El camino del equipo durante la postemporada.
+                            </p>
+                        </div>
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=rzR8_xEWmPA"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver clasificación de Sultanes">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 11. TOROS - PARTIDO CONTRA DURANGO -->
+                    <div class="video-card" title="Toros de Tijuana contra Caliente de Durango - 2025">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/DV9e_LqYXrQ/hqdefault.jpg"
+                            alt="Toros de Tijuana contra Caliente de Durango">
+
+                         <div class="video-info">
+                            <span class="video-equipo">TOROS DE TIJUANA</span>
+                            <h3 class="video-titulo">Duelo contra Durango</h3>
+                            <p class="video-descripcion">
+                                Acciones destacadas de la temporada 2025.
+                            </p>
+                        </div>
+
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=DV9e_LqYXrQ"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver Toros contra Durango">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    <!-- 12. TOROS - SERIE DEL REY 2026 -->
+                    <div class="video-card" title="Toros - Serie del Rey 2026, Juego 2">
+                        <img class="video-media"
+                            src="https://img.youtube.com/vi/MegI5_GHdN8/hqdefault.jpg"
+                            alt="Toros de Tijuana Serie del Rey 2026">
+
+                        <div class="video-info">
+                            <span class="video-equipo">TOROS DE TIJUANA</span>
+                            <h3 class="video-titulo">Serie del Rey 2026</h3>
+                            <p class="video-descripcion">
+                               Momentos destacados de la final.
+                            </p>
+                        </div>
+
+                        <a class="play-btn"
+                        href="https://www.youtube.com/watch?v=MegI5_GHdN8"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Ver Toros Serie del Rey 2026">
+                            <i class="icon ion-md-play"></i>
+                        </a>
+                    </div>
+
+                    
+                        <!-- 13. SARAPEROS - BICAMPEONATO 2010 -->
+                        <div class="video-card" title="Saraperos Bicampeón 2010">
+
+                            <img class="video-media"
+                                src="https://img.youtube.com/vi/4jlIgfAeC0I/hqdefault.jpg"
+                                alt="Saraperos de Saltillo bicampeones 2010">
+
+                        <div class="video-info">
+                            <span class="video-equipo">SARAPEROS DE SALTILLO</span>
+                            <h3 class="video-titulo">Bicampeonato 2010</h3>
+                            <p class="video-descripcion">
+                                Un logro histórico para el equipo saltillense.
+                            </p>
+                        </div>
+
+
+                            <a class="play-btn"
+                            href="https://www.youtube.com/watch?v=4jlIgfAeC0I"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Ver bicampeonato de Saraperos 2010">
+
+                                <i class="icon ion-md-play"></i>
+
+                            </a>
+                        </div>
+
             </DIV>
 
             <button class="carrusel-flecha flecha-der"><i class="icon ion-md-arrow-forward"></i></button>
@@ -193,5 +488,8 @@
     <FOOTER>
         <!--colocar los scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
+        <SCRIPT SRC="./JS/tema.js"></SCRIPT>
+        <SCRIPT SRC="./JS/carrusel-vid.js"></SCRIPT>
+        <SCRIPT SRC="./JS/enlaces-videos.js"></SCRIPT>
     </FOOTER>
 </HTML>

@@ -25,3 +25,41 @@
     background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
     pointer-events: none;
 }
+
+
+
+/* FONDO DIFUMINADO - MODO CLARO */
+
+body.modo-claro .fondo-difuminado {
+    background-color: #b7e6ae;
+
+    background-image:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(239, 255, 223, 0.85) 0%,
+            transparent 45%
+        ),
+
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(110, 191, 112, 0.35) 0%,
+            transparent 50%
+        ),
+
+        radial-gradient(
+            circle at 50% 70%,
+            rgba(72, 173, 73, 0.25) 0%,
+            transparent 55%
+        );
+
+    background-blend-mode: normal;
+}
+
+body.modo-claro .fondo-difuminado::after {
+    background: radial-gradient(
+        ellipse at center,
+        transparent 40%,
+        rgba(33, 107, 43, 0.16) 100%
+    );
+}
+

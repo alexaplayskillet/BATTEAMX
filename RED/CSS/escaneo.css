@@ -1,3 +1,4 @@
+
 body.pagina-escaneo {
     margin: 0;
     min-height: 100vh;
@@ -20,7 +21,7 @@ body.pagina-escaneo {
     padding: 30px 40px 0 40px;
     cursor: pointer;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 .btn-volver i {
@@ -33,7 +34,9 @@ body.pagina-escaneo {
     justify-content: center;
     font-size: 18px;
     color: #8e8b3a;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .btn-volver:hover i {
@@ -52,18 +55,30 @@ body.pagina-escaneo {
     z-index: 1;
     padding: 40px 20px;
 }
-/*
+
+
+/*TARJETA DE ESCANEO*/
+
 .escaneo-tarjeta {
     background-color: #0c2b0c;
     border: 2px solid #8e8b3a;
     border-radius: 20px;
-    width: 300px;
+    width: 350px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
     padding: 25px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    position: relative;
+    z-index: 1;
 }
+
+
+/* VISOR DE CAMARA */
 
 .escaneo-visor {
     position: relative;
@@ -72,67 +87,48 @@ body.pagina-escaneo {
     border-radius: 12px;
     overflow: hidden;
     background-color: #06180a;
-}*/
-
-/*añadido por ale para el ar, porque no carga la camara
-.escaneo-visor {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: transparent; /* antes: #06180a 
-    isolation: isolate; 
+    isolation: isolate;
+    z-index: 1;
 }
 
-.escaneo-visor {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-    background-color: transparent;
-}*/
 
-.escaneo-visor {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 12px;
-    background-color: transparent;
-    box-shadow: 0 0 0 9999px rgba(9, 38, 9, 1.00);
-    z-index: -1;
-    /* el color debe ser el mismo que uses en .fondo-difuminado / .escaneo-tarjeta para que se vea continuo */
-}
-.escaneo-tarjeta {
-    /*background-color: #0c2b0c; /* esta la puedes dejar */
-    /* pero asegúrate de que .escaneo-visor, adentro, quede sin fondo sólido */
+/* ESCENA DE REALIDAD AUMENTADA*/
+
+body.pagina-escaneo .escaneo-ar {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    z-index: 1;
 }
 
-.escaneo-visor video,
-.escaneo-visor canvas.a-canvas {
+
+/* CANVAS DE A-FRAME */
+
+body.pagina-escaneo .escaneo-ar canvas.a-canvas {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover; /* recorta manteniendo proporción, sin deformar */
+    max-width: none !important;
+    max-height: none !important;
+    display: block !important;
+    object-fit: fill !important;
+    z-index: 2;
 }
 
+/*  ESQUINAS DEL ESCANER*/
 
-.video-camara {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* esquinas tipo mira de escaner */
 .esquina {
     position: absolute;
     width: 30px;
     height: 30px;
     border: 3px solid #c4c3d2;
     pointer-events: none;
+    z-index: 10;
 }
 
 .esquina-tl {
@@ -163,6 +159,9 @@ body.pagina-escaneo {
     border-top: none;
 }
 
+
+/* RESULTADO DEL ESCANEO */
+
 .escaneo-resultado {
     background-color: #d9d9e3;
     color: #001c00;
@@ -177,6 +176,9 @@ body.pagina-escaneo {
     word-break: break-word;
 }
 
+
+/* BOTON ACTIVAR CAMARA */
+
 .btn-activar-camara {
     background-color: #48ad49;
     border: 2px solid #7ee881;
@@ -187,13 +189,20 @@ body.pagina-escaneo {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    position: relative;
+    z-index: 5;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
-.btn-activar-camara:hover {
+.btn-activar-camara:hover:not(:disabled) {
     background-color: #3a9a3b;
     transform: scale(1.05);
 }
@@ -205,6 +214,9 @@ body.pagina-escaneo {
     transform: none;
 }
 
+
+/* BOTON ESCANEAR PROVISIONAL */
+
 .btn-escanear-provisional {
     background-color: #48ad49;
     border: 2px solid #7ee881;
@@ -215,14 +227,261 @@ body.pagina-escaneo {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+
     display: flex;
     align-items: center;
     gap: 10px;
+
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    position: relative;
+    z-index: 5;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .btn-escanear-provisional:hover {
     background-color: #3a9a3b;
     transform: scale(1.05);
+}
+
+
+/* MODO CLARO  */
+
+body.modo-claro.pagina-escaneo .btn-volver {
+    background: transparent;
+    border: none;
+    color: #14552b;
+}
+
+body.modo-claro.pagina-escaneo .btn-volver i {
+    border: 2px solid #218b32;
+    color: #218b32;
+}
+
+body.modo-claro.pagina-escaneo .btn-volver:hover {
+    color: #218b32;
+}
+
+body.modo-claro.pagina-escaneo .btn-volver:hover i {
+    background-color: #14552b;
+    border-color: #14552b;
+    color: #ffffff;
+}
+
+
+/* MODO CLARO - TARJETA */
+
+body.modo-claro.pagina-escaneo .escaneo-tarjeta {
+    background-color: #14552b;
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 5px rgba(20, 85, 43, 0.5),
+        0 0 12px rgba(20, 85, 43, 0.4),
+        0 0 22px rgba(20, 85, 43, 0.25);
+}
+
+
+/*  MODO CLARO - VISOR */
+
+body.modo-claro.pagina-escaneo .escaneo-visor {
+    background-color: #06180a;
+    border: 2px solid #48ad49;
+    box-sizing: border-box;
+}
+
+
+/* MODO CLARO - ESQUINAS*/
+
+body.modo-claro.pagina-escaneo .esquina {
+    border-color: #8cdb8b;
+}
+
+
+/*  MODO CLARO - RESULTADO */
+
+body.modo-claro.pagina-escaneo .escaneo-resultado {
+    background-color: #d7f4d0;
+    color: #14552b;
+    border: 1px solid #8cdb8b;
+}
+
+
+/* MODO CLARO - ACTIVAR CAMARA */
+
+body.modo-claro.pagina-escaneo .btn-activar-camara {
+    background-color: #14552b;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+body.modo-claro.pagina-escaneo
+.btn-activar-camara:hover:not(:disabled) {
+    background-color: #8cdb8b;
+    color: #14552b;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+body.modo-claro.pagina-escaneo
+.btn-activar-camara:disabled {
+    background-color: #607565;
+    border-color: #607565;
+    color: #d7e2d8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* MODO CLARO - ESCANEAR */
+
+body.modo-claro.pagina-escaneo .btn-escanear-provisional {
+    background-color: #14552b;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+body.modo-claro.pagina-escaneo
+.btn-escanear-provisional:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+
+/*DISEÑO RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    .btn-volver {
+        padding: 20px 20px 0 20px;
+        font-size: 12px;
+    }
+
+    .escaneo-contenedor {
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .escaneo-tarjeta {
+        width: 100%;
+        max-width: 350px;
+        padding: 18px;
+    }
+
+    .escaneo-resultado {
+        font-size: 12px;
+    }
+
+    .btn-activar-camara,
+    .btn-escanear-provisional {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+}
+
+body.pagina-escaneo .escaneo-visor {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+body.pagina-escaneo .escaneo-ar {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+body.pagina-escaneo .escaneo-visor .esquina {
+    z-index: 10;
+}
+
+body.pagina-escaneo .camara-vista-visor {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    z-index: 0 !important;
+}
+
+body.pagina-escaneo .escaneo-ar {
+    z-index: 1 !important;
+}
+
+body.pagina-escaneo .escaneo-visor .esquina {
+    z-index: 10 !important;
+}
+
+/* MANTENER EL BOTON VOLVER POR ENCIMA DE AR.JS */
+
+body.pagina-escaneo .btn-volver {
+    position: relative !important;
+    z-index: 99999 !important;
+    isolation: isolate;
+    pointer-events: auto !important;
+}
+
+/* MANTENER LA INTERFAZ SOBRE EL FONDO */
+
+body.pagina-escaneo .escaneo-contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+/* FONDO DIFUMINADO */
+
+body.pagina-escaneo .fondo-difuminado {
+    z-index: -10 !important;
+}
+
+/* BOTON VOLVER - POSICION FIJA */
+
+body.pagina-escaneo .btn-volver {
+    position: fixed !important;
+
+    top: 25px !important;
+    left: 30px !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+
+    width: max-content !important;
+
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
 }

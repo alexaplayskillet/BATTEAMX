@@ -214,3 +214,314 @@
     background-color: #c4c3d2;
     border-color: #c4c3d2;
 }
+
+
+.modal-logout {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-logout.activo {
+    display: flex;
+}
+
+.modal-logout-contenido {
+    width: 90%;
+    max-width: 430px;
+    padding: 35px 32px;
+    background: linear-gradient(
+        145deg,
+        #121a17,
+        #09100d
+    );
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(220, 30, 40, 0.08);
+    animation: aparecerModal 0.2s ease;
+}
+
+.modal-logout-icono {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(210, 30, 40, 0.12);
+    border: 1px solid rgba(230, 45, 55, 0.35);
+}
+
+.modal-logout-icono i {
+    color: #e32b35;
+    font-size: 32px;
+}
+
+.modal-logout-contenido h2 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.modal-logout-contenido p {
+    margin: 0 0 28px;
+    color: #a9b0ad;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.modal-logout-botones {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.modal-logout-botones form {
+    margin: 0;
+}
+
+.btn-cancelar,
+.btn-confirmar {
+    min-width: 145px;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-cancelar {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-cancelar:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+.btn-confirmar {
+    background: linear-gradient(90deg, #a9141d, #df2935);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-confirmar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(220, 30, 40, 0.30);
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-logout-contenido {
+        padding: 28px 20px;
+    }
+
+    .modal-logout-botones {
+        flex-direction: column;
+    }
+
+    .modal-logout-botones form {
+        width: 100%;
+    }
+        .btn-cancelar,
+    .btn-confirmar {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================
+   PERFIL - MODO CLARO
+========================================== */
+
+/* TARJETA DE PERFIL */
+
+body.modo-claro.pagina-perfil .perfil-card {
+    background-color: #14552b;
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 8px rgba(20, 85, 43, 0.3),
+        0 0 18px rgba(20, 85, 43, 0.2);
+}
+
+
+/* TITULO MI PERFIL */
+
+body.modo-claro.pagina-perfil .perfil-titulo {
+    color: #ffffff;
+}
+
+
+/* NOMBRE DE USUARIO */
+
+body.modo-claro.pagina-perfil .perfil-nombre {
+    color: #e1f5df;
+}
+
+
+/* FOTO DE PERFIL */
+
+body.modo-claro.pagina-perfil .perfil-avatar {
+    border-color: #8cdb8b;
+}
+
+
+/* TARJETA DE COLECCION */
+
+body.modo-claro.pagina-perfil .tarjetas-card {
+    background-color: #14552b;
+    border: 2px solid #218b32;
+
+    box-shadow:
+        0 0 8px rgba(20, 85, 43, 0.3),
+        0 0 18px rgba(20, 85, 43, 0.2);
+}
+
+
+/* TITULO TARJETAS COLECCIONADAS */
+
+body.modo-claro.pagina-perfil .tarjetas-titulo {
+    color: #ffffff;
+}
+
+
+/* BOTONES VERDES */
+
+body.modo-claro.pagina-perfil .btn-perfil-verde {
+    background-color: #218b32;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .btn-perfil-verde:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+}
+
+
+/* BOTON CERRAR SESION */
+
+body.modo-claro.pagina-perfil .btn-perfil-rojo {
+    background-color: #d1263a;
+    border: 2px solid #ed5969;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .btn-perfil-rojo:hover {
+    background-color: #ed5969;
+    color: #ffffff;
+}
+
+
+/* BOTON ESCANEAR */
+
+body.modo-claro.pagina-perfil .btn-perfil-outline {
+    background-color: transparent;
+    border: 2px solid #8cdb8b;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .btn-perfil-outline:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+}
+
+
+/* FLECHAS DEL CARRUSEL */
+
+body.modo-claro.pagina-perfil .carrusel-flecha {
+    background-color: #218b32;
+    border: 2px solid #48ad49;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .carrusel-flecha:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+}
+
+
+/* INDICADORES DEL CARRUSEL */
+
+body.modo-claro.pagina-perfil .tarjetas-dots .dot {
+    background-color: #8cdb8b;
+}
+
+body.modo-claro.pagina-perfil .tarjetas-dots .dot-activo {
+    background-color: #ffffff;
+}
+
+
+/* VENTANA DE CERRAR SESION */
+
+body.modo-claro.pagina-perfil .modal-logout-contenido {
+    background-color: #14552b;
+    border: 2px solid #218b32;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .modal-logout-contenido h2 {
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .modal-logout-contenido p {
+    color: #e1f5df;
+}
+
+
+/* BOTON CANCELAR */
+
+body.modo-claro.pagina-perfil .btn-cancelar {
+    background-color: transparent;
+    border: 2px solid #8cdb8b;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .btn-cancelar:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+}
+
+
+/* BOTON CONFIRMAR CIERRE DE SESION */
+
+body.modo-claro.pagina-perfil .btn-confirmar {
+    background-color: #d1263a;
+    border: 2px solid #ed5969;
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-perfil .btn-confirmar:hover {
+    background-color: #ed5969;
+}

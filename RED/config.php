@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <HTML>
     <HEAD>
-        <title>Minijuego</title>
+        <title>Mi Perfil</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
-        <!--aqui van las ligas externas-->
+        <!--links iconos y tipografias -->
+        
             <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
 			<link rel="preconnect" href="https://fonts.googleapis.com">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,19 +16,16 @@
 			<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!--Aqui iran las ligas de los elementos de css-->
+        <!--links css-->
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
-        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/juego.css">
-        <link rel="stylesheet" href="./CSS/juego-bateo.css">
-
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/perfil.css">
     </HEAD>
-
-    <BODY CLASS="pagina-minijuego">
-        <!--FONDO FIJO: franjas, grano y particulas detras de toda la pagina-->
+   <BODY CLASS="pagina-perfil">
+        <!--FONDO FIJO-->
         <div class="fondo-fijo">
             <div class="glow"></div>
             <div class="grano"></div>
@@ -58,8 +55,7 @@
             </div>
         </div>
 
-       
-     <DIV CLASS="menu">
+         <DIV CLASS="menu">
             <ul class="menulist">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
                 <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
@@ -79,13 +75,15 @@
             AQUI VAN LAS CONFIGURACIONES DEL PERFIL
         </DIV>
 
-        <!--colocar la barra principal-->
+        <!-- barra principal-->
         <DIV CLASS="title">
             <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
-            <img src="./resources/Logo.png" alt="Logo BatteaMx"
-             class="titulo-imagen logo-oscuro">
+            <img src="./resources/Logo.png"
+            alt="Logo BatteaMx"
+            class="titulo-imagen logo-oscuro">
 
-             <img src="./resources/logoModoclaro.png" alt="Logo BatteaMx"
+            <img src="./resources/logoModoclaro.png"
+            alt="Logo BatteaMx"
             class="titulo-imagen logo-claro">
 
              <ul class="menuhor">
@@ -98,7 +96,7 @@
                 <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
 
-         <div class="theme-toggle">
+          <div class="theme-toggle">
     <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
 
     <label for="themeSwitch" class="theme-toggle-track">
@@ -129,7 +127,7 @@
     </label>
 </div>
 
-         <a href="config.html" class="profile">
+        <a href="config.html" class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
             </a>
         <!-- cerrado provicional
@@ -139,63 +137,118 @@
 
         </DIV>
 
-     
-      <DIV CLASS="body">
-    <DIV CLASS="ctr w100">
+        <DIV CLASS="body">
+            <DIV CLASS="perfil-layout">
 
-        <h1 class="titulo-historia titulo-centrado minijuego-titulo">
-            <span class="verde">DEMU</span>ESTRA <span class="rojo">TUS</span> HABILI<span class="rojo">DADES</span>
-        </h1>
-        <p class="minijuego-instrucciones">
-            Presiona en el momento justo para conectar el batazo. Tienes 3 intentos.
+                <!-- IZQUIERDA: Mi perfil -->
+                <DIV class="perfil-card">
+                    <h2 class="perfil-titulo">MI PERFIL</h2>
+
+                    <img src="./PHP/foto.php" alt="Foto de perfil" class="perfil-avatar">
+
+                    <h3 class="perfil-nombre">NOMBRE USUARIO</h3>
+
+                    <DIV class="perfil-botones-fila">
+                        <form action="PHP/subirfoto.php" method="POST" enctype="multipart/form-data" class="ima">
+                        <!--<button type="submit" class="btn-perfil btn-perfil-verde" name="CARGAR">
+                            <i class="icon ion-md-cloud-upload"></i> CARGAR IMAGEN
+                        </button>
+                        <input type="file" class="btn-perfil btn-perfil-verde" name="imagen" id="imagen" accept="image/*">
+                        -->
+                        <input type="file" name="imagen" id="imagen" accept="image/*" class="input-oculto">
+
+                        <label for="imagen" class="btn-perfil btn-perfil-verde">
+                            <i class="icon ion-md-cloud-upload"></i>
+                            <span id="nombre-archivo">CARGAR IMAGEN</span>
+                        </label>
+                        <button class="btn-perfil btn-perfil-verde" name="CARGAR" type="submit">
+                            <i class="icon ion-md-camera"></i> CAMBIAR FOTO DE PERFIL
+                        </button>
+                    </form>
+                        
+                    </DIV>
+
+                    <DIV class="perfil-botones-fila">
+                        <button type="button" class="btn-perfil btn-perfil-rojo" id="btnCerrarSesion">
+                            <i class="icon ion-md-log-out"></i> CERRAR SESIÓN
+                        </button>
+
+                        <button class="btn-perfil btn-perfil-outline">
+                            <i class="icon ion-md-qr-scanner"></i> ESCANEAR
+                        </button>
+                    </DIV>
+
+                
+                </DIV>
+
+                <!-- DERECHA: Mis tarjetas coleccionadas -->
+                <DIV class="tarjetas-card">
+                    <h2 class="tarjetas-titulo">MIS TARJETAS COLECCIONADAS</h2>
+
+                    <DIV class="tarjetas-carrusel-contenedor">
+                        <button class="carrusel-flecha flecha-izq"><i class="icon ion-md-arrow-back"></i></button>
+
+                        <DIV class="tarjetas-track">
+                            <DIV class="tarjeta-coleccion">
+                                <img src="./resources/historiaSarape.png" alt="Sultán">
+                            </DIV>
+                            <DIV class="tarjeta-coleccion tarjeta-coleccion-grande">
+                                <img src="./resources/historiaToros.png" alt="Saraperos">
+                            </DIV>
+                            <DIV class="tarjeta-coleccion">
+                                <img src="./resources/historiaSulta.png" alt="Toros">
+                            </DIV>
+                            
+                        </DIV>
+
+                        <button class="carrusel-flecha flecha-der"><i class="icon ion-md-arrow-forward"></i></button>
+                    </DIV>
+
+                    <DIV class="tarjetas-dots">
+                        <span class="dot dot-activo"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </DIV>
+                </DIV>
+
+            </DIV>
+        </DIV>
+        <div class="modal-logout" id="modalLogout">
+    <div class="modal-logout-contenido">
+
+        <div class="modal-logout-icono">
+            <i class="icon ion-md-log-out"></i>
+        </div>
+
+        <h2>¿CERRAR SESIÓN?</h2>
+
+        <p>
+            ¿Estás seguro de que quieres cerrar tu sesión?
         </p>
 
-        <!-- caja de bateo-->
-        <DIV class="minijuego-campo">
+        <div class="modal-logout-botones">
 
-        <div id="caja-bateo" style="background-image: url('./resources/imagenProv.png')">
-    <canvas id="lienzo-bateo" width="900" height="560"></canvas>
+            <button type="button" class="btn-cancelar" id="cancelarLogout">
+                CANCELAR
+            </button>
 
-    <div class="hud">
-        <span id="puntos">PUNTOS: 0</span>
-        <div id="vidas"></div>
-    </div>
+            <form action="./PHP/cerrarsesion.php" method="POST">
+                <button type="submit" class="btn-confirmar">
+                    CERRAR SESIÓN
+                </button>
+            </form>
 
-    <div id="mensaje"></div>
+        </div>
 
-    <div id="pantalla">
-        <h2 id="pantalla-titulo">CAJA DE BATEO</h2>
-        <p id="pantalla-texto">Presiona clic, toque o la barra espaciadora cuando el aro rojo toque el círculo. Tienes 3 vidas.</p>
-        <button id="btn-jugar" class="bateo-btn">JUGAR</button>
     </div>
 </div>
-        </DIV>
-                 
-
-        <!-- puntaje 
-        <DIV class="minijuego-resultado">
-            <span id="resultadoTexto" class="resultado-texto">¡Prepárate para batear!</span>
-        </DIV>-->
-
-        
-        <DIV class="minijuego-botones">
-              <!--<button id="btnJugar" class="btn-minijuego btn-jugar">
-                <i class="icon ion-md-play"></i> JUGAR
-            </button>-->
-            <button id="btnReiniciar" class="btn-minijuego btn-reiniciar-juego" style="display:none;">
-                <i class="icon ion-md-refresh"></i> VOLVER A JUGAR
-            </button>
-        </DIV>
-
-    </DIV>
-</DIV>
-     
-
     </BODY>
-    <FOOTER>
-        <!--colocar los scripts-->
+     <!-- scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
-        <script src="./JS/juego-bateo.js"></script>
         <SCRIPT SRC="./JS/tema.js"></SCRIPT>
+    <FOOTER>
+       
     </FOOTER>
 </HTML>

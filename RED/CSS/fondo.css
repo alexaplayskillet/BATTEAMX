@@ -97,3 +97,75 @@
 body{
   background-color: transparent;
 }
+
+
+
+/* MODO CLARO - FONDO */
+
+body.modo-claro .fondo-fijo .glow {
+    background: radial-gradient(
+        ellipse 75% 95% at 32% 35%,
+        #d7f4d0 0%,
+        #b7e6ae 48%,
+        #8dcc87 110%
+    );
+}
+
+body.modo-claro .fondo-fijo .grano {
+    opacity: 0.18;
+    mix-blend-mode: multiply;
+}
+
+body.modo-claro .fondo-fijo .vineta {
+    background: radial-gradient(
+        ellipse 110% 110% at 50% 50%,
+        transparent 65%,
+        rgba(25, 100, 35, 0.16) 100%
+    );
+}
+
+body.modo-claro .fondo-fijo .linea {
+    mix-blend-mode: multiply;
+}
+
+body.modo-claro .fondo-fijo .l-verde {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #397d3e 40%,
+        #397d3e 60%,
+        transparent
+    );
+    opacity: 0.65;
+}
+
+body.modo-claro .fondo-fijo .l-roja {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #e53935 40%,
+        #e53935 60%,
+        transparent
+    );
+    opacity: 0.75;
+}
+
+body.modo-claro .fondo-fijo .l-azul {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #2476d3 40%,
+        #2476d3 60%,
+        transparent
+    );
+    opacity: 0.65;
+}
+
+body.modo-claro .fondo-fijo .particula {
+    background: radial-gradient(
+        circle,
+        #14552b 0%,
+        #48ad49 60%,
+        transparent 100%
+    );
+}

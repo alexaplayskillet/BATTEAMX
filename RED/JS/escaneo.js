@@ -1,52 +1,79 @@
-const video = document.getElementById('videoCamara');
-const canvas = document.getElementById('canvasProcesamiento');
-const contexto = canvas.getContext('2d', { willReadFrequently: true });
-const resultadoDiv = document.getElementById('resultadoEscaneo');
-const btnActivar = document.getElementById('btnActivarCamara');
 
-let escaneando = false;
+document.addEventListener("DOMContentLoaded", function () {
 
-btnActivar.addEventListener('click', activarCamara);
+    const visor = document.getElementById("visorAR");
+    const escena = document.querySelector(".escaneo-ar");
+    const btnActivar = document.getElementById("btnActivarCamara");
+    const resultadoDiv = document.getElementById("resultadoEscaneo");
 
-async function activarCamara() {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-            video: { facingMode: 'environment' } // usa la camara trasera si existe
-        });
+    if (!visor || !escena || !btnActivar || !resultadoDiv) {
+        return;
+    }
 
-        video.srcObject = stream;
-        await video.play();
+    let vistaCamara = null;
+    let camaraPreparada = false;
 
-        btnActivar.innerHTML = '<i class="icon ion-md-checkmark"></i> CÁMARA ACTIVA';
+    function buscarVideoAR() {
+        return [...document.querySelectorAll("video")]
+            .find(video => video.srcObject instanceof MediaStream);
+    }
+
+    function prepararVista() {
+
+        if (camaraPreparada) return;
+
+        const videoOriginal = buscarVideoAR();
+
+        if (!videoOriginal) return;
+
+        vistaCamara = document.createElement("video");
+
+        vistaCamara.autoplay = true;
+        vistaCamara.muted = true;
+        vistaCamara.playsInline = true;
+        vistaCamara.className = "camara-vista-visor";
+        vistaCamara.srcObject = videoOriginal.srcObject;
+
+        visor.prepend(vistaCamara);
+
+        videoOriginal.style.setProperty(
+            "visibility", "hidden", "important"
+        );
+
+        camaraPreparada = true;
+
+        vistaCamara.play().catch(console.error);
+
+        btnActivar.innerHTML =
+            '<i class="icon ion-md-checkmark"></i> CÁMARA ACTIVA';
+
         btnActivar.disabled = true;
 
-        escaneando = true;
-        requestAnimationFrame(procesarFrame);
-
-    } catch (error) {
-        resultadoDiv.textContent = 'No se pudo acceder a la cámara. Revisa los permisos.';
-        console.error('Error al acceder a la camara:', error);
+        resultadoDiv.textContent =
+            "Apunta la cámara hacia la tarjeta";
     }
-}
 
-function procesarFrame() {
-    if (!escaneando) return;
+    const observer = new MutationObserver(prepararVista);
 
-    if (video.readyState === video.HAVE_ENOUGH_DATA) {
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        contexto.drawImage(video, 0, 0, canvas.width, canvas.height);
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 
-        const imagenData = contexto.getImageData(0, 0, canvas.width, canvas.height);
-        const codigoQR = jsQR(imagenData.data, imagenData.width, imagenData.height);
+    const intervalo = setInterval(function () {
+        prepararVista();
 
-        if (codigoQR) {
-            resultadoDiv.textContent = `Código detectado: ${codigoQR.data}`;
-
-            // Aqui va el backend para conectar la base de datos 
-            // 
+        if (camaraPreparada) {
+            clearInterval(intervalo);
+            observer.disconnect();
         }
-    }
+    }, 500);
 
-    requestAnimationFrame(procesarFrame);
-}
+    btnActivar.addEventListener("click", prepararVista);
+
+    escena.addEventListener("camera-error", function () {
+        resultadoDiv.textContent =
+            "No se pudo acceder a la cámara. Revisa los permisos.";
+    });
+
+});

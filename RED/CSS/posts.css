@@ -248,3 +248,484 @@
     z-index: 1;
     margin-bottom: 5px;
 }
+
+.input-oculto {
+    display: none;
+}
+
+label.btn-perfil {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.ima{
+  /*background-color: red;*/
+  display: flex;
+  gap: 20px;
+}
+
+/* ==================================
+   ESTADISTICAS - MODO CLARO
+================================== */
+
+/* TITULO PRINCIPAL */
+
+body.modo-claro .titulo-historia.titulo-centrado {
+    color: #103b1b;
+}
+
+/* PALABRAS DESTACADAS */
+
+body.modo-claro .titulo-historia .verde {
+    background: linear-gradient(
+        90deg,
+        #218b32,
+        #32a640
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.modo-claro .titulo-historia .rojo {
+    background: linear-gradient(
+        90deg,
+        #d1263a,
+        #a91524
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CONTENEDORES DE ESTADISTICAS */
+
+body.modo-claro .post {
+    background-color: #14552b;
+    border: 1px solid #218b32;
+
+    box-shadow:
+        0 0 5px rgba(20, 85, 43, 0.5),
+        0 0 12px rgba(20, 85, 43, 0.4),
+        0 0 22px rgba(20, 85, 43, 0.25);
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* EFECTO HOVER */
+
+body.modo-claro .post:hover {
+    background-color: #1b6835;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 8px rgba(20, 85, 43, 0.7),
+        0 0 18px rgba(20, 85, 43, 0.5),
+        0 0 30px rgba(20, 85, 43, 0.4);
+}
+
+/* TABLAS */
+
+body.modo-claro .tabla {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* CELDAS */
+
+body.modo-claro .tabla td {
+    color: #ffffff;
+    border-color: rgba(140, 219, 139, 0.3);
+}
+
+/* NOMBRES DE EQUIPOS */
+
+body.modo-claro .celda-equipo {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* LOGOS DE LOS EQUIPOS */
+
+body.modo-claro .logo-equipo {
+    filter: drop-shadow(
+        0 0 8px rgba(140, 219, 139, 0.25)
+    );
+}
+
+
+
+/* ========================================
+   CARRUSEL DE VIDEOS - NUEVA VERSION
+======================================== */
+
+.pagina-videos .carrusel-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    gap: 12px;
+}
+
+.pagina-videos .carrusel-ventana {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    padding: 28px 0;
+}
+
+.pagina-videos .carrusel-track {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    overflow: visible;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+.pagina-videos .video-card,
+.pagina-videos .video-card-grande {
+    position: relative;
+    flex: 0 0 280px;
+    width: 280px;
+    height: 195px;
+    min-width: 280px;
+    min-height: 195px;
+    max-width: none;
+    max-height: none;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid #a6a248;
+    border-radius: 10px;
+    background-color: #09240d;
+    transform: scale(1);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.pagina-videos .video-card:hover {
+    transform: scale(1.09);
+    z-index: 10;
+    border-color: #d8c85d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.pagina-videos .video-card .video-media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    border-radius: 0;
+}
+
+.pagina-videos .video-card .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pagina-videos .carrusel-flecha {
+    position: relative;
+    flex-shrink: 0;
+    z-index: 20;
+    cursor: pointer;
+}
+
+body.modo-claro.pagina-videos .video-card {
+    border-color: #218b32;
+}
+
+body.modo-claro.pagina-videos .video-card:hover {
+    border-color: #14552b;
+    box-shadow: 0 8px 25px rgba(20, 85, 43, 0.3);
+}
+
+
+/* ==========================================
+   INFORMACION DE VIDEOS - EFECTO HOVER
+========================================== */
+
+.pagina-videos .video-card .video-info {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    background: rgba(3, 24, 8, 0.86);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 20px 55px;
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.pagina-videos .video-card:hover .video-info,
+.pagina-videos .video-card:focus-within .video-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* NOMBRE DEL EQUIPO */
+
+.pagina-videos .video-equipo {
+    color: #b5dc75;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* TITULO DEL VIDEO */
+
+.pagina-videos .video-titulo {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 6px;
+}
+
+/* DESCRIPCION */
+
+.pagina-videos .video-descripcion {
+    color: #e2e8e0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* BOTON PLAY SIEMPRE ENCIMA */
+
+.pagina-videos .video-card .play-btn {
+    z-index: 5;
+}
+
+/* EFECTO SOBRE LA IMAGEN */
+
+.pagina-videos .video-card .video-media {
+    transition: filter 0.3s ease;
+}
+
+.pagina-videos .video-card:hover .video-media {
+    filter: brightness(0.75);
+}
+
+/* MODO CLARO */
+
+body.modo-claro.pagina-videos .video-info {
+    background: rgba(20, 85, 43, 0.88);
+}
+
+body.modo-claro.pagina-videos .video-equipo {
+    color: #b7e6ae;
+}
+
+body.modo-claro.pagina-videos .video-titulo {
+    color: #ffffff;
+}
+
+body.modo-claro.pagina-videos .video-descripcion {
+    color: #edf8e9;
+}
+ 
+@media (max-width: 600px) {
+    .pagina-videos .video-card,
+    .pagina-videos .video-card-grande {
+        flex-basis: 220px;
+        width: 220px;
+        min-width: 220px;
+        height: 155px;
+        min-height: 155px;
+    }
+
+    .pagina-videos .carrusel-track {
+        gap: 16px;
+    }
+}
+
+.pagina-videos .video-card:hover .play-btn,
+.pagina-videos .video-card:focus-within .play-btn {
+    top: 83%;
+    transform: translate(-50%, -50%) scale(0.85);
+    transition: top 0.3s ease, transform 0.3s ease;
+}
+
+
+/* ===================================
+   PAGINA VIDEOS - MODO CLARO
+=================================== */
+
+/* TITULO PRINCIPAL */
+
+body.modo-claro.pagina-videos .titulo-videos {
+    color: #103b1b;
+}
+
+/* PALABRAS DESTACADAS */
+
+body.modo-claro.pagina-videos .titulo-videos .dorado {
+    color: #95851e;
+    -webkit-text-fill-color: #95851e;
+}
+
+body.modo-claro.pagina-videos .titulo-videos .verde {
+    color: #218b32;
+    -webkit-text-fill-color: #218b32;
+}
+
+body.modo-claro.pagina-videos .titulo-videos .rojo {
+    color: #c51d28;
+    -webkit-text-fill-color: #c51d28;
+}
+
+/* PARRAFO DESCRIPTIVO */
+
+body.modo-claro.pagina-videos .parrafo-videos {
+    color: #244c2b;
+}
+
+/* TARJETAS DEL CARRUSEL */
+
+body.modo-claro.pagina-videos .video-card {
+    background-color: #14552b;
+    border: 1px solid #218b32;
+
+    box-shadow:
+        0 0 5px rgba(20, 85, 43, 0.5),
+        0 0 12px rgba(20, 85, 43, 0.4),
+        0 0 22px rgba(20, 85, 43, 0.25);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* HOVER DE LAS TARJETAS */
+
+body.modo-claro.pagina-videos .video-card:hover {
+    border-color: #48ad49;
+
+    box-shadow:
+        0 0 8px rgba(33, 139, 50, 0.7),
+        0 0 18px rgba(33, 139, 50, 0.5),
+        0 0 30px rgba(33, 139, 50, 0.35);
+}
+
+/* BOTONES DE REPRODUCCION */
+
+body.modo-claro.pagina-videos .play-btn {
+    background-color: #14552b;
+    color: #ffffff;
+    border: 2px solid #48ad49;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* HOVER BOTONES DE REPRODUCCION */
+
+body.modo-claro.pagina-videos .play-btn:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+    border-color: #218b32;
+
+    box-shadow:
+        0 0 8px rgba(140, 219, 139, 0.5),
+        0 0 15px rgba(140, 219, 139, 0.3);
+}
+
+/* FLECHAS DEL CARRUSEL */
+
+body.modo-claro.pagina-videos .carrusel-flecha {
+    background-color: #14552b;
+    color: #ffffff;
+    border: 1px solid #218b32;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* HOVER FLECHAS */
+
+body.modo-claro.pagina-videos .carrusel-flecha:hover {
+    background-color: #8cdb8b;
+    color: #14552b;
+
+    box-shadow:
+        0 0 12px rgba(33, 139, 50, 0.5);
+}
+
+/* BARRA DE PROGRESO */
+
+body.modo-claro.pagina-videos .video-progress {
+    background-color: rgba(20, 85, 43, 0.65);
+}
+
+/* INDICADOR DE PROGRESO */
+
+body.modo-claro.pagina-videos .progress-dot {
+    background-color: #8cdb8b;
+
+    box-shadow:
+        0 0 6px rgba(140, 219, 139, 0.7),
+        0 0 12px rgba(140, 219, 139, 0.4);
+}
+
+
