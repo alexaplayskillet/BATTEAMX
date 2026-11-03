@@ -3,6 +3,7 @@
     <HEAD>
         <title>Videos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta charset="UTF-8">
         <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
         <!--aqui van las ligas externas-->
             <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -21,6 +22,10 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
+        <link rel="stylesheet" href="./CSS/tour.css">
+        
     </HEAD>
     <BODY CLASS="pagina-videos">
        
@@ -62,7 +67,7 @@
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
                 <li><a href="minijuego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
         </DIV>
         
@@ -87,12 +92,12 @@
 
              <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
-                <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
+                <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
                 <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
 
 
@@ -137,10 +142,15 @@
                     </label>
 
                 </div>
+<a href="config.php" class="profile">
+    <img
+        src="./PHP/foto.php"
+        alt="Foto de perfil del usuario"
+        class="profile-img"
+        onerror="this.onerror=null; this.src='./resources/usuario.png';"
+    >
+</a>
 
-             <a href="config.html" class="profile">
-                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
-            </a>
         <!-- cerrado provicional
             <button class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
@@ -188,9 +198,8 @@
                         </div>
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=TkjgRKC6O9Q"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="./filtros.html?video=1"
+                        
                         aria-label="Ver campeonato de Toros 2021">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -213,8 +222,8 @@
                         </div>
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=edlICqWt7Ww"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=2"
+                        
                         aria-label="Ver Sultanes Serie del Rey 2022">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -236,8 +245,8 @@
 
                             
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=WrbC-dlFscc"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=3"
+                        
                         aria-label="Ver Algodoneros Serie del Rey 2023">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -259,8 +268,8 @@
 
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=NP4Ena_0elw"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=4"
+                        
                         aria-label="Ver Saraperos contra Sultanes">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -282,8 +291,8 @@
 
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=RGYF-9z3nhI"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=5"
+                        
                         aria-label="Ver remontada de Toros 2021">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -305,8 +314,8 @@
 
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=DBQ4zsYzbjg"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=6"
+                        
                         aria-label="Ver Sultanes contra Leones">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -327,8 +336,8 @@
                         </div>
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=HVAoQrLhZ7A"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=7"
+                        
                         aria-label="Ver victoria de Sultanes">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -350,8 +359,8 @@
 
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=ISAHilze5Vw"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=8"
+                        
                         aria-label="Ver victoria de Saraperos">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -372,8 +381,8 @@
                         </div>
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=cW-9lNeG6Bc"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=9"
+                        
                         aria-label="Ver remontada de Sultanes">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -394,8 +403,8 @@
                         </div>
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=rzR8_xEWmPA"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=10"
+                        
                         aria-label="Ver clasificación de Sultanes">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -417,8 +426,8 @@
 
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=DV9e_LqYXrQ"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=11"
+                        
                         aria-label="Ver Toros contra Durango">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -439,8 +448,8 @@
                         </div>
 
                         <a class="play-btn"
-                        href="https://www.youtube.com/watch?v=MegI5_GHdN8"
-                        target="_blank" rel="noopener noreferrer"
+                        href="./filtros.html?video=12"
+                        
                         aria-label="Ver Toros Serie del Rey 2026">
                             <i class="icon ion-md-play"></i>
                         </a>
@@ -464,9 +473,8 @@
 
 
                             <a class="play-btn"
-                            href="https://www.youtube.com/watch?v=4jlIgfAeC0I"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="./filtros.html?video=13"
+                            
                             aria-label="Ver bicampeonato de Saraperos 2010">
 
                                 <i class="icon ion-md-play"></i>
@@ -485,11 +493,164 @@
       
 
     </BODY>
-    <FOOTER>
-        <!--colocar los scripts-->
+    <FOOTER class="footer-battea">
+
+    <DIV class="footer-contenido">
+
+        <DIV class="footer-columna footer-info">
+
+            <h2 class="footer-logo">
+                BATTEA<span>MX</span>
+            </h2>
+
+            <DIV class="footer-redes">
+
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="icon ion-logo-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="icon ion-logo-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="icon ion-logo-youtube"></i>
+                </a>
+
+            </DIV>
+              
+<DIV class="footer-contacto">
+
+    <h3 class="footer-titulo-contacto">CONTÁCTANOS</h3>
+
+    <DIV class="footer-integrante">
+
+        <h4>Arantza De La Vega</h4>
+        <span class="footer-rol">Diseñadora UI/UX y Artista 3D</span>
+
+        <a href="arantza.deg@unal.edu.mx">
+            <i class="icon ion-md-mail"></i>
+           arantza.deg@uanl.edu.mx
+        </a>
+
+        <a href="tel:+528343094868">
+            <i class="icon ion-md-call"></i>
+            +52 83 4309 4868
+        </a>
+
+    </DIV>
+
+    <DIV class="footer-integrante">
+
+        <h4>Alexandra Cardenas</h4>
+        <span class="footer-rol">Desarrolladora Web y Artista 3D</span>
+
+        <a href="correo2@ejemplo.com">
+            <i class="icon ion-md-mail"></i>
+            correo2@ejemplo.com
+        </a>
+
+        <a href="tel:+528100000002">
+            <i class="icon ion-md-call"></i>
+            +52 81 0000 0002
+        </a>
+
+    </DIV>
+
+
+</DIV>
+
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">EXPLORA</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estadisticas.php">Estadísticas</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="juego.html">Minijuego</a></li>
+            </ul>
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">MÁS SOBRE BATTEAMX</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Historia del béisbol</a></li>
+                <li><a href="estadisticas.html">Equipos mexicanos</a></li>
+                <li><a href="escaneo.html">Escaneo</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+
+        </DIV>
+
+    </DIV>
+
+    <button class="footer-subir"
+            id="btnSubir"
+            aria-label="Volver arriba">
+        <i class="icon ion-md-arrow-up"></i>
+    </button>
+
+       
+    </FOOTER>
+
+<!-- Ventana de ayuda para Videos -->
+<div class="ayuda-overlay" id="ayudaOverlay">
+
+    <div class="ayuda-modal">
+
+        <button class="ayuda-cerrar"
+                id="cerrarAyuda"
+                aria-label="Cerrar ayuda">
+            <i class="icon ion-md-close"></i>
+        </button>
+
+        <div class="ayuda-icono">
+            <i class="icon ion-md-videocam"></i>
+        </div>
+
+        <h2>Explora nuestros videos</h2>
+
+        <p>
+            Aprende a utilizar el carrusel, descubrir
+            momentos destacados y acceder a las opciones
+            de visualizacion de los videos.
+        </p>
+
+        <button class="ayuda-iniciar" id="iniciarTour">
+            <i class="icon ion-md-play"></i>
+            Comenzar recorrido
+        </button>
+
+        <span class="ayuda-nota">
+            Puedes cerrar el recorrido cuando quieras.
+        </span>
+
+    </div>
+ <!--colocar los scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
         <SCRIPT SRC="./JS/tema.js"></SCRIPT>
         <SCRIPT SRC="./JS/carrusel-vid.js"></SCRIPT>
-        <SCRIPT SRC="./JS/enlaces-videos.js"></SCRIPT>
-    </FOOTER>
+        <SCRIPT SRC="./JS/enlaces-videos.js"></SCRIPT> 
+        <script src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js"></script>
+        <script src="./JS/tour.js?v=5"></script>
+        <script src="./JS/scroll_reveal.js"></script>
+</div>
+
 </HTML>

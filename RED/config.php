@@ -23,6 +23,9 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/perfil.css">
+        <!-- Estilos del recorrido guiado -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
+        <link rel="stylesheet" href="./CSS/tour.css">
     </HEAD>
    <BODY CLASS="pagina-perfil">
         <!--FONDO FIJO-->
@@ -63,7 +66,7 @@
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
                 <li><a href="minijuego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
         </DIV>
         
@@ -93,7 +96,7 @@
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
                 <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
 
           <div class="theme-toggle">
@@ -127,9 +130,16 @@
     </label>
 </div>
 
-        <a href="config.html" class="profile">
-                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
-            </a>
+       
+<a href="config.html" class="profile">
+    <img
+        src="./PHP/foto.php"
+        alt="Foto de perfil del usuario"
+        class="profile-img"
+        onerror="this.onerror=null; this.src='./resources/usuario.png';"
+    >
+</a>
+
         <!-- cerrado provicional
             <button class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
@@ -244,10 +254,29 @@
 
     </div>
 </div>
+
+        <!-- Ventana para iniciar el recorrido de Mi Perfil -->
+        <div class="ayuda-overlay" id="ayudaOverlay">
+            <div class="ayuda-modal">
+                <button class="ayuda-cerrar" id="cerrarAyuda" type="button" aria-label="Cerrar ayuda">
+                    <i class="icon ion-md-close"></i>
+                </button>
+                <div class="ayuda-icono"><i class="icon ion-md-person"></i></div>
+                <h2>Conoce tu perfil</h2>
+                <p>Descubre como cambiar tu foto, consultar tus tarjetas coleccionadas y administrar tu sesion en BATTEAMX.</p>
+                <button class="ayuda-iniciar" id="iniciarTour" type="button">
+                    <i class="icon ion-md-play"></i> Comenzar recorrido
+                </button>
+                <span class="ayuda-nota">Puedes cerrar el recorrido cuando quieras.</span>
+            </div>
+        </div>
     </BODY>
      <!-- scripts-->
         <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
         <SCRIPT SRC="./JS/tema.js"></SCRIPT>
+        <!-- Driver.js y recorridos guiados -->
+        <script src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js"></script>
+       <script src="./JS/tour.js?v=10"></script>
     <FOOTER>
        
     </FOOTER>

@@ -16,7 +16,7 @@
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
             
         <!--Aqui iran las ligas de los elementos de css-->
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
@@ -25,6 +25,9 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
+        <link rel="stylesheet" href="./CSS/tour.css">
+        <link rel="stylesheet" href="./CSS/tarjetas_carrusel.css">
+
 
     </HEAD>
     <BODY>
@@ -62,12 +65,12 @@
             <DIV CLASS="menu">
             <ul class="menulist">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
-                <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
+                <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
-                <li><a href="minijuego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
         </DIV>
         
@@ -81,12 +84,12 @@
            
             <ul class="menuhor">
                 <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
-                <li><a href="estadisticas.html"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
+                <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
                 <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                 <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
            <div class="theme-toggle">
     <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
@@ -109,9 +112,16 @@
 
     </label>
         </div>
-            <a href="config.php" class="profile">
-                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
-            </a>
+          
+<a href="config.php" class="profile">
+    <img
+        src="./PHP/foto.php"
+        alt="Foto de perfil del usuario"
+        class="profile-img"
+        onerror="this.onerror=null; this.src='./resources/usuario.png';"
+    >
+</a>
+
         <!-- cerrado provicional
             <button class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
@@ -167,11 +177,11 @@
                 generación en generación.</p>
 
             <DIV class="historia-imagenes">
-                <img src="./resources/fotoE1.jpg" alt="Imagen 1" class="img-abajo borde-neon">
-                <img src="./resources/fotoE2.jpg" alt="Imagen 2" class="img-abajo borde-neon">
+                <img src="./resources/fotoE1.jpg" loading="lazy" decoding="async" alt="Imagen 1" class="img-abajo borde-neon">
+                <img src="./resources/fotoE2.jpg" loading="lazy" decoding="async" alt="Imagen 2" class="img-abajo borde-neon">
             </DIV>
         </DIV>
-          <img src="./resources/fotoL1.jpg" alt="Imagen historia" class="img-lateral borde-neon">
+          <img src="./resources/fotoL1.jpg" loading="lazy" decoding="async" alt="Imagen historia" class="img-lateral borde-neon">
 
           <DIV CLASS="seccion-equipos">
     <h2 class="titulo-historia titulo-centrado">
@@ -180,7 +190,7 @@
 
     <DIV class="equipos-grid">
         <DIV class="equipo-card">
-                <img src="./resources/historiaSulta.png"
+                <img src="./resources/historiaSulta.png" loading="lazy" decoding="async"
                     alt="Sultanes de Monterrey"
                     class="equipo-img">
 
@@ -191,7 +201,7 @@
         </DIV>
 
         <DIV class="equipo-card">
-                <img src="./resources/historiaSarape.png"
+                <img src="./resources/historiaSarape.png" loading="lazy" decoding="async"
                     alt="Saraperos de Saltillo"
                     class="equipo-img">
 
@@ -202,7 +212,7 @@
         </DIV>
 
        <DIV class="equipo-card">
-            <img src="./resources/historiaToros.png"
+            <img src="./resources/historiaToros.png" loading="lazy" decoding="async"
                 alt="Toros de Tijuana"
                 class="equipo-img">
 
@@ -214,7 +224,7 @@
 
 
       <DIV class="equipo-card">
-            <img src="./resources/hisotriaUnion.png"
+            <img src="./resources/hisotriaUnion.png" loading="lazy" decoding="async"
                 alt="Algodoneros de Unión Laguna"
                 class="equipo-img">
 
@@ -226,10 +236,36 @@
     </DIV>
 </DIV>
         </DIV>
-                
+
+                <!-- CARRUSEL DE TARJETAS COLECCIONABLES -->
+                <section class="seccion-tarjetas" aria-label="Tarjetas coleccionables de la Zona Norte">
+                    <div class="tarjetas-encabezado">
+                        <h2 class="titulo-historia titulo-centrado">
+                            TARJETAS <span class="verde">COLECCIONABLES</span>
+                            DE LA <span class="rojo">ZONA NORTE</span>
+                        </h2>
+                        <p>Descubre las tarjetas de los equipos de la Zona Norte del béisbol mexicano. ¡Explora nuestra colección!</p>
+                    </div>
+
+                    <div class="carrusel-tarjetas">
+                        <button class="tarjetas-flecha anterior" id="tarjetasAnterior" type="button" aria-label="Tarjeta anterior">
+                            <i class="icon ion-md-arrow-back"></i>
+                        </button>
+                        <div class="tarjetas-ventana">
+                            <div class="tarjetas-pista" id="tarjetasPista">
+                                <!-- El archivo JS/tarjetasCarrusel.js carga resources/1.png a resources/12.png -->
+                            </div>
+                        </div>
+                        <button class="tarjetas-flecha siguiente" id="tarjetasSiguiente" type="button" aria-label="Tarjeta siguiente">
+                            <i class="icon ion-md-arrow-forward"></i>
+                        </button>
+                    </div>
+                    <div class="tarjetas-indicadores" id="tarjetasIndicadores"></div>
+                </section>
+
             </DIV>
         </DIV>
-    </BODY>
+   
 
     
 <FOOTER class="footer-battea">
@@ -331,18 +367,12 @@
 
             <ul class="footer-enlaces">
                 <li><a href="index.html">Historia del béisbol</a></li>
-                <li><a href="estadisticas.html">Equipos mexicanos</a></li>
+                <li><a href="estadisticas.php">Equipos mexicanos</a></li>
                 <li><a href="escaneo.html">Escaneo</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="#" class="abrir-ayuda">Ayuda</a></li>
             </ul>
 
         </DIV>
-
-    </DIV>
-
-    <DIV class="footer-inferior">
-
-        <p>© 2026 BatteaMX. Todos los derechos reservados.</p>
 
     </DIV>
 
@@ -351,9 +381,54 @@
             aria-label="Volver arriba">
         <i class="icon ion-md-arrow-up"></i>
     </button>
-        <!--colocar los scripts-->
-        <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
-        <SCRIPT SRC="./JS/tema.js"></SCRIPT> 
+
+
 </FOOTER>
 
+<!-- Ventana flotante de ayuda -->
+<div class="ayuda-overlay" id="ayudaOverlay">
+
+    <div class="ayuda-modal">
+
+        <button class="ayuda-cerrar"
+                id="cerrarAyuda"
+                aria-label="Cerrar ayuda">
+            <i class="icon ion-md-close"></i>
+        </button>
+
+        <div class="ayuda-icono">
+            <i class="icon ion-md-help-circle"></i>
+        </div>
+
+        <h2>¡Bienvenido a BATTEAMX!</h2>
+
+        <p>
+            Descubre cómo navegar por nuestra plataforma,
+            consultar estadísticas, explorar videos,
+            participar en trivias y mucho más.
+        </p>
+
+        <button class="ayuda-iniciar" id="iniciarTour">
+            <i class="icon ion-md-play"></i>
+            Comenzar recorrido
+        </button>
+
+        <span class="ayuda-nota">
+            Puedes cerrar el recorrido cuando quieras.
+        </span>
+
+    </div>
+
+</div>
+
+        <!--colocar los scripts-->
+        <script src="./JS/buttons.js" defer></script>
+<script src="./JS/tema.js" defer></script>
+<script src="./JS/tarjetaCarrusel.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js" defer></script>
+
+<script src="./JS/scroll_reveal.js" defer></script>
+<script src="./JS/tour.js" defer></script>
+</BODY>
 </HTML>

@@ -26,6 +26,9 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
         <link rel="stylesheet" href="./CSS/estadisticas.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
+        <link rel="stylesheet" href="./CSS/tour.css">
     </HEAD>
     <BODY>
         <div class="fondo-fijo">
@@ -64,8 +67,8 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
-                <li><a href="minijuego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
         </DIV>
         
@@ -94,7 +97,7 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
                 <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
                 <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="ayuda.html"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
             </ul>
             
            
@@ -140,9 +143,16 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
 </div>
 
             
-         <a href="config.html" class="profile">
-                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
-            </a>
+        
+<a href="config.php" class="profile">
+    <img
+        src="./PHP/foto.php"
+        alt="Foto de perfil del usuario"
+        class="profile-img"
+        onerror="this.onerror=null; this.src='./resources/usuario.png';"
+    >
+</a>
+
         <!-- cerrado provicional
             <button class="profile">
                 <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
@@ -232,10 +242,145 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
                 </section>
             </main>
         </DIV>
-    </BODY>
-    <FOOTER>
-        <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
-        <SCRIPT SRC="./JS/tema.js"></SCRIPT>
-        
+    <FOOTER class="footer-battea">
+
+    <DIV class="footer-contenido">
+
+        <DIV class="footer-columna footer-info">
+
+            <h2 class="footer-logo">
+                BATTEA<span>MX</span>
+            </h2>
+
+            <DIV class="footer-redes">
+
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="icon ion-logo-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="icon ion-logo-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="icon ion-logo-youtube"></i>
+                </a>
+
+            </DIV>
+              
+<DIV class="footer-contacto">
+
+    <h3 class="footer-titulo-contacto">CONTÁCTANOS</h3>
+
+    <DIV class="footer-integrante">
+
+        <h4>Arantza De La Vega</h4>
+        <span class="footer-rol">Diseñadora UI/UX y Artista 3D</span>
+
+        <a href="arantza.deg@unal.edu.mx">
+            <i class="icon ion-md-mail"></i>
+           arantza.deg@uanl.edu.mx
+        </a>
+
+        <a href="tel:+528343094868">
+            <i class="icon ion-md-call"></i>
+            +52 83 4309 4868
+        </a>
+
+    </DIV>
+
+    <DIV class="footer-integrante">
+
+        <h4>Alexandra Cardenas</h4>
+        <span class="footer-rol">Desarrolladora Web y Artista 3D</span>
+
+        <a href="correo2@ejemplo.com">
+            <i class="icon ion-md-mail"></i>
+            correo2@ejemplo.com
+        </a>
+
+        <a href="tel:+528100000002">
+            <i class="icon ion-md-call"></i>
+            +52 81 0000 0002
+        </a>
+
+    </DIV>
+
+
+</DIV>
+
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">EXPLORA</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estadisticas.php">Estadísticas</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="juego.html">Minijuego</a></li>
+            </ul>
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">MÁS SOBRE BATTEAMX</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Historia del béisbol</a></li>
+                <li><a href="estadisticas.php">Equipos mexicanos</a></li>
+                <li><a href="escaneo.html">Escaneo</a></li>
+                <li><a href="#" class="abrir-ayuda">Ayuda</a></li>
+            </ul>
+
+        </DIV>
+
+    </DIV>
+
+    <button class="footer-subir"
+            id="btnSubir"
+            aria-label="Volver arriba">
+        <i class="icon ion-md-arrow-up"></i>
+    </button>
+
     </FOOTER>
+
+    <!-- Ayuda flotante de Estadisticas -->
+    <div class="ayuda-overlay" id="ayudaOverlay">
+        <div class="ayuda-modal" role="dialog" aria-modal="true" aria-labelledby="tituloAyuda">
+            <button class="ayuda-cerrar" id="cerrarAyuda" aria-label="Cerrar ayuda">
+                <i class="icon ion-md-close"></i>
+            </button>
+            <div class="ayuda-icono"><i class="icon ion-md-help-circle"></i></div>
+            <h2 id="tituloAyuda">Ayuda de Estadisticas</h2>
+            <p>Aprende a interpretar las posiciones de los equipos, los resultados y los enfrentamientos de la temporada.</p>
+            <button class="ayuda-iniciar" id="iniciarTour">
+                <i class="icon ion-md-play"></i> Comenzar recorrido
+            </button>
+            <span class="ayuda-nota">Puedes cerrar el recorrido cuando quieras.</span>
+        </div>
+    </div>
+
+    <script src="./JS/buttons.js" defer></script>
+<script src="./JS/tema.js" defer></script>
+<script src="./JS/tarjetaCarrusel.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js" defer></script>
+
+<script src="./JS/scroll_reveal.js" defer></script>
+<script src="./JS/tour.js" defer></script>
+</BODY>
 </HTML>

@@ -1,49 +1,97 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const enlaces = document.querySelectorAll(
-        ".pagina-videos .video-card .play-btn"
+    const carrusel = document.querySelector(
+        ".pagina-videos .carrusel-track"
     );
 
-    enlaces.forEach(enlace => {
-        const urlOriginal = enlace.getAttribute("href");
+    if (!carrusel) {
+        console.error("No se encontro el carrusel de videos");
+        return;
+    }
 
-        if (!urlOriginal) return;
+    // Relacion entre miniaturas y archivos MP4
+    const videos = {
+        "TkjgRKC6O9Q": 1,
+        "edlICqWt7Ww": 2,
+        "WrbC-dlFscc": 3,
+        "NP4Ena_0elw": 4,
+        "RGYF-9z3nhI": 5,
+        "DBQ4zsYzbjg": 6,
+        "HVAoQrLhZ7A": 7,
+        "ISAHilze5Vw": 8,
+        "cW-9lNeG6Bc": 9,
+        "rzR8_xEWmPA": 10,
+        "DV9e_LqYXrQ": 11,
+        "MegI5_GHdN8": 12,
+        "4jlIgfAeC0I": 13
+    };
 
-        try {
-            const url = new URL(urlOriginal, window.location.href);
+    // Obtener el numero a partir de la miniatura
+    function obtenerNumeroVideo(tarjeta) {
 
-            let videoId = null;
+        const imagen = tarjeta.querySelector(".video-media");
 
-            if (
-                url.hostname === "youtube.com" ||
-                url.hostname === "www.youtube.com" ||
-                url.hostname === "m.youtube.com"
-            ) {
-                videoId = url.searchParams.get("v");
+        if (!imagen) return null;
 
-                if (!videoId && url.pathname.startsWith("/shorts/")) {
-                    videoId = url.pathname.split("/")[2];
-                }
+        const coincidencia = imagen.src.match(
+            /youtube\.com\/vi\/([^/]+)\//
+        );
+
+        if (!coincidencia) return null;
+
+        return videos[coincidencia[1]] || null;
+    }
+
+    // Configurar los enlaces de todas las tarjetas
+    function configurarTarjetas() {
+
+        const tarjetas = carrusel.querySelectorAll(".video-card");
+
+        tarjetas.forEach(tarjeta => {
+
+            const numero = obtenerNumeroVideo(tarjeta);
+
+            if (!numero) return;
+
+            const ruta = `./filtros.html?video=${numero}`;
+
+            tarjeta.dataset.video = numero;
+            tarjeta.style.cursor = "pointer";
+
+            const botonPlay = tarjeta.querySelector(".play-btn");
+
+            if (botonPlay) {
+                botonPlay.href = ruta;
+                botonPlay.removeAttribute("target");
+                botonPlay.removeAttribute("rel");
             }
 
-            if (url.hostname === "youtu.be") {
-                videoId = url.pathname.split("/")[1];
-            }
+        });
+    }
 
-            if (!videoId || !/^[a-zA-Z0-9_-]{11}$/.test(videoId)) {
-                return;
-            }
+    configurarTarjetas();
 
-            enlace.href =
-                "filtros.html?video=" + encodeURIComponent(videoId);
+    // Capturar el clic antes de que se abra el MP4
+    carrusel.addEventListener("click", (evento) => {
 
-            enlace.removeAttribute("target");
-            enlace.removeAttribute("rel");
+        const tarjeta = evento.target.closest(".video-card");
 
-        } catch (error) {
-            console.warn("Enlace de video no válido:", urlOriginal);
-        }
-    });
+        if (!tarjeta) return;
+
+        const numero = obtenerNumeroVideo(tarjeta);
+
+        if (!numero) return;
+
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        window.location.assign(
+            `./filtros.html?video=${numero}`
+        );
+
+    }, true);
+
+    console.log("Enlaces de videos configurados correctamente");
 
 });

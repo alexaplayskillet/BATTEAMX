@@ -34,15 +34,18 @@
             <!-- CONTENEDOR DEL VIDEO -->
             <DIV class="video-wrapper" id="videoWrapper">
 
-                <!-- REPRODUCTOR MP4 -->
-                <video id="mainVideo"
-                       class="video-principal"
-                       poster="./resources/videos/thumb1.jpg">
 
-                    <source src="./resources/videos/partido1.mp4"
-                            type="video/mp4">
+<video id="mainVideo"
+       class="video-principal"
+       preload="metadata"
+       playsinline>
 
-                </video>
+    <source src=""
+            type="video/mp4">
+
+    Tu navegador no soporta videos HTML5.
+
+</video>
 
                 <!-- REPRODUCTOR YOUTUBE -->
                 <div id="youtubeContenedor"
@@ -137,8 +140,9 @@
 
     <SCRIPT SRC="./JS/reproductor.js"></SCRIPT>
     <SCRIPT SRC="./JS/tema.js"></SCRIPT>
-    <SCRIPT SRC="./JS/cargar-video.js"></SCRIPT>
+   <SCRIPT SRC="./JS/cargar-video.js?v=3"></SCRIPT>
     <SCRIPT SRC="./JS/filtros-video.js"></SCRIPT>
+    
 
 </BODY>
 </HTML>

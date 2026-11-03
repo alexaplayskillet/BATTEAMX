@@ -1,0 +1,173 @@
+
+/* Recuadros del recorrido */
+
+.driver-popover.tour-batteamx {
+    background: #123c21;
+    color: #ffffff;
+    border: 2px solid #8e8b3a;
+    border-radius: 16px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    max-width: 350px;
+}
+
+.tour-batteamx .driver-popover-title {
+    color: #f1d66c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tour-batteamx .driver-popover-description {
+    color: #f1f5ef;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.tour-batteamx .driver-popover-progress-text {
+    color: #c4d7bf;
+    font-size: 12px;
+}
+
+.tour-batteamx .driver-popover-footer button {
+    background: #8e8b3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.tour-batteamx .driver-popover-footer button:hover {
+    background: #aaa64a;
+    color: #ffffff;
+}
+
+.tour-batteamx .driver-popover-close-btn {
+    color: #ffffff;
+}
+
+.tour-batteamx .driver-popover-close-btn:hover {
+    color: #f1d66c;
+}
+
+.tour-batteamx .driver-popover-arrow {
+    border-color: #123c21;
+}
+
+/* Modo claro */
+
+body.modo-claro .driver-popover.tour-batteamx {
+    background: #14552b;
+    border-color: #8cdb8b;
+}
+
+@media (max-width: 600px) {
+    .driver-popover.tour-batteamx {
+        max-width: 290px;
+        padding: 15px;
+    }
+}
+
+
+/* Ventana flotante de ayuda */
+
+.ayuda-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    padding: 20px;
+}
+
+.ayuda-overlay.activo {
+    display: flex;
+}
+
+.ayuda-modal {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    background: #123c21;
+    border: 2px solid #8e8b3a;
+    border-radius: 18px;
+    padding: 30px 25px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.ayuda-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.ayuda-icono {
+    font-size: 40px;
+    color: #f1d66c;
+    margin-bottom: 10px;
+}
+
+.ayuda-modal h2 {
+    font-size: 20px;
+    color: #f1d66c;
+    margin-bottom: 12px;
+}
+
+.ayuda-modal p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #e0eee0;
+}
+
+.ayuda-iniciar {
+    margin-top: 20px;
+    background: #8e8b3a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ayuda-iniciar:hover {
+    background: #aaa64a;
+}
+
+.ayuda-nota {
+    display: block;
+    margin-top: 15px;
+    font-size: 11px;
+    color: #bfd4bf;
+}
+
+/* Modo claro */
+
+body.modo-claro .ayuda-modal {
+    background: #14552b;
+    border-color: #8cdb8b;
+}
+
+@media (max-width: 480px) {
+    .ayuda-modal {
+        max-width: 330px;
+        padding: 25px 18px;
+    }
+}

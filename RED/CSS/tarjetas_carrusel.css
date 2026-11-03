@@ -1,0 +1,189 @@
+
+/* SECCION TARJETAS */
+
+.seccion-tarjetas {
+    width: 100%;
+    padding: 75px 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tarjetas-encabezado {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tarjetas-encabezado p {
+    font-family: 'Poppins', sans-serif;
+    color: #d4d4d4;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* CARRUSEL */
+
+.carrusel-tarjetas {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.tarjetas-ventana {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(0, 35, 10, 0.7);
+    border: 1px solid rgba(75, 190, 85, 0.4);
+    padding: 35px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(0, 100, 20, 0.18);
+}
+
+.tarjetas-pista {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.7s ease-in-out;
+    will-change: transform;
+}
+
+/* CONTENEDORES INDIVIDUALES */
+
+.tarjeta-slide {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: linear-gradient(
+        145deg,
+        rgba(13, 70, 26, 0.8),
+        rgba(0, 22, 8, 0.9)
+    );
+    border: 1px solid rgba(77, 175, 80, 0.25);
+}
+
+.tarjeta-slide img {
+    width: 100%;
+    max-width: 280px;
+    height: 390px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.4));
+}
+
+.tarjeta-slide:hover img {
+    transform: scale(1.05);
+}
+
+/* FLECHAS */
+
+.tarjetas-flecha {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid #43b64a;
+    background: #063817;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarjetas-flecha:hover {
+    background: #37a743;
+    box-shadow: 0 0 15px rgba(60, 200, 80, 0.4);
+}
+
+/* INDICADORES */
+
+.tarjetas-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.tarjetas-punto {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #647567;
+    cursor: pointer;
+}
+
+.tarjetas-punto.activo {
+    background: #42c64e;
+    width: 25px;
+    border-radius: 8px;
+}
+
+/* MODO CLARO */
+
+body.modo-claro .tarjetas-ventana,
+body.light-mode .tarjetas-ventana {
+    background: rgba(230, 245, 230, 0.85);
+    border-color: #8cbd92;
+}
+
+body.modo-claro .tarjeta-slide,
+body.light-mode .tarjeta-slide {
+    background: linear-gradient(145deg, #e4f1e5, #c9e3cb);
+}
+
+body.modo-claro .tarjetas-encabezado p,
+body.light-mode .tarjetas-encabezado p {
+    color: #344d38;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .tarjeta-slide {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .seccion-tarjetas {
+        padding: 45px 12px;
+    }
+
+    .carrusel-tarjetas {
+        gap: 6px;
+    }
+
+    .tarjetas-ventana {
+        padding: 18px 10px;
+    }
+
+    .tarjeta-slide {
+        flex-basis: 100%;
+        padding: 12px;
+    }
+
+    .tarjeta-slide img {
+        height: 350px;
+    }
+
+    .tarjetas-flecha {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tarjetas-pista,
+    .tarjeta-slide img {
+        transition: none;
+    }
+}
