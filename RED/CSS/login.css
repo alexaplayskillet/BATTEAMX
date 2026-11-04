@@ -240,3 +240,422 @@ body{
     outline: 2px solid #f44336;  
     box-shadow: 0 0 5px rgba(244, 67, 54, 0.8);
 }
+
+/* ==========================================
+   LOGIN RESPONSIVO - BATTEAMX
+========================================== */
+
+/* Ajustes generales */
+.log {
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 410px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+}
+
+.input-grupo .inp {
+    width: 100%;
+    min-width: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formulario .btn {
+    width: 70%;
+}
+
+/* ==========================================
+   TABLETS - HASTA 768px
+========================================== */
+
+@media (max-width: 768px) {
+
+    .log {
+        padding: 30px 20px;
+        background-position: center;
+    }
+
+    .formulario {
+        max-width: 400px;
+        padding: 28px;
+        border-radius: 18px;
+    }
+
+    .logo {
+        max-width: 300px;
+        margin-bottom: 22px;
+    }
+
+    .cabecera h1 {
+        font-size: 2.1rem;
+    }
+
+    .formulario .btn {
+        width: 85%;
+    }
+}
+
+/* ==========================================
+   CELULARES - HASTA 480px
+========================================== */
+
+@media (max-width: 480px) {
+
+    .log {
+        padding: 24px 16px;
+        align-items: center;
+        justify-content: center;
+        background-position: center center;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 370px;
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto 25px;
+    }
+
+    /* Titulo */
+    .cabecera {
+        margin-bottom: 20px;
+        gap: 8px;
+    }
+
+    .cabecera h1 {
+        font-size: clamp(1.4rem, 6vw, 1.9rem);
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .cabecera::before,
+    .cabecera::after {
+        min-width: 8px;
+        height: 2px;
+    }
+
+    /* Campos */
+    .input-grupo {
+        margin: 12px 0;
+    }
+
+    .input-grupo .inp {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 12px 12px 42px;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .input-grupo .icon {
+        left: 14px;
+        font-size: 19px;
+        z-index: 1;
+    }
+
+    /* Validaciones */
+    .validations {
+        text-align: left;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Boton */
+    .formulario .btn {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+    /* Registro */
+    .formulario a {
+        margin-top: 22px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
+/* ==========================================
+   CELULARES PEQUEÑOS - HASTA 360px
+========================================== */
+
+@media (max-width: 360px) {
+
+    .log {
+        padding: 18px 12px;
+    }
+
+    .formulario {
+        padding: 24px 16px;
+    }
+
+    .logo {
+        max-width: 215px;
+    }
+
+    .cabecera h1 {
+        font-size: 1.35rem;
+    }
+
+    .input-grupo .inp {
+        font-size: 16px;
+    }
+
+    .formulario a {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   PANTALLAS CON POCA ALTURA
+========================================== */
+
+@media (max-height: 650px) {
+
+    .log {
+        align-items: flex-start;
+    }
+
+    .formulario {
+        margin: auto;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .cabecera {
+        margin-bottom: 12px;
+    }
+}
+
+/* ==========================================
+   REGISTRO RESPONSIVO - BATTEAMX
+========================================== */
+
+/* Contenedor principal */
+.log-registro {
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto;
+    padding: 35px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulario */
+.log-registro .formulario {
+    width: 100%;
+    max-width: 410px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.log-registro .logo {
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+}
+
+/* Campos */
+.log-registro .input-grupo {
+    width: 100%;
+}
+
+.log-registro .input-grupo .inp {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Boton de registro */
+.log-registro .btn-green {
+    width: 70%;
+    min-height: 48px;
+    background-color: #2e9e40;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.log-registro .btn-green:hover {
+    background-color: #237d32;
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 768px) {
+
+    .log-registro {
+        padding: 30px 20px;
+    }
+
+    .log-registro .formulario {
+        max-width: 400px;
+        padding: 28px;
+    }
+
+    .log-registro .logo {
+        max-width: 290px;
+        margin-bottom: 20px;
+    }
+
+    .log-registro .btn-green {
+        width: 85%;
+    }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 480px) {
+
+    .log-registro {
+        padding: 20px 16px;
+        align-items: center;
+        background-position: center;
+    }
+
+    .log-registro .formulario {
+        width: 100%;
+        max-width: 370px;
+        padding: 24px 22px;
+        border-radius: 16px;
+    }
+
+    /* Logo */
+    .log-registro .logo {
+        max-width: 240px;
+        margin: 0 auto 18px;
+    }
+
+    /* Titulo */
+    .log-registro .cabecera {
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+
+    .log-registro .cabecera h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    /* Campos */
+    .log-registro .input-grupo {
+        margin: 10px 0;
+    }
+
+    .log-registro .input-grupo .inp {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 12px 12px 42px;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .log-registro .input-grupo .icon {
+        left: 14px;
+        font-size: 19px;
+        z-index: 1;
+    }
+
+    /* Mensajes de validacion */
+    .log-registro .validations {
+        text-align: left;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Boton */
+    .log-registro .btn-green {
+        width: 100%;
+        min-height: 48px;
+        margin-top: 18px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    /* Enlace al login */
+    .log-registro .formulario a {
+        display: block;
+        margin-top: 20px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ==========================================
+   CELULARES PEQUEÑOS
+========================================== */
+
+@media (max-width: 360px) {
+
+    .log-registro {
+        padding: 15px 12px;
+    }
+
+    .log-registro .formulario {
+        padding: 20px 16px;
+    }
+
+    .log-registro .logo {
+        max-width: 210px;
+    }
+
+    .log-registro .cabecera h1 {
+        font-size: 1.5rem;
+    }
+
+    .log-registro .formulario a {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   PANTALLAS DE POCA ALTURA
+========================================== */
+
+@media (max-height: 700px) {
+
+    .log-registro {
+        align-items: flex-start;
+    }
+
+    .log-registro .formulario {
+        margin: auto;
+    }
+
+    .log-registro .logo {
+        margin-bottom: 12px;
+    }
+
+    .log-registro .cabecera {
+        margin-bottom: 10px;
+    }
+}

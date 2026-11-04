@@ -25,7 +25,7 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
-        <link rel="stylesheet" href="./CSS/estadisticas.css">
+        <link rel="stylesheet" href="./CSS/estadisticas.css?v=5">
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
         <link rel="stylesheet" href="./CSS/tour.css">
@@ -117,7 +117,12 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
         <DIV CLASS="body">
             <main class="ctr w100 estadisticas-contenido">
                 <header class="estadisticas-encabezado">
-                    <h1 class="titulo-historia titulo-centrado">ESTAS SON LAS <span class="verde">ESTAD</span>IST<span class="rojo">ICAS</span></h1>
+                    <h1 class="titulo-historia titulo-centrado titulo-estadisticas">
+    ESTAS SON LAS
+    <span class="titulo-estadisticas-segunda">
+        <span class="verde">ESTAD</span>IST<span class="rojo">ICAS</span>
+    </span>
+</h1>
                     <p class="estadisticas-subtitulo">Conoce las posiciones y los enfrentamientos de tus equipos favoritos de la LMB.</p>
                 </header>
 
