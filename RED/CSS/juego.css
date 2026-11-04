@@ -240,3 +240,131 @@ body.modo-claro.pagina-minijuego .btn-reiniciar-juego:hover {
         0 0 8px rgba(140, 219, 139, 0.5),
         0 0 15px rgba(140, 219, 139, 0.3);
 }
+
+@media (max-width: 780px) {
+
+    body.pagina-minijuego #caja-bateo {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        touch-action: manipulation;
+    }
+
+    body.pagina-minijuego #lienzo-bateo {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        object-fit: fill;
+        touch-action: manipulation;
+    }
+
+    body.pagina-minijuego .hud {
+        max-width: 100%;
+        padding: 8px 10px;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    body.pagina-minijuego #puntos {
+        font-size: 12px;
+        line-height: 1.4;
+        white-space: nowrap;
+    }
+
+    body.pagina-minijuego #vidas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        max-width: 50%;
+        font-size: 13px;
+    }
+
+    body.pagina-minijuego #mensaje {
+        max-width: 90%;
+        font-size: 13px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    body.pagina-minijuego #pantalla {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        padding: 12px;
+        overflow-y: auto;
+        text-align: center;
+    }
+
+    body.pagina-minijuego #pantalla-titulo {
+        max-width: 100%;
+        margin: 0 0 8px;
+        font-size: clamp(15px, 4.5vw, 24px);
+        line-height: 1.2;
+    }
+
+    body.pagina-minijuego #pantalla-texto {
+        max-width: 100%;
+        margin: 0 auto 12px;
+        font-size: clamp(10px, 2.7vw, 13px);
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
+    body.pagina-minijuego #btn-jugar {
+        min-height: 38px;
+        max-width: 100%;
+        padding: 8px 18px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 380px) {
+
+    body.pagina-minijuego .hud {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    body.pagina-minijuego #puntos {
+        font-size: 10px;
+    }
+
+    body.pagina-minijuego #vidas {
+        font-size: 11px;
+    }
+
+    body.pagina-minijuego #pantalla {
+        padding: 8px;
+    }
+
+    body.pagina-minijuego #pantalla-titulo {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    body.pagina-minijuego #pantalla-texto {
+        font-size: 10px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    body.pagina-minijuego #btn-jugar {
+        min-height: 32px;
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+}

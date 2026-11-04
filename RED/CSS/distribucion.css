@@ -1,42 +1,30 @@
-/*etiquetas completas*/
 
-/*para reiniciar los margenes de toda la pagina
-html, body{
-  margin: 0;
-}*/
-
-body{
-  background-color: aliceblue;
+body {
+    background-color: aliceblue;
 }
 
-/*barra principal*/
-.title{
- display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-left: 5px;
-  width: 100%;
-  background-color: #001c00;
-  z-index: 1000;
-  gap: 10px;
-
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 5px;
+    width: 100%;
+    background-color: #001c00;
+    z-index: 1000;
+    gap: 10px;
 }
 
-.title h1{
-  flex-shrink: 0; 
+.title h1,
+.title .profile {
+    flex-shrink: 0;
 }
 
-.title .profile{
-  flex-shrink: 0; 
-}
-
-/*btn perfil*/
 .profile {
-     order: 1; 
+    order: 1;
     width: 50px;
     height: 50px;
     padding: 0;
@@ -50,174 +38,128 @@ body{
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     transform: translateX(-30px);
+    text-decoration: none;
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 50%;
 }
 
-
 .profile:hover {
-    transform: scale(1.08) translateX(-30px); 
+    transform: scale(1.08) translateX(-30px);
     box-shadow: 0 0 10px #8e8b3a;
 }
 
-/*contenedor principal*/
-.body{
-  display: flex;
-  margin-top: 90px;
-  margin-left: 0;
-  transition: margin-left 0.5s ease;
+.body {
+    display: flex;
+    margin-top: 90px;
+    margin-left: 0;
+    transition: margin-left 0.5s ease;
 }
 
-/*contenedor auxiliar para repartir elementos*/
-.contenedor{
-  display: flex;
+.contenedor {
+    display: flex;
     flex-direction: column;
     gap: 30px;
     position: relative;
-
 }
 
-/*contenido del centro*/
-.ctr{
-   min-width: 500px;
+.ctr {
+    min-width: 500px;
     margin-left: 0;
     padding-bottom: 20px;
     margin-top: -30px;
 }
 
-/*contenedor de la derecha*/
-.right{
-  visibility: visible;
-  text-align: center;
-  justify-content: center;
+.right {
+    visibility: visible;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
 }
 
-/*estilos que definen el grosor del contenido*/
-.w80{
-      font-family: 'Poppins', sans-serif;
+.w80,
+.w50 {
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #c1c0cd;
-     text-align: justify;
+    text-align: justify;
     line-height: 1.7;
     max-width: 800px;
+    margin-left: 85px;
+}
+
+.w80 {
     margin-top: 0;
-    margin-left: 85px;
 }
 
-.w100{
-  width: 100%;
-}
-
-
-.w50{
-  font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: #c1c0cd;
-     text-align: justify;
-    line-height: 1.7;
-    max-width: 800px;
+.w50 {
     margin-top: 120px;
-    margin-left: 85px;
 }
 
-/*cuestiones sin usar*/
-
-/*
-.movil{
-  visibility: hidden;
-}
-*/
-/*cuestiones de la configuracion*/
-.dual{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: flex-start;
+.w100 {
+    width: 100%;
 }
 
-.Cpost{
-  margin: 15px 30px;
-  padding: 10px;
-  border: 1px #aaaaac;
-  border-radius: 20px;
-  box-shadow: 10px 5px 5px #aaaaac;
-  background-color: white;
-  color: black;
-  transition: background-color 0.5s ease, color 0.5s ease;
-  /*min-width: 30%;*/
-  min-width: 400px;
-  width: 40%;
-  align-items: center;
-  justify-content: space-between;
-  justify-items: center;
-  text-align: center;
-  position: relative;
-  height: auto;
-
+.dual {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
 }
+
+.Cpost {
+    margin: 15px 30px;
+    padding: 10px;
+    border: 1px #aaaaac;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px #aaaaac;
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    min-width: 400px;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    height: auto;
+}
+
 @font-face {
     font-family: 'VarsityTeam';
     src: url('../resources/varsity_team/VarsityTeam-Bold.otf') format('opentype');
-   font-weight: bold;
+    font-weight: bold;
     font-style: normal;
 }
 
-.titulo-principal {
+.titulo-principal,
+.titulo-videos,
+.titulo-historia {
     font-family: 'VarsityTeam', sans-serif;
-
-    font-size: clamp(4rem, 7vw, 7rem);
-
-    line-height: 0.9;
-
     text-transform: uppercase;
-
-    margin-top: 220px;
-    margin-left: 85px;
-  margin-bottom: 30px;
-    width: 80%;
-
-    letter-spacing: 2px;
-
     color: #c4c3d2;
+}
 
+.titulo-principal {
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: 0.9;
+    margin: 220px 0 30px 85px;
+    width: 80%;
+    letter-spacing: 2px;
     text-align: left;
 }
 
-
-
-
-.titulo-principal .verde {
-    background: linear-gradient(90deg, #48ad49 0%, #42c936 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.titulo-principal .rojo {
-    background: linear-gradient(90deg, #ed1c24 0%, #bf0f15 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-/* titulos videos*/
 .titulo-videos {
-    font-family: 'VarsityTeam', sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 0.95;
-    text-transform: uppercase;
     letter-spacing: 2px;
-    color: #c4c3d2;
     text-align: left;
-    margin-top: 140px;      
-    margin-left: 85px;
-    margin-bottom: 20px;
+    margin: 140px 0 20px 85px;
 }
 
 .parrafo-videos {
@@ -230,58 +172,54 @@ body{
     margin-left: 85px;
     margin-bottom: 40px;
 }
-.titulo-videos .dorado {
-    background: linear-gradient(90deg, #8e8b3a 0%, #a6a248 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.titulo-videos .verde {
-    background: linear-gradient(90deg, #48ad49 0%, #42c936 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.titulo-videos .rojo {
-    background: linear-gradient(90deg, #ed1c24 0%, #bf0f15 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.titulo-imagen{
-  width: 240px;
-  height: auto;
-  display: block;
-  transform: translateX(40px);
-}
-.profile {
-  order: 1; 
-   text-decoration: none;  
-}
 
 .titulo-historia {
-    font-family: 'VarsityTeam', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem); 
+    font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 0.9;
-    text-transform: uppercase;
     letter-spacing: 2px;
-    color: #c4c3d2;
     text-align: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
+}
+
+.titulo-principal .verde,
+.titulo-videos .verde,
+.titulo-historia .verde {
+    background: linear-gradient(90deg, #48ad49, #42c936);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-principal .rojo,
+.titulo-videos .rojo,
+.titulo-historia .rojo {
+    background: linear-gradient(90deg, #ed1c24, #bf0f15);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-videos .dorado {
+    background: linear-gradient(90deg, #8e8b3a, #a6a248);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.titulo-imagen {
+    width: 240px;
+    height: auto;
+    display: block;
+    transform: translateX(40px);
 }
 
 .titulo-centrado {
     text-align: center;
-    color: #c2c2d0;      
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
+    color: #c2c2d0;
+    margin: 120px auto 0;
 }
 
 .historia-header {
@@ -291,19 +229,21 @@ body{
     flex-wrap: wrap;
     margin: 0;
 }
+
 .historia-header .titulo-historia {
-    margin: 0; 
+    margin: 0;
     flex: 1;
 }
 
 .img-lateral {
-  position: absolute;
+    position: absolute;
     top: 160px;
-    right: 45px;     
-    width: auto;     
+    right: 45px;
+    width: auto;
     height: 395px;
     border-radius: 5px;
 }
+
 .historia-imagenes {
     display: flex;
     gap: 30px;
@@ -314,46 +254,17 @@ body{
     flex: 1;
     top: 40px;
     width: 100%;
-    height: 200px;     
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
-}
-.right {
-    width: 100%;
-     text-align: center;
-}
-
-
-.titulo-historia .verde {
-    background: linear-gradient(
-        90deg,
-        #48ad49 0%,
-        #42c936 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.titulo-historia .rojo {
-    background: linear-gradient(
-        90deg,
-        #ed1c24 0%,
-        #bf0f15 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
 }
 
 .hero-flex {
     display: flex;
-    align-items: flex-start;   
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;          
+    flex-wrap: wrap;
 }
 
 .hero-texto {
@@ -379,7 +290,6 @@ body{
         0 0 35px rgba(142, 139, 58, 0.6);
 }
 
-/*Tarjetas historia equipos*/
 .equipos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -413,7 +323,6 @@ body{
     object-fit: contain;
 }
 
-
 .btn-historia {
     background-color: transparent;
     border: 2px solid #48ad49;
@@ -427,8 +336,11 @@ body{
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     margin-top: -5px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .btn-historia:hover {
@@ -437,9 +349,8 @@ body{
     transform: scale(1.05);
 }
 
-/*Animacion jugador index*/
 .hero-animacion {
-        position: relative;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,7 +360,6 @@ body{
     margin-top: 100px;
     flex-shrink: 0;
 }
-
 
 .jugador-animado {
     width: 100%;
@@ -484,23 +394,14 @@ body{
     }
 }
 
-
-
-
-/* MODO CLARO - INDEX */
-
 body.modo-claro {
     background-color: #b7e6ae;
     color: #123b1c;
 }
 
-/* Barra superior */
-
 body.modo-claro .title {
     background-color: #14552b;
 }
-
-/* Titulos */
 
 body.modo-claro .titulo-principal,
 body.modo-claro .titulo-videos,
@@ -509,144 +410,67 @@ body.modo-claro .titulo-centrado {
     color: #103b1b;
 }
 
-/* Parrafos */
-
 body.modo-claro .w80,
 body.modo-claro .w50,
 body.modo-claro .parrafo-videos {
     color: #244c2b;
 }
 
-/* Colores destacados */
-
 body.modo-claro .titulo-principal .verde,
 body.modo-claro .titulo-historia .verde,
 body.modo-claro .titulo-videos .verde {
-    background: linear-gradient(
-        90deg,
-        #218b32,
-        #35ae40
-    );
+    background: linear-gradient(90deg, #218b32, #35ae40);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Tarjetas de equipos */
-
-body.modo-claro .equipo-card {
-    background-color: rgba(213, 245, 207, 0.85);
-    border: 1px solid #6fae73;
-}
-
-body.modo-claro .equipo-card:hover {
-    box-shadow: 0 0 18px rgba(35, 120, 45, 0.3);
-}
-
-/* Botones de historia */
-
-body.modo-claro .btn-historia {
-    color: #14552b;
-    border-color: #218b32;
-}
-
-body.modo-claro .btn-historia:hover {
-    background-color: #218b32;
-    color: #ffffff;
-}
-
-/* Bordes de imagenes */
-
-body.modo-claro .borde-neon {
-    border: 1px solid #397d3e;
-    box-shadow:
-        0 0 5px rgba(57, 125, 62, 0.3),
-        0 0 12px rgba(57, 125, 62, 0.25);
-}
-
-/* Perfil */
-
-body.modo-claro .profile {
-    border-color: #65bb6b;
-}
-
-/* RESPLANDOR VERDE PARA IMAGENES EN MODO CLARO */
-
-body.modo-claro .borde-neon {
-    border: 1px solid #218b32;
-
-    box-shadow:
-        0 0 5px #218b32,
-        0 0 10px rgba(33, 139, 50, 0.8),
-        0 0 20px rgba(33, 139, 50, 0.6),
-        0 0 35px rgba(33, 139, 50, 0.4);
-
-    transition: box-shadow 0.4s ease, border-color 0.4s ease;
-}
-
-/* TARJETAS DE EQUIPOS - MODO CLARO */
-
 body.modo-claro .equipo-card {
     background-color: #14552b;
     border: 1px solid #218b32;
-
     box-shadow:
         0 0 5px rgba(20, 85, 43, 0.5),
         0 0 12px rgba(20, 85, 43, 0.4),
         0 0 22px rgba(20, 85, 43, 0.25);
-
-    transition:
-        transform 0.3s ease,
-        background-color 0.3s ease,
-        box-shadow 0.3s ease;
 }
-
-/* EFECTO HOVER */
 
 body.modo-claro .equipo-card:hover {
     background-color: #1b6835;
-
     transform: translateY(-5px);
-
     box-shadow:
         0 0 8px rgba(20, 85, 43, 0.7),
         0 0 18px rgba(20, 85, 43, 0.5),
         0 0 30px rgba(20, 85, 43, 0.4);
 }
 
-/* BOTONES DE HISTORIA - MODO CLARO */
-
 body.modo-claro .equipo-card .btn-historia {
     color: #ffffff;
-    border: 2px solid #48ad49;
+    border-color: #48ad49;
     background-color: transparent;
-
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.2s ease;
 }
-
 
 body.modo-claro .equipo-card .btn-historia:hover {
     color: #14552b;
     background-color: #8cdb8b;
-    border-color: #48ad49;
-    transform: scale(1.05);
-
-    box-shadow:
-        0 0 8px rgba(140, 219, 139, 0.5),
-        0 0 15px rgba(140, 219, 139, 0.3);
+    box-shadow: 0 0 15px rgba(140, 219, 139, 0.3);
 }
 
-/* =====================================
-   SCROLL REVEAL - BATTEAMX
-===================================== */
+body.modo-claro .borde-neon {
+    border-color: #218b32;
+    box-shadow:
+        0 0 5px #218b32,
+        0 0 10px rgba(33, 139, 50, 0.8),
+        0 0 20px rgba(33, 139, 50, 0.6),
+        0 0 35px rgba(33, 139, 50, 0.4);
+}
+
+body.modo-claro .profile {
+    border-color: #65bb6b;
+}
 
 .scroll-reveal {
     opacity: 0;
     translate: 0 50px;
-
     transition:
         opacity 0.9s ease,
         translate 0.9s cubic-bezier(0.22, 1, 0.36, 1);
@@ -656,8 +480,6 @@ body.modo-claro .equipo-card .btn-historia:hover {
     opacity: 1;
     translate: 0 0;
 }
-
-/* Entrada escalonada de las tarjetas */
 
 .equipo-card:nth-child(1) {
     transition-delay: 0.1s;
@@ -675,16 +497,11 @@ body.modo-claro .equipo-card .btn-historia:hover {
     transition-delay: 0.4s;
 }
 
-/* =====================================
-   ANIMACION BIENVENIDA - INDEX
-===================================== */
-
 .hero-texto .titulo-principal.scroll-reveal,
 .hero-texto .w80.scroll-reveal,
 .hero-animacion.scroll-reveal {
     opacity: 0;
     translate: 0 55px;
-
     transition:
         opacity 1s ease,
         translate 1s cubic-bezier(0.22, 1, 0.36, 1);
@@ -698,6 +515,7 @@ body.modo-claro .equipo-card .btn-historia:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
     .hero-texto .titulo-principal.scroll-reveal,
     .hero-texto .w80.scroll-reveal,
     .hero-animacion.scroll-reveal {
@@ -707,13 +525,364 @@ body.modo-claro .equipo-card .btn-historia:hover {
     }
 }
 
+@media (max-width: 780px) {
 
-/* Accesibilidad */
+    html {
+        overflow-x: clip;
+    }
 
-@media (prefers-reduced-motion: reduce) {
-    .scroll-reveal {
-        opacity: 1;
-        translate: none;
-        transition: none;
+    body.pagina-index,
+    body.pagina-videos,
+    body.pagina-trivia,
+    body.pagina-minijuego {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body.pagina-index *,
+    body.pagina-videos *,
+    body.pagina-trivia *,
+    body.pagina-minijuego * {
+        box-sizing: border-box;
+    }
+
+    body.pagina-index .body,
+    body.pagina-videos .body,
+    body.pagina-trivia .body,
+    body.pagina-minijuego .body {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 80px 0 0 !important;
+        padding: 0 0 45px;
+    }
+
+    body.pagina-index .body > .ctr,
+    body.pagina-videos .body > .ctr,
+    body.pagina-trivia .body > .ctr,
+    body.pagina-minijuego .body > .ctr {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        padding: 0 18px 30px;
+    }
+
+    body.pagina-index .titulo-principal,
+    body.pagina-videos .titulo-videos,
+    body.pagina-trivia .titulo-historia,
+    body.pagina-minijuego .minijuego-titulo {
+        width: 100%;
+        max-width: 100%;
+        margin: 85px auto 25px;
+        padding: 0;
+        line-height: 1.15;
+        letter-spacing: 0;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    body.pagina-index .titulo-principal {
+        font-size: clamp(2.1rem, 9vw, 3.6rem);
+    }
+
+    body.pagina-videos .titulo-videos {
+        font-size: clamp(2.2rem, 9vw, 4rem);
+    }
+
+    body.pagina-trivia .titulo-historia {
+        font-size: clamp(1.9rem, 7.5vw, 3.2rem);
+    }
+
+    body.pagina-minijuego .minijuego-titulo {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    body.pagina-videos .parrafo-videos,
+    body.pagina-trivia .trivia-subtitulo,
+    body.pagina-minijuego .minijuego-instrucciones {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        padding: 0 4px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    body.pagina-videos .parrafo-videos {
+        text-align: left;
+    }
+
+    body.pagina-trivia .trivia-subtitulo,
+    body.pagina-minijuego .minijuego-instrucciones {
+        text-align: center;
+    }
+
+    body.pagina-index .hero-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 18px;
+    }
+
+    body.pagina-index .hero-texto {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+    }
+
+    body.pagina-index .hero-texto .w80,
+    body.pagina-index .hero-texto .ctr.w80 {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+        overflow-wrap: break-word;
+    }
+
+    body.pagina-index .hero-animacion {
+        width: min(80%, 310px);
+        max-width: 100%;
+        margin: 5px auto 25px;
+        flex-shrink: 1;
+    }
+
+    body.pagina-index .hero-imagen,
+    body.pagina-index .jugador-animado {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    body.pagina-index .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    body.pagina-index .contenedor > .w50 {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    body.pagina-index .historia-header {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    body.pagina-index .historia-header .titulo-historia {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px;
+        font-size: clamp(1.8rem, 7.5vw, 3.1rem);
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    body.pagina-index .contenedor > .w50 > p {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.85;
+        text-align: left;
+        overflow-wrap: break-word;
+    }
+
+    body.pagina-index .historia-imagenes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 10px;
+        margin: 22px 0 0;
+    }
+
+    body.pagina-index .historia-imagenes .img-abajo {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        height: clamp(120px, 35vw, 190px);
+        object-fit: cover;
+    }
+
+    body.pagina-index .contenedor > .img-lateral {
+        position: static !important;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        margin: 0 auto 15px;
+    }
+
+    body.pagina-index .seccion-equipos {
+        display: block !important;
+        width: 100%;
+        min-width: 0;
+        margin: 10px 0 0;
+    }
+
+    body.pagina-index .seccion-equipos .titulo-centrado {
+        margin: 0 auto 24px;
+    }
+
+    body.pagina-index .equipos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 12px;
+        margin: 0;
+    }
+
+    body.pagina-index .equipo-card {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 215px;
+        padding: 12px 8px;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    body.pagina-index .equipo-img {
+        width: 100%;
+        max-width: 175px;
+        height: 155px;
+        object-fit: contain;
+    }
+
+    body.pagina-index .btn-historia {
+        max-width: 100%;
+        padding: 8px;
+        margin: 0;
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    body.pagina-index .seccion-tarjetas,
+    body.pagina-index .carrusel-tarjetas,
+    body.pagina-index .tarjetas-ventana {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    body.pagina-index .seccion-tarjetas {
+        margin: 30px auto 0;
+        padding: 20px 0;
+    }
+
+    body.pagina-index .tarjetas-encabezado {
+        width: 100%;
+        padding: 0 4px;
+        text-align: center;
+    }
+
+    body.pagina-index .tarjetas-encabezado p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    body.pagina-trivia .trivia-jugador {
+        max-width: 100%;
+        height: auto;
+        max-height: 350px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 380px) {
+
+    body.pagina-index .body > .ctr,
+    body.pagina-videos .body > .ctr,
+    body.pagina-trivia .body > .ctr,
+    body.pagina-minijuego .body > .ctr {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    body.pagina-index .titulo-principal,
+    body.pagina-videos .titulo-videos,
+    body.pagina-trivia .titulo-historia,
+    body.pagina-minijuego .minijuego-titulo {
+        margin-top: 65px;
+        margin-bottom: 20px;
+    }
+
+    body.pagina-index .titulo-principal {
+        font-size: 2rem;
+    }
+
+    body.pagina-videos .titulo-videos {
+        font-size: 2rem;
+    }
+
+    body.pagina-trivia .titulo-historia {
+        font-size: 1.8rem;
+    }
+
+    body.pagina-minijuego .minijuego-titulo {
+        font-size: 1.9rem;
+    }
+
+    body.pagina-index .equipos-grid {
+        gap: 9px;
+    }
+
+    body.pagina-index .equipo-card {
+        min-height: 195px;
+        padding: 9px 5px;
+    }
+
+    body.pagina-index .equipo-img {
+        height: 135px;
+    }
+
+    body.pagina-videos .parrafo-videos,
+    body.pagina-trivia .trivia-subtitulo,
+    body.pagina-minijuego .minijuego-instrucciones {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 780px) {
+
+    body.pagina-videos .body > .ctr,
+    body.pagina-trivia .body > .ctr,
+    body.pagina-minijuego .body > .ctr {
+        padding-top: 65px !important;
+    }
+
+    body.pagina-videos .titulo-videos,
+    body.pagina-trivia .titulo-historia,
+    body.pagina-minijuego .minijuego-titulo {
+        margin-top: 0 !important;
     }
 }

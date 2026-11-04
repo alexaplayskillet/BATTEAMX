@@ -1,0 +1,518 @@
+
+/* Elementos ocultos en escritorio */
+
+.menu-overlay,
+.menu-cabecera,
+.menu-inferior {
+    display: none;
+}
+
+
+/* Menú móvil */
+
+@media (max-width: 768px) {
+
+    /* Encabezado */
+
+    .title {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 75px;
+        padding: 10px 65px;
+        box-sizing: border-box;
+        background-color: #001c00;
+        z-index: 1000;
+    }
+
+    .title .menuhor,
+    .title .profile,
+    .title .tema-escritorio-contenedor {
+        display: none !important;
+    }
+
+    .title .logo-contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .title .logo-contenedor .titulo-imagen {
+        width: auto;
+        max-width: min(65vw, 230px);
+        height: auto;
+        max-height: 60px;
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+        transform: none !important;
+    }
+
+    /* Botón hamburguesa */
+
+    .title .hamburger {
+        display: flex !important;
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        color: #ffffff;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .title .hamburger:hover {
+        background-color: rgba(72, 173, 73, 0.2);
+    }
+
+    /* Fondo oscuro */
+
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 10, 2, 0.75);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1998;
+    }
+
+    body:has(.menu.active) .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* Panel lateral */
+
+    body .menu {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: min(82vw, 315px) !important;
+        min-width: 0 !important;
+        height: 100dvh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+        background: linear-gradient(
+            160deg,
+            #092b13 0%,
+            #041e0b 50%,
+            #001508 100%
+        ) !important;
+        border: none !important;
+        border-radius: 0 20px 20px 0 !important;
+        box-shadow: 12px 0 40px rgba(0, 0, 0, 0.4);
+        transform: translateX(-105%) !important;
+        transition: transform 0.35s ease, visibility 0.35s ease !important;
+        visibility: hidden;
+        pointer-events: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        z-index: 1999 !important;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body .menu::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    body .menu.active {
+        transform: translateX(0) !important;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    body.menu-abierto {
+        overflow: hidden;
+    }
+
+    /* Cabecera del menú */
+
+    .menu-cabecera {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 25px 18px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 2;
+    }
+
+    /* Logo del menú */
+
+    .menu-marca {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .menu-marca img {
+        width: 185px;
+        max-width: 100%;
+        height: auto;
+        max-height: 65px;
+        object-fit: contain;
+        margin: 0;
+        padding: 0;
+        transform: none !important;
+    }
+
+    .menu-cabecera .menu-marca .logo-oscuro {
+        display: block !important;
+    }
+
+    .menu-cabecera .menu-marca .logo-claro {
+        display: none !important;
+    }
+
+    body.modo-claro .menu-cabecera .menu-marca .logo-oscuro {
+        display: none !important;
+    }
+
+    body.modo-claro .menu-cabecera .menu-marca .logo-claro {
+        display: block !important;
+    }
+
+    /* Botón cerrar */
+
+    .menu-cerrar {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.07);
+        border: none;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 10;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-cerrar:hover {
+        background-color: rgba(237, 28, 36, 0.25);
+    }
+
+    .menu-cerrar .icon {
+        pointer-events: none;
+    }
+
+    /* Navegación */
+
+    body .menu .menulist {
+        display: flex !important;
+        flex-direction: column;
+        gap: 7px;
+        width: 100%;
+        margin: 0 !important;
+        padding: 22px 14px !important;
+        list-style: none;
+        border: none !important;
+        border-radius: 0 !important;
+        box-sizing: border-box;
+    }
+
+    body .menu .menulist li {
+        display: block;
+        width: 100% !important;
+        min-width: 0 !important;
+        height: auto;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    body .menu .menulist li a {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+        min-height: 51px;
+        margin: 0;
+        padding: 12px 15px;
+        box-sizing: border-box;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 13px;
+        color: #d4e7d8;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    /* Iconos */
+
+    body .menu .menulist li a .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        min-width: 24px;
+        font-size: 21px;
+        color: #8abf94;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    /* Efecto hover */
+
+    body .menu .menulist li a:hover {
+        background-color: rgba(72, 173, 73, 0.15);
+        color: #ffffff;
+    }
+
+    body .menu .menulist li a:hover .icon {
+        color: #80ed91;
+    }
+
+    /* Página activa */
+
+    body .menu .menulist li a.activo {
+        background: linear-gradient(
+            100deg,
+            #276c39,
+            #17472a
+        );
+        border-color: rgba(72, 173, 73, 0.2);
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    body .menu .menulist li a.activo .icon {
+        color: #80ed91;
+    }
+
+    /* Parte inferior */
+
+    .menu-inferior {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: auto;
+        padding: 20px 16px 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Perfil */
+
+    .menu-perfil {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 13px;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-perfil:hover {
+        background-color: rgba(72, 173, 73, 0.18);
+    }
+
+    .menu-perfil img {
+        width: 39px;
+        height: 39px;
+        border: 2px solid #48ad49;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .menu-perfil > i {
+        margin-left: auto;
+        color: #a1d8aa;
+    }
+
+    /* Cambio de tema */
+
+    .menu-apariencia {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .menu-apariencia-titulo {
+        display: none !important;
+    }
+
+    .tema-movil-contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .tema-movil-contenedor .theme-toggle {
+        display: flex !important;
+        position: static !important;
+        width: auto;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .tema-movil-contenedor .theme-toggle-track {
+        transform: none !important;
+    }
+
+    /* Evitar desplazamiento del contenido */
+
+    body .body.menu-active {
+        margin-left: 0 !important;
+    }
+
+    /* Ocultar menú secundario */
+
+    body .menu2 {
+        display: none !important;
+    }
+}
+
+
+/* Modo claro del menú hamburguesa */
+
+@media (max-width: 768px) {
+
+    /* Encabezado móvil */
+    body.modo-claro .title {
+        background: #174b25 !important;
+        border-bottom: 1px solid #8e8b3a;
+    }
+
+    /* Botón hamburguesa */
+    body.modo-claro #toggleMenu {
+        background: #347a40 !important;
+        border: 1px solid #a5a052 !important;
+        color: #ffffff !important;
+    }
+
+    body.modo-claro #toggleMenu i {
+        color: #ffffff !important;
+    }
+
+    /* Panel lateral */
+    body.modo-claro #menuMovil {
+        background: linear-gradient(
+            160deg,
+            #286a36 0%,
+            #1d532a 55%,
+            #123c20 100%
+        ) !important;
+    }
+
+    /* Encabezado y separadores */
+    body.modo-claro #menuMovil .menu-cabecera,
+    body.modo-claro #menuMovil .menu-inferior {
+        border-color: rgba(195, 179, 90, 0.35) !important;
+    }
+
+    /* Botón cerrar */
+    body.modo-claro #cerrarMenu {
+        background: rgba(255, 255, 255, 0.12) !important;
+        color: #ffffff !important;
+    }
+
+    body.modo-claro #cerrarMenu i {
+        color: #ffffff !important;
+    }
+
+    /* Enlaces */
+    body.modo-claro #menuMovil .menulist li a {
+        color: #f3f7ee !important;
+    }
+
+    /* Iconos */
+    body.modo-claro #menuMovil .menulist li a i {
+        color: #b7d99e !important;
+    }
+
+    /* Icono del Minijuego */
+    body.modo-claro #menuMovil .menulist li a svg {
+        stroke: #b7d99e !important;
+    }
+
+    /* Hover */
+    body.modo-claro #menuMovil .menulist li a:hover {
+        background: rgba(170, 205, 120, 0.18) !important;
+    }
+
+    /* Página seleccionada */
+    body.modo-claro #menuMovil .menulist li a.activo {
+        background: linear-gradient(
+            100deg,
+            #57984b,
+            #397b3e
+        ) !important;
+
+        color: #ffffff !important;
+        border-color: transparent !important;
+    }
+
+    body.modo-claro #menuMovil .menulist li a.activo i {
+        color: #e3f5bd !important;
+    }
+
+    /* Perfil */
+    body.modo-claro #menuMovil .menu-perfil {
+        background: rgba(170, 205, 120, 0.18) !important;
+        color: #ffffff !important;
+    }
+
+    body.modo-claro #menuMovil .menu-perfil > i {
+        color: #c5e3a3 !important;
+    }
+
+    /* Imagen de perfil */
+    body.modo-claro #menuMovil .menu-perfil img {
+        border-color: #a5a052 !important;
+    }
+
+}
