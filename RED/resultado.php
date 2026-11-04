@@ -70,20 +70,22 @@ $equipo = $equipos[$id];
                 <button id="btnReproducir" class="btn-resultado btn-outline">
                     <i class="icon ion-md-arrow-dropright-circle"></ion-icon></i> REPRODUCIR ANIMACIÓN
                 </button>
+                <button id="btnDetener" class="btn-resultado btn-outline">
+                    <i class="icon ion-md-arrow-dropright-circle"></ion-icon></i> DETENER ANIMACIÓN
+                </button>
+                <button id="btnConfeti" class="btn-resultado btn-outline">
+                    <i class="icon ion-md-arrow-dropright-circle"></ion-icon></i> MOSTRAR CONFETI
+                </button>
                 <button id="btnGuardarColeccion" class="btn-resultado btn-outline">
                     <i class="icon ion-md-bookmark"></i> GUARDAR EN MI COLECCIÓN
                 </button>
             </DIV>
 
         </DIV>
-    <SCRIPT SRC="./JS/resultado-escaneo.js"></SCRIPT>
-    <script src="./JS/confeti.js"></script>
     <script src="./LIBS/aframe.min.js"></script>
     <script src="./LIBS/aframe-extras.min.js"></script>
     <script src="./LIBS/confetti.browser.min.js"></script>
+    <script src="./JS/confeti.js"></script>
     <script src="./JS/resultado-escaneo.js"></script>
     </BODY>
-    <FOOTER>
-        
-    </FOOTER>
 </HTML>

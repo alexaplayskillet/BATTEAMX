@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -379,8 +380,7 @@
                     onerror="this.onerror=null;this.src='./resources/usuario.png';">
 
                 <h3 class="perfil-nombre">
-                    <!--NOMBRE USUARIO-->
-                    <? htmlspecialchars($_SESSION)?>
+                    NOMBRE USUARIO
                 </h3>
 
                 <div class="perfil-botones-fila">
