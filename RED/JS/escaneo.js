@@ -1,8 +1,21 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    let temporizador = null;
+
+    document.querySelectorAll('[data-equipo]').forEach(ent => {
+        ent.addEventListener('targetFound', () => {
+            clearTimeout(temporizador);
+            temporizador = setTimeout(() => {
+                window.location.href = 'resultado.php?equipo=' + encodeURIComponent(ent.dataset.equipo);
+            }, 2500);
+        });
+        ent.addEventListener('targetLost', () => clearTimeout(temporizador));
+    });
+
     const visor = document.getElementById("visorAR");
-    const escena = document.querySelector(".escaneo-ar");
+    //const escena = document.querySelector(".escaneo-ar");
+    const escena = document.querySelector("a-scene");
     const btnActivar = document.getElementById("btnActivarCamara");
     const resultadoDiv = document.getElementById("resultadoEscaneo");
 
@@ -71,9 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btnActivar.addEventListener("click", prepararVista);
 
-    escena.addEventListener("camera-error", function () {
+    escena.addEventListener("arError", function () {
         resultadoDiv.textContent =
             "No se pudo acceder a la cámara. Revisa los permisos.";
     });
+
+
 
 });

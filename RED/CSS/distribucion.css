@@ -886,3 +886,27 @@ body.modo-claro .profile {
         margin-top: 0 !important;
     }
 }
+/* ==========================================
+   AJUSTE EXCLUSIVO DE ESTADÍSTICAS
+========================================== */
+
+body:has(.estadisticas-contenido) .body {
+    margin-top: 90px;
+}
+
+body:has(.estadisticas-contenido) .ctr.estadisticas-contenido {
+    margin-top: 0;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+
+    body:has(.estadisticas-contenido) .body {
+        margin-top: 90px;
+    }
+
+    body:has(.estadisticas-contenido) .ctr.estadisticas-contenido {
+        margin-top: 0;
+        padding-top: 100px;
+    }
+}
