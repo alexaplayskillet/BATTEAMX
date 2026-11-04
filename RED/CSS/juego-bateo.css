@@ -249,3 +249,85 @@ body.modo-claro.pagina-minijuego .bateo-btn:focus-visible {
     outline: 3px solid #d7f4d0;
     outline-offset: 3px;
 }
+
+/* ---- pantalla de victoria con tarjeta ---- */
+
+/* permite usar unidades cqw (% del ancho de la caja) para que la tarjeta escale con ella */
+#caja-bateo {
+    container-type: inline-size;
+}
+
+.pantalla-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+#pantalla.victoria #pantalla-titulo {
+    color: #ffd54f;
+    text-shadow: 0 0 18px rgba(255, 213, 79, 0.45);
+}
+
+/* con tarjeta: texto a la izquierda, tarjeta a la derecha */
+#pantalla.con-tarjeta {
+    flex-direction: row-reverse;
+    gap: 32px;
+}
+
+#pantalla.con-tarjeta .pantalla-info {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 55%;
+}
+
+#recompensa[hidden] {
+    display: none;
+}
+
+#recompensa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+    width: 30%;      /* respaldo para navegadores viejos */
+    width: 30cqw;    /* 30% del ancho de la caja de bateo */
+    animation: aparecer-tarjeta 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+#recompensa-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow:
+        0 0 0 2px #ffd54f,
+        0 10px 30px rgba(0, 0, 0, 0.55),
+        0 0 28px rgba(255, 213, 79, 0.45);
+}
+
+#recompensa-nombre {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #ffd54f;
+    text-align: center;
+}
+
+@keyframes aparecer-tarjeta {
+    from { opacity: 0; transform: translateY(24px) scale(0.6) rotate(-8deg); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #recompensa { animation: none; }
+}
+
+/* pantallas chicas: la caja mide poco de alto, así que se compacta */
+@media (max-width: 600px) {
+    #pantalla.victoria { padding: 12px; }
+    #pantalla.con-tarjeta { gap: 14px; }
+    #pantalla.victoria #pantalla-texto { font-size: 0.8rem; line-height: 1.35; }
+    #recompensa-nombre { font-size: 0.7rem; }
+}

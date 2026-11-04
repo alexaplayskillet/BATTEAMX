@@ -6,6 +6,8 @@
     const DURACION_MINIMA = 750;   // la pelota nunca será más rápida que esto
     const PAUSA_MS = 1100;         // pausa entre lanzamientos
     const RUTA_GUARDAR = 'PHP/guardar-puntaje.php';
+    const PUNTOS_META = 10;                  // al llegar a estos puntos se gana la partida
+    const RUTA_TARJETA = 'PHP/tarjeta.php';
 
     // ===== ELEMENTOS =====
     const canvas = document.getElementById('lienzo-bateo');
@@ -19,6 +21,9 @@
     const pantallaTitulo = document.getElementById('pantalla-titulo');
     const pantallaTexto = document.getElementById('pantalla-texto');
     const btnJugar = document.getElementById('btn-jugar');
+    const elRecompensa = document.getElementById('recompensa');
+    const elTarjetaImg = document.getElementById('recompensa-img');
+    const elTarjetaNombre = document.getElementById('recompensa-nombre');
 
     // ===== ESTADO =====
     let estado = 'inicio'; // inicio | lanzando | pausa | fin
@@ -48,8 +53,11 @@
         }
     }
 
-    function pintarPuntos() {
+    /*function pintarPuntos() {
         elPuntos.textContent = 'PUNTOS: ' + puntos;
+    }*/
+   function pintarPuntos() {
+        elPuntos.textContent = 'PUNTOS: ' + puntos + ' / ' + PUNTOS_META;
     }
 
     function mostrarMensaje(texto, tipo) {
@@ -59,9 +67,20 @@
     }
 
     // ===== FLUJO DEL JUEGO =====
-    function empezar() {
+    /*function empezar() {
         vidas = VIDAS_INICIALES;
         puntos = 0;
+        pintarVidas();
+        pintarPuntos();
+        pantalla.classList.add('oculta');
+        siguienteLanzamiento();
+    }*/
+   function empezar() {
+        vidas = VIDAS_INICIALES;
+        puntos = 0;
+        pantalla.classList.remove('victoria', 'con-tarjeta');
+        elRecompensa.hidden = true;
+        elTarjetaImg.removeAttribute('src');
         pintarVidas();
         pintarPuntos();
         pantalla.classList.add('oculta');
@@ -108,7 +127,12 @@
         pintarVidas();
         pintarPuntos();
 
-        setTimeout(vidas <= 0 ? terminar : siguienteLanzamiento, PAUSA_MS);
+        //setTimeout(vidas <= 0 ? terminar : siguienteLanzamiento, PAUSA_MS);
+        // ganó, se quedó sin vidas, o sigue el siguiente lanzamiento
+        let siguiente = siguienteLanzamiento;
+        if (puntos >= PUNTOS_META) siguiente = ganar;
+        else if (vidas <= 0) siguiente = terminar;
+        setTimeout(siguiente, PAUSA_MS);
     }
 
     function terminar() {
@@ -121,7 +145,18 @@
         guardarPuntaje();
     }
 
-    function guardarPuntaje() {
+    function ganar() {
+        estado = 'fin';
+        lan = null;
+        pantalla.classList.add('victoria');
+        pantallaTitulo.textContent = '¡GANASTE!';
+        pantallaTexto.textContent = 'Llegaste a ' + puntos + ' bateos. Preparando tu recompensa...';
+        btnJugar.textContent = 'JUGAR DE NUEVO';
+        pantalla.classList.remove('oculta');
+        guardarPuntaje(true);
+    }
+
+    /*function guardarPuntaje() {
         const datos = new FormData();
         datos.append('puntos', puntos);
         fetch(RUTA_GUARDAR, { method: 'POST', body: datos })
@@ -139,7 +174,45 @@
                 pantallaTexto.textContent = 'Conectaste ' + puntos + ' bateos. No se pudo guardar el puntaje.';
             });
     }
+*/
+    function guardarPuntaje(gano) {
+    const base = 'Conectaste ' + puntos + ' bateos.';
+    const datos = new FormData();
+    datos.append('puntos', puntos);
+    fetch(RUTA_GUARDAR, { method: 'POST', body: datos })
+        .then(r => r.json().then(j => ({ status: r.status, json: j })))
+        .then(({ status, json }) => {
+            if (status === 403) {
+                pantallaTexto.textContent = base + (gano
+                    ? ' Inicia sesión para guardar tu puntaje y reclamar tu tarjeta.'
+                    : ' Inicia sesión para guardar tu puntaje.');
+            } else if (json.ok) {
+                pantallaTexto.textContent = base + ' Tu mejor puntaje: ' + json.mejor + '.';
+                if (gano && json.tarjeta) mostrarTarjeta(json.tarjeta);
+            } else {
+                pantallaTexto.textContent = base + ' No se pudo guardar el puntaje.';
+            }
+        })
+        .catch(() => {
+            pantallaTexto.textContent = base + ' No se pudo guardar el puntaje.';
+        });
+}
 
+function mostrarTarjeta(t) {
+    // la tarjeta aparece hasta que la imagen terminó de cargar
+    elTarjetaImg.onload = () => {
+        elRecompensa.hidden = false;
+        pantalla.classList.add('con-tarjeta');
+    };
+    elTarjetaImg.onerror = () => {
+        elRecompensa.hidden = true;
+        pantalla.classList.remove('con-tarjeta');
+    };
+    elTarjetaImg.alt = 'Tarjeta de ' + t.equipo;
+    elTarjetaImg.src = RUTA_TARJETA + '?id=' + t.id;
+    elTarjetaNombre.textContent = t.equipo;
+    pantallaTexto.textContent += ' ¡Ganaste una tarjeta de ' + t.equipo + '!';
+}
     // ===== DIBUJO =====
     function dibujarObjetivo(tp, color) {
         const { x, y } = lan.p2;
