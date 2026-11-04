@@ -1,30 +1,34 @@
-<!DOCTYPE HTML>
 
-<HTML>
+<!DOCTYPE html>
+<html lang="es">
 
-<HEAD>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Historia del Equipo - BatteaMX</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
 
     <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
-    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo.css">
-    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
-    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
-    <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/historiaEquipo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
 
-</HEAD>
+    <link rel="stylesheet" href="./CSS/distribucion.css">
+    <link rel="stylesheet" href="./CSS/fondo.css">
+    <link rel="stylesheet" href="./CSS/movil.css">
+    <link rel="stylesheet" href="./CSS/menus.css">
+    <link rel="stylesheet" href="./CSS/posts.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/tour.css">
+    <link rel="stylesheet" href="./CSS/menu_movil.css">
+    <link rel="stylesheet" href="./CSS/historiaEquipo.css?v=6">
+</head>
 
-
-<BODY>
+<body class="pagina-historia-equipo">
 
     <div class="fondo-fijo">
 
@@ -44,175 +48,298 @@
 
         <div class="vineta"></div>
 
+        <div class="particulas">
+            <div class="particula" style="width:3px;height:3px;top:78%;left:12%;animation-duration:6s;animation-delay:0s;"></div>
+            <div class="particula" style="width:2px;height:2px;top:65%;left:22%;animation-duration:7.5s;animation-delay:1.2s;"></div>
+            <div class="particula" style="width:4px;height:4px;top:90%;left:35%;animation-duration:5.5s;animation-delay:.5s;"></div>
+            <div class="particula" style="width:2px;height:2px;top:60%;left:8%;animation-duration:8s;animation-delay:2s;"></div>
+            <div class="particula" style="width:3px;height:3px;top:70%;left:48%;animation-duration:6.5s;animation-delay:.8s;"></div>
+            <div class="particula" style="width:2px;height:2px;top:50%;left:60%;animation-duration:7s;animation-delay:1.6s;"></div>
+            <div class="particula" style="width:3px;height:3px;top:95%;left:65%;animation-duration:6s;animation-delay:3s;"></div>
+            <div class="particula" style="width:2px;height:2px;top:80%;left:75%;animation-duration:9s;animation-delay:.2s;"></div>
+        </div>
+
     </div>
 
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-    <DIV CLASS="menu">
+    <nav class="menu" id="menuMovil" aria-label="Navegación móvil">
+
+        <div class="menu-cabecera">
+
+            <div class="menu-marca">
+
+                <img
+                    src="./resources/Logo.png"
+                    alt="BatteaMX"
+                    class="menu-logo logo-oscuro">
+
+                <img
+                    src="./resources/logoModoclaro.png"
+                    alt="BatteaMX"
+                    class="menu-logo logo-claro">
+
+            </div>
+
+            <button
+                type="button"
+                id="cerrarMenu"
+                class="menu-cerrar"
+                aria-label="Cerrar menú">
+
+                <i class="icon ion-md-close"></i>
+
+            </button>
+
+        </div>
 
         <ul class="menulist">
 
             <li>
                 <a href="index.html">
-                    <i class="icon ion-md-home"></i> Inicio
+                    <i class="icon ion-md-home"></i>
+                    Inicio
                 </a>
             </li>
 
             <li>
-                <a href="estadisticas.html">
-                    <i class="icon ion-md-stats"></i> Estadisticas
+                <a href="estadisticas.php">
+                    <i class="icon ion-md-stats"></i>
+                    Estadísticas
                 </a>
             </li>
 
             <li>
                 <a href="videos.html">
-                    <i class="icon ion-md-videocam"></i> Videos
+                    <i class="icon ion-md-videocam"></i>
+                    Videos
                 </a>
             </li>
 
             <li>
                 <a href="trivia.html">
-                    <i class="icon ion-md-bulb"></i> Trivia
+                    <i class="icon ion-md-bulb"></i>
+                    Trivia
                 </a>
             </li>
 
             <li>
                 <a href="escaneo.html">
-                    <i class="icon ion-md-qr-scanner"></i> Escaneo
+                    <i class="icon ion-md-qr-scanner"></i>
+                    Escaneo
                 </a>
             </li>
 
             <li>
                 <a href="juego.html">
-                    <i class="icon ion-md-game-controller-b"></i> Minijuego
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="#8abf94"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         style="display:inline-block;flex-shrink:0;"
+                         aria-hidden="true">
+
+                        <path d="M6 12h4M8 10v4"/>
+
+                        <circle cx="15.5" cy="11" r="1"
+                                fill="#8abf94" stroke="none"/>
+
+                        <circle cx="18" cy="13.5" r="1"
+                                fill="#8abf94" stroke="none"/>
+
+                        <path d="M6.5 6.5h11a4 4 0 0 1 3.9 3.1l1.1 5.2a3 3 0 0 1-4.7 3.1l-2.3-1.8h-7l-2.3 1.8a3 3 0 0 1-4.7-3.1l1.1-5.2a4 4 0 0 1 3.9-3.1z"/>
+
+                    </svg>
+
+                    <span>Minijuego</span>
+
                 </a>
             </li>
 
             <li>
-                <a href="config.php">
-                    <i class="icon ion-md-help-circle"></i> Ayuda
+                <a href="#" class="abrir-ayuda">
+                    <i class="icon ion-md-help-circle"></i>
+                    Ayuda
                 </a>
             </li>
 
         </ul>
 
-    </DIV>
+        <div class="menu-inferior">
 
+            <a href="config.php" class="menu-perfil">
 
-    <DIV CLASS="title">
+                <img
+                    src="./PHP/foto.php"
+                    alt="Foto de perfil"
+                    onerror="this.onerror=null;this.src='./resources/usuario.png';">
 
-        <button id="toggleMenu" class="hamburger">☰</button>
+                <span>Mi perfil</span>
 
-        <img src="./resources/Logo.png"
-     alt="Logo BatteaMx"
-     class="titulo-imagen logo-oscuro">
+                <i class="icon ion-md-arrow-forward"></i>
 
-        <img src="./resources/logoModoclaro.png"
-            alt="Logo BatteaMx"
-            class="titulo-imagen logo-claro">
+            </a>
 
+            <div class="menu-apariencia">
+                <div class="tema-movil-contenedor" id="temaMovil"></div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="title">
+
+        <button
+            id="toggleMenu"
+            class="hamburger"
+            type="button"
+            aria-label="Abrir menú"
+            aria-controls="menuMovil"
+            aria-expanded="false">
+
+            <i class="icon ion-md-menu"></i>
+
+        </button>
+
+        <div class="logo-contenedor">
+
+            <img
+                src="./resources/Logo.png"
+                alt="Logo BatteaMX"
+                class="titulo-imagen logo-oscuro">
+
+            <img
+                src="./resources/logoModoclaro.png"
+                alt="Logo BatteaMX"
+                class="titulo-imagen logo-claro">
+
+        </div>
 
         <ul class="menuhor">
 
             <li>
                 <a href="index.html">
-                    <i class="icon ion-md-home"></i> Inicio
+                    <i class="icon ion-md-home"></i>
+                    Inicio
                 </a>
             </li>
 
             <li>
-                <a href="estadisticas.html">
-                    <i class="icon ion-md-stats"></i> Estadisticas
+                <a href="estadisticas.php">
+                    <i class="icon ion-md-stats"></i>
+                    Estadísticas
                 </a>
             </li>
 
             <li>
                 <a href="videos.html">
-                    <i class="icon ion-md-videocam"></i> Videos
+                    <i class="icon ion-md-videocam"></i>
+                    Videos
                 </a>
             </li>
 
             <li>
                 <a href="trivia.html">
-                    <i class="icon ion-md-bulb"></i> Trivia
+                    <i class="icon ion-md-bulb"></i>
+                    Trivia
                 </a>
             </li>
 
             <li>
                 <a href="escaneo.html">
-                    <i class="icon ion-md-qr-scanner"></i> Escaneo
+                    <i class="icon ion-md-qr-scanner"></i>
+                    Escaneo
                 </a>
             </li>
 
             <li>
                 <a href="juego.html">
-                    <i class="icon ion-md-game-controller-b"></i> Minijuego
+                    <i class="icon ion-md-game-controller-b"></i>
+                    Minijuego
                 </a>
             </li>
 
             <li>
-                <a href="config.php">
-                    <i class="icon ion-md-help-circle"></i> Ayuda
+                <a href="#" class="abrir-ayuda">
+                    <i class="icon ion-md-help-circle"></i>
+                    Ayuda
                 </a>
             </li>
 
         </ul>
 
+        <div id="temaEscritorio" class="tema-escritorio-contenedor">
 
-        
-        <div class="theme-toggle">
+            <div class="theme-toggle">
 
-            <input type="checkbox"
-                id="themeSwitch"
-                class="theme-toggle-input">
+                <input
+                    type="checkbox"
+                    id="themeSwitch"
+                    class="theme-toggle-input">
 
-            <label for="themeSwitch" class="theme-toggle-track">
+                <label for="themeSwitch" class="theme-toggle-track">
 
-                <span class="theme-toggle-thumb">
+                    <span class="theme-toggle-thumb">
 
-                    <svg class="theme-toggle-icon icon-luna"
-                        viewBox="0 0 24 24"
-                        fill="currentColor">
-                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                    </svg>
+                        <svg
+                            class="theme-toggle-icon icon-luna"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
 
-                    <svg class="theme-toggle-icon icon-sol"
-                        viewBox="0 0 24 24"
-                        fill="currentColor">
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            fill="none"
-                            stroke-linecap="round"/>
-                    </svg>
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
 
-                </span>
+                        </svg>
 
-                <span class="theme-toggle-texto texto-claro">
-                    MODO OSCURO
-                </span>
+                        <svg
+                            class="theme-toggle-icon icon-sol"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
 
-                <span class="theme-toggle-texto texto-oscuro">
-                    MODO CLARO
-                </span>
+                            <circle cx="12" cy="12" r="4"/>
 
-            </label>
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                fill="none"
+                                stroke-linecap="round"/>
+
+                        </svg>
+
+                    </span>
+
+                    <span class="theme-toggle-texto texto-claro">
+                        MODO OSCURO
+                    </span>
+
+                    <span class="theme-toggle-texto texto-oscuro">
+                        MODO CLARO
+                    </span>
+
+                </label>
+
+            </div>
 
         </div>
 
+        <a href="config.php" class="profile">
 
-<a href="config.php" class="profile">
-    <img
-        src="./PHP/foto.php"
-        alt="Foto de perfil del usuario"
-        class="profile-img"
-        onerror="this.onerror=null; this.src='./resources/usuario.png';"
-    >
-</a>
+            <img
+                src="./PHP/foto.php"
+                alt="Foto de perfil del usuario"
+                class="profile-img"
+                onerror="this.onerror=null;this.src='./resources/usuario.png';">
 
+        </a>
 
-    </DIV>
-
+    </div>
 
     <main class="historia-equipo">
 
@@ -230,25 +357,24 @@
 
                 <div class="linea-titulo"></div>
 
-                <p id="descripcionEquipo"
-                   class="descripcion-equipo">
+                <p
+                    id="descripcionEquipo"
+                    class="descripcion-equipo">
                 </p>
 
             </div>
 
-
             <div class="equipo-logo-contenedor">
 
-                <img id="logoEquipo"
-                     src=""
-                     alt="Equipo"
-                     class="equipo-logo">
+                <img
+                    id="logoEquipo"
+                    src=""
+                    alt="Escudo del equipo"
+                    class="equipo-logo">
 
             </div>
 
         </section>
-
-
 
         <section class="datos-equipo">
 
@@ -258,12 +384,9 @@
                     FUNDACIÓN
                 </span>
 
-                <span id="fundacion"
-                      class="dato-valor">
-                </span>
+                <span id="fundacion" class="dato-valor"></span>
 
             </div>
-
 
             <div class="dato-card">
 
@@ -271,12 +394,9 @@
                     CIUDAD
                 </span>
 
-                <span id="ciudad"
-                      class="dato-valor">
-                </span>
+                <span id="ciudad" class="dato-valor"></span>
 
             </div>
-
 
             <div class="dato-card">
 
@@ -284,30 +404,21 @@
                     ESTADIO
                 </span>
 
-                <span id="estadio"
-                      class="dato-valor">
-                </span>
+                <span id="estadio" class="dato-valor"></span>
 
             </div>
 
         </section>
 
-
-
         <section class="seccion-historia">
 
             <div class="encabezado-seccion">
 
-                <span class="numero-seccion">
-                    01
-                </span>
+                <span class="numero-seccion">01</span>
 
-                <h2>
-                    NUESTRA HISTORIA
-                </h2>
+                <h2>NUESTRA HISTORIA</h2>
 
             </div>
-
 
             <div class="contenido-historia">
 
@@ -321,12 +432,12 @@
 
                 </div>
 
-
                 <div class="imagen-historia">
 
-                    <img id="imagenPrincipal"
-                         src=""
-                         alt="Historia del equipo">
+                    <img
+                        id="imagenPrincipal"
+                        src=""
+                        alt="Historia del equipo">
 
                 </div>
 
@@ -334,67 +445,274 @@
 
         </section>
 
-
-
         <section class="seccion-momentos">
 
             <div class="encabezado-seccion">
 
-                <span class="numero-seccion">
-                    02
-                </span>
+                <span class="numero-seccion">02</span>
 
-                <h2>
-                    MOMENTOS HISTÓRICOS
-                </h2>
+                <h2>MOMENTOS HISTÓRICOS</h2>
 
             </div>
 
-
-            <div id="timeline"
-                 class="timeline">
-
-            </div>
+            <div id="timeline" class="timeline"></div>
 
         </section>
-
-
 
         <section class="galeria-equipo">
 
             <div class="encabezado-seccion">
 
-                <span class="numero-seccion">
-                    03
-                </span>
+                <span class="numero-seccion">03</span>
 
-                <h2>
-                    GALERÍA
-                </h2>
+                <h2>GALERÍA</h2>
 
             </div>
 
-
             <div class="galeria-grid">
 
-                <img id="galeria1" src="" alt="Imagen histórica">
+                <img
+                    id="galeria1"
+                    src=""
+                    alt="Primera imagen histórica"
+                    loading="lazy">
 
-                <img id="galeria2" src="" alt="Imagen histórica">
+                <img
+                    id="galeria2"
+                    src=""
+                    alt="Segunda imagen histórica"
+                    loading="lazy">
 
-                <img id="galeria3" src="" alt="Imagen histórica">
+                <img
+                    id="galeria3"
+                    src=""
+                    alt="Tercera imagen histórica"
+                    loading="lazy">
 
             </div>
 
         </section>
 
-
     </main>
 
+    <footer class="footer-battea">
 
-    <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
-    <SCRIPT SRC="./JS/historiaEquipo.js"></SCRIPT>
-    <SCRIPT SRC="./JS/tema.js"></SCRIPT>
+        <div class="footer-contenido">
 
-</BODY>
+            <div class="footer-columna footer-info">
 
-</HTML>
+                <h2 class="footer-logo">
+                    BATTEA<span>MX</span>
+                </h2>
+
+                <div class="footer-redes">
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook">
+
+                        <i class="icon ion-logo-facebook"></i>
+
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+
+                        <i class="icon ion-logo-instagram"></i>
+
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube">
+
+                        <i class="icon ion-logo-youtube"></i>
+
+                    </a>
+
+                </div>
+
+                <div class="footer-contacto">
+
+                    <h3 class="footer-titulo-contacto">
+                        CONTÁCTANOS
+                    </h3>
+
+                    <div class="footer-integrante">
+
+                        <h4>Arantza De La Vega</h4>
+
+                        <span class="footer-rol">
+                            Diseñadora UI/UX y Artista 3D
+                        </span>
+
+                        <a href="mailto:arantza.deg@uanl.edu.mx">
+
+                            <i class="icon ion-md-mail"></i>
+
+                            arantza.deg@uanl.edu.mx
+
+                        </a>
+
+                    </div>
+
+                    <div class="footer-integrante">
+
+                        <h4>Alexandra Cardenas</h4>
+
+                        <span class="footer-rol">
+                            Desarrolladora Web y Artista 3D
+                        </span>
+
+                        <a href="mailto:correo2@ejemplo.com">
+
+                            <i class="icon ion-md-mail"></i>
+
+                            correo2@ejemplo.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-columna">
+
+                <h3 class="footer-titulo">
+                    EXPLORA
+                </h3>
+
+                <ul class="footer-enlaces">
+
+                    <li><a href="index.html">Inicio</a></li>
+
+                    <li><a href="estadisticas.php">Estadísticas</a></li>
+
+                    <li><a href="videos.html">Videos</a></li>
+
+                    <li><a href="trivia.html">Trivia</a></li>
+
+                    <li><a href="juego.html">Minijuego</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-columna">
+
+                <h3 class="footer-titulo">
+                    MÁS SOBRE BATTEAMX
+                </h3>
+
+                <ul class="footer-enlaces">
+
+                    <li>
+                        <a href="index.html">
+                            Historia del béisbol
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="estadisticas.php">
+                            Equipos mexicanos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="escaneo.html">
+                            Escaneo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="abrir-ayuda">
+                            Ayuda
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <button
+            class="footer-subir"
+            id="btnSubir"
+            type="button"
+            aria-label="Volver arriba">
+
+            <i class="icon ion-md-arrow-up"></i>
+
+        </button>
+
+    </footer>
+
+    <div class="ayuda-overlay" id="ayudaOverlay">
+
+        <div class="ayuda-modal">
+
+            <button
+                class="ayuda-cerrar"
+                id="cerrarAyuda"
+                type="button"
+                aria-label="Cerrar ayuda">
+
+                <i class="icon ion-md-close"></i>
+
+            </button>
+
+            <div class="ayuda-icono">
+                <i class="icon ion-md-help-circle"></i>
+            </div>
+
+            <h2>¡Bienvenido a BATTEAMX!</h2>
+
+            <p>
+                Descubre cómo navegar por nuestra plataforma,
+                conocer la historia de los equipos,
+                consultar estadísticas, explorar videos
+                y participar en trivias.
+            </p>
+
+            <button
+                class="ayuda-iniciar"
+                id="iniciarTour"
+                type="button">
+
+                <i class="icon ion-md-play"></i>
+
+                Comenzar recorrido
+
+            </button>
+
+            <span class="ayuda-nota">
+                Puedes cerrar el recorrido cuando quieras.
+            </span>
+
+        </div>
+
+    </div>
+
+    <script src="./JS/buttons.js?v=4" defer></script>
+    <script src="./JS/historiaEquipo.js" defer></script>
+    <script src="./JS/tema.js" defer></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js"
+        defer>
+    </script>
+
+    <script src="./JS/tour.js" defer></script>
+
+</body>
+</html>

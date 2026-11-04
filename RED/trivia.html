@@ -24,10 +24,12 @@
         <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
          <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/trivia.css">
             <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
+            
 
         <!-- Estilos de ayuda Driver.js -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
         <link rel="stylesheet" href="./CSS/tour.css">
+        <link rel="stylesheet" href="./CSS/menu_movil.css">
     </HEAD>
     <BODY CLASS="pagina-trivia">
      
@@ -62,106 +64,65 @@
         </div>
 
        
-     <DIV CLASS="menu">
-            <ul class="menulist">
-                <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
-                <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
-                <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
-                <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
-                <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
-                <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
-            </ul>
-        </DIV>
-        
-        <DIV CLASS="menu2">
-            <ul class="menulist">
-                <li>Perfil</li>
-                <li>Configuracion</li>
-            </ul>
-            AQUI VAN LAS CONFIGURACIONES DEL PERFIL
-        </DIV>
+     <!-- Menú lateral móvil -->
+     <div class="menu-overlay" id="menuOverlay"></div>
+     <nav class="menu" id="menuMovil" aria-label="Navegación móvil">
+         <div class="menu-cabecera">
+             <div class="menu-marca"><img src="./resources/Logo.png" alt="BatteaMX" class="menu-logo logo-oscuro"><img src="./resources/logoModoclaro.png" alt="BatteaMX" class="menu-logo logo-claro"></div>
+             <button type="button" id="cerrarMenu" class="menu-cerrar" aria-label="Cerrar menú"><i class="icon ion-md-close"></i></button>
+         </div>
+         <ul class="menulist">
+             <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
+             <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadísticas</a></li>
+             <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
+             <li><a href="trivia.html" class="activo" aria-current="page"><i class="icon ion-md-bulb"></i> Trivia</a></li>
+             <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
+           <li><a href="juego.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8abf94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;flex-shrink:0;" aria-hidden="true"><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1" fill="#8abf94" stroke="none"/><circle cx="18" cy="13.5" r="1" fill="#8abf94" stroke="none"/><path d="M6.5 6.5h11a4 4 0 0 1 3.9 3.1l1.1 5.2a3 3 0 0 1-4.7 3.1l-2.3-1.8h-7l-2.3 1.8a3 3 0 0 1-4.7-3.1l1.1-5.2a4 4 0 0 1 3.9-3.1z"/></svg><span>Minijuego</span></a></li>
+             <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+         </ul>
+         <div class="menu-inferior">
+             <a href="config.php" class="menu-perfil">
+                 <img src="./PHP/foto.php" alt="Foto de perfil">
+                 <span>Mi perfil</span><i class="icon ion-md-arrow-forward"></i>
+             </a>
+             <div class="menu-apariencia">
+                 
+                 <div class="tema-movil-contenedor" id="temaMovil"></div>
+             </div>
+         </div>
+     </nav>
 
-        <!--colocar la barra principal-->
-        <DIV CLASS="title">
-            <button id="toggleMenu" class="hamburger" accesskey="M">☰</button>
-            <img src="./resources/Logo.png"
-            alt="Logo BatteaMx"
-            class="titulo-imagen logo-oscuro">
-
-            <img src="./resources/logoModoclaro.png"
-                alt="Logo BatteaMx"
-                class="titulo-imagen logo-claro">
-
-             <ul class="menuhor">
-                <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
-                <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadisticas</a></li>
-                <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
-                <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
-                <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
-                <li><a href="juego.html"><i class="icon ion-md-game-controller-b"></i> Minijuego</a></li>
-                <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
-            </ul>
-
-            
-           
-            <div class="theme-toggle">
-
-                <input type="checkbox"
-                    id="themeSwitch"
-                    class="theme-toggle-input">
-
-                <label for="themeSwitch" class="theme-toggle-track">
-
-                    <span class="theme-toggle-thumb">
-
-                        <svg class="theme-toggle-icon icon-luna"
-                            viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-                        </svg>
-
-                        <svg class="theme-toggle-icon icon-sol"
-                            viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <circle cx="12" cy="12" r="4"/>
-                            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                fill="none"
-                                stroke-linecap="round"/>
-                        </svg>
-
-                    </span>
-
-                    <span class="theme-toggle-texto texto-claro">
-                        MODO OSCURO
-                    </span>
-
-                    <span class="theme-toggle-texto texto-oscuro">
-                        MODO CLARO
-                    </span>
-
-                </label>
-
-            </div>
-
-
-<a href="config.php" class="profile">
-    <img
-        src="./PHP/foto.php"
-        alt="Foto de perfil del usuario"
-        class="profile-img"
-        onerror="this.onerror=null; this.src='./resources/usuario.png';"
-    >
-</a>
-
-        <!-- cerrado provicional
-            <button class="profile">
-                <img src="./resources/usuario.png" alt="Perfil de usuario" class="profile-img">
-            </button>-->
-
-        </DIV>
+     <!-- Encabezado: logo y hamburguesa en móvil -->
+     <div class="title">
+         <button id="toggleMenu" class="hamburger" type="button" aria-label="Abrir menú" aria-controls="menuMovil" aria-expanded="false"><i class="icon ion-md-menu"></i></button>
+         <div class="logo-contenedor">
+             <img src="./resources/Logo.png" alt="Logo BatteaMX" class="titulo-imagen logo-oscuro">
+             <img src="./resources/logoModoclaro.png" alt="Logo BatteaMX" class="titulo-imagen logo-claro">
+         </div>
+         <ul class="menuhor">
+             <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
+             <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadísticas</a></li>
+             <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
+             <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
+             <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
+        <li><a href="juego.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8abf94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;flex-shrink:0;" aria-hidden="true"><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1" fill="#8abf94" stroke="none"/><circle cx="18" cy="13.5" r="1" fill="#8abf94" stroke="none"/><path d="M6.5 6.5h11a4 4 0 0 1 3.9 3.1l1.1 5.2a3 3 0 0 1-4.7 3.1l-2.3-1.8h-7l-2.3 1.8a3 3 0 0 1-4.7-3.1l1.1-5.2a4 4 0 0 1 3.9-3.1z"/></svg><span>Minijuego</span></a></li>
+             <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+         </ul>
+         <div id="temaEscritorio" class="tema-escritorio-contenedor">
+             <div class="theme-toggle">
+                 <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
+                 <label for="themeSwitch" class="theme-toggle-track">
+                     <span class="theme-toggle-thumb">
+                         <svg class="theme-toggle-icon icon-luna" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                         <svg class="theme-toggle-icon icon-sol" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                     </span>
+                     <span class="theme-toggle-texto texto-claro">MODO OSCURO</span>
+                     <span class="theme-toggle-texto texto-oscuro">MODO CLARO</span>
+                 </label>
+             </div>
+         </div>
+         <a href="config.php" class="profile"><img src="./PHP/foto.php" alt="Foto de perfil del usuario" class="profile-img"></a>
+     </div>
 
       <DIV CLASS="body">
     <DIV CLASS="ctr w100">
@@ -220,7 +181,6 @@
 </DIV>
       
 
-    </BODY>
         <FOOTER class="footer-battea">
 
     <DIV class="footer-contenido">
@@ -336,9 +296,9 @@
     </button>
 
         <!--colocar los scripts-->
-        <SCRIPT SRC="./JS/buttons.js"></SCRIPT>
+        <script src="./JS/buttons.js?v=4" defer></script>
         <script src="./JS/Trivia.js?v=3" charset="UTF-8"></script>
-        <SCRIPT SRC="./JS/tema.js"></SCRIPT>
+        <script src="./JS/tema.js" defer></script>
     </FOOTER>
 
 <!-- Ventana de ayuda exclusiva de Trivia -->
@@ -360,4 +320,7 @@
 <!-- Libreria y recorrido de ayuda -->
 <script src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js"></script>
 <script src="./JS/tour.js?v=7"></script>
-</HTML>
+
+
+</body>
+</html>

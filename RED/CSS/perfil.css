@@ -1,527 +1,297 @@
-.perfil-layout {
-    display: flex;
-    gap: 25px;
-    padding: 130px 40px 50px 40px;
-    width: 100%;
-    box-sizing: border-box;
-    align-items: stretch;
-    flex-wrap: wrap;
-}
+/* BATTEAMX — PERFIL */
+body.pagina-perfil { overflow-x: clip; }
+body.pagina-perfil .body { width: 100%; max-width: none; min-width: 0; margin: 0; padding: 0; box-sizing: border-box; }
+body.pagina-perfil .perfil-layout,
+body.pagina-perfil .perfil-layout * { box-sizing: border-box; }
 
-/* mi perfil */
-.perfil-card {
-    background-color: #0c2b0c;
+body.pagina-perfil .perfil-layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+    gap: 25px;
+    width: min(100%, 1500px);
+    margin-inline: auto;
+    padding: 150px 40px 70px;
+    align-items: stretch;
+}
+.perfil-card, .tarjetas-card {
+    min-width: 0;
+    background: #0c2b0c;
     border: 2px solid #8e8b3a;
     border-radius: 20px;
     padding: 30px 25px;
-    flex: 1;
-    min-width: 280px;
-    max-width: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    position: relative;
+    gap: 20px;
 }
-
-.perfil-titulo {
-    font-family: 'VarsityTeam', sans-serif;
-    font-size: 1.8rem;
-    color: #c4c3d2;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.perfil-card { gap: 15px; }
+.tarjetas-card { justify-content: center; }
+.perfil-titulo, .tarjetas-titulo {
     margin: 0;
+    color: #c4c3d2;
+    font: 700 1.8rem/1.3 'VarsityTeam', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
 }
-
 .perfil-avatar {
     width: 180px;
     height: 180px;
+    margin-top: 10px;
+    padding: 15px;
     border-radius: 50%;
     object-fit: cover;
-    
-    padding: 15px;
-    box-sizing: border-box;
-    margin-top: 10px;
 }
-
 .perfil-nombre {
-    font-family: 'VarsityTeam', sans-serif;
-    font-size: 1.3rem;
-    color: #c4c3d2;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    max-width: 100%;
     margin: 0;
+    color: #c4c3d2;
+    font: 700 1.3rem/1.4 'VarsityTeam', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
 }
-
-.perfil-botones-fila {
+.perfil-botones-fila, .perfil-botones-fila .ima {
     display: flex;
-    gap: 10px;
     width: 100%;
+    min-width: 0;
+    gap: 10px;
 }
-
+.perfil-botones-fila .ima { margin: 0; }
+.input-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
 .btn-perfil {
-    flex: 1;
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    border-radius: 8px;
-    padding: 10px 8px;
-    cursor: pointer;
-    display: flex;
+    display: inline-flex;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 44px;
     align-items: center;
     justify-content: center;
     gap: 6px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    font: 700 11px/1.4 'Poppins', sans-serif;
     text-align: center;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s, color .2s, transform .2s;
 }
+.btn-perfil i { font-size: 14px; flex-shrink: 0; }
+.btn-perfil:hover { transform: translateY(-2px); }
+.btn-perfil-verde { background: #2f7a34; border: 2px solid #48ad49; color: #fff; }
+.btn-perfil-verde:hover { background: #48ad49; }
+.btn-perfil-rojo { background: #7a2f2f; border: 2px solid #ed1c24; color: #fff; }
+.btn-perfil-rojo:hover { background: #ed1c24; }
+.btn-perfil-outline { background: transparent; border: 2px solid #48ad49; color: #c4c3d2; }
+.btn-perfil-outline:hover { background: #48ad49; color: #001c00; }
+.perfil-pelota { color: #8e8b3a; font-size: 16px; margin-top: 5px; }
 
-.btn-perfil:hover {
-    transform: scale(1.03);
-}
-
-.btn-perfil i {
-    font-size: 14px;
-}
-
-.btn-perfil-verde {
-    background-color: #2f7a34;
-    border: 2px solid #48ad49;
-    color: #ffffff;
-}
-
-.btn-perfil-verde:hover {
-    background-color: #48ad49;
-}
-
-.btn-perfil-rojo {
-    background-color: #7a2f2f;
-    border: 2px solid #ed1c24;
-    color: #ffffff;
-}
-
-.btn-perfil-rojo:hover {
-    background-color: #ed1c24;
-}
-
-.btn-perfil-outline {
-    background-color: transparent;
-    border: 2px solid #48ad49;
-    color: #c4c3d2;
-}
-
-.btn-perfil-outline:hover {
-    background-color: #48ad49;
-    color: #001c00;
-}
-
-.perfil-pelota {
-    color: #8e8b3a;
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-/*coleccion tarjetas */
-.tarjetas-card {
-    background-color: #0c2b0c;
-    border: 2px solid #8e8b3a;
-    border-radius: 20px;
-    padding: 30px 25px;
-    flex: 2;
-    min-width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-.tarjetas-titulo {
-    font-family: 'VarsityTeam', sans-serif;
-    font-size: 1.8rem;
-    color: #c4c3d2;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
+/* Carrusel */
 .tarjetas-carrusel-contenedor {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
     width: 100%;
+    min-width: 0;
+    gap: 12px;
 }
-
 .tarjetas-track {
     display: flex;
+    flex: 1 1 0;
+    min-width: 0;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 16px;
+    padding: 10px 2px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    flex: 1;
-    padding: 10px 0;
-
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
 }
-
-.tarjetas-track::-webkit-scrollbar {
-    display: none;
-}
-
+.tarjetas-track::-webkit-scrollbar { display: none; }
 .tarjeta-coleccion {
-    background-color: #1a3d1a;
-    border: 2px solid #8e8b3a;
-    border-radius: 12px;
+    display: flex;
+    flex: 0 0 190px;
     width: 190px;
     height: 260px;
-    flex-shrink: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    background: #1a3d1a;
+    border: 2px solid #8e8b3a;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    transition: transform .2s;
 }
-
-.tarjeta-coleccion img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tarjeta-coleccion-grande {
-    width: 210px;
-    height: 280px;
-}
-
-.tarjetas-dots {
+.tarjeta-coleccion:hover { transform: translateY(-4px); }
+.tarjeta-coleccion-grande { flex-basis: 210px; width: 210px; height: 280px; }
+.tarjeta-coleccion img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tarjetas-carrusel-contenedor .carrusel-flecha {
     display: flex;
-    gap: 10px;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 2px solid #8e8b3a;
+    border-radius: 50%;
+    background: #16431b;
+    color: #fff;
+    cursor: pointer;
 }
-
-.dot {
+.tarjetas-carrusel-contenedor .carrusel-flecha:hover { background: #2f7a34; }
+.tarjetas-carrusel-contenedor .carrusel-flecha i { font-size: 18px; }
+.tarjetas-dots { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.tarjetas-dots .dot {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
     border: 2px solid #8e8b3a;
-    background-color: transparent;
+    border-radius: 50%;
+    background: transparent;
     cursor: pointer;
-    transition: background-color 0.2s ease;
 }
+.tarjetas-dots .dot-activo { background: #c4c3d2; border-color: #c4c3d2; }
 
-.dot-activo {
-    background-color: #c4c3d2;
-    border-color: #c4c3d2;
-}
-
-
+/* Confirmación de cierre de sesión */
 .modal-logout {
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-    display: none;
-    justify-content: center;
-    align-items: center;
     z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(5px);
 }
-
-.modal-logout.activo {
-    display: flex;
-}
-
+.modal-logout.activo { display: flex; }
 .modal-logout-contenido {
-    width: 90%;
+    width: 100%;
     max-width: 430px;
     padding: 35px 32px;
-    background: linear-gradient(
-        145deg,
-        #121a17,
-        #09100d
-    );
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255,255,255,.1);
     border-radius: 18px;
+    background: linear-gradient(145deg, #121a17, #09100d);
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    font-family: "Poppins", sans-serif;
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.6),
-        0 0 30px rgba(220, 30, 40, 0.08);
-    animation: aparecerModal 0.2s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    animation: aparecerModal .2s ease;
 }
-
 .modal-logout-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 65px;
     height: 65px;
     margin: 0 auto 20px;
+    border: 1px solid rgba(230,45,55,.35);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(210, 30, 40, 0.12);
-    border: 1px solid rgba(230, 45, 55, 0.35);
+    background: rgba(210,30,40,.12);
 }
-
-.modal-logout-icono i {
-    color: #e32b35;
-    font-size: 32px;
-}
-
-.modal-logout-contenido h2 {
-    margin: 0 0 12px;
-    color: #ffffff;
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.modal-logout-contenido p {
-    margin: 0 0 28px;
-    color: #a9b0ad;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.modal-logout-botones {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.modal-logout-botones form {
-    margin: 0;
-}
-
-.btn-cancelar,
-.btn-confirmar {
-    min-width: 145px;
-    padding: 12px 20px;
+.modal-logout-icono i { color: #e32b35; font-size: 32px; }
+.modal-logout-contenido h2 { margin: 0 0 12px; color: #fff; font-size: 23px; }
+.modal-logout-contenido p { margin: 0 0 28px; color: #a9b0ad; font-size: 14px; line-height: 1.6; }
+.modal-logout-botones { display: flex; gap: 12px; }
+.modal-logout-botones form { flex: 1; margin: 0; }
+.btn-cancelar, .btn-confirmar {
+    flex: 1;
+    min-width: 0;
+    min-height: 44px;
+    padding: 12px;
     border-radius: 9px;
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font: 700 12px 'Poppins', sans-serif;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: background .2s, transform .2s;
 }
+.btn-cancelar { color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.25); }
+.btn-cancelar:hover { background: rgba(255,255,255,.08); }
+.btn-confirmar { width: 100%; color: #fff; background: linear-gradient(90deg,#a9141d,#df2935); border: 0; }
+.btn-confirmar:hover { transform: translateY(-2px); }
+@keyframes aparecerModal { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
 
-.btn-cancelar {
-    background: transparent;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.btn-cancelar:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.45);
-}
-
-.btn-confirmar {
-    background: linear-gradient(90deg, #a9141d, #df2935);
-    color: #ffffff;
-    border: none;
-}
-
-.btn-confirmar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 7px 20px rgba(220, 30, 40, 0.30);
-}
-
-@keyframes aparecerModal {
-    from {
-        opacity: 0;
-        transform: scale(0.92);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 500px) {
-    .modal-logout-contenido {
-        padding: 28px 20px;
-    }
-
-    .modal-logout-botones {
-        flex-direction: column;
-    }
-
-    .modal-logout-botones form {
-        width: 100%;
-    }
-        .btn-cancelar,
-    .btn-confirmar {
-        width: 100%;
-    }
-}
-
-
-/* ==========================================
-   PERFIL - MODO CLARO
-========================================== */
-
-/* TARJETA DE PERFIL */
-
-body.modo-claro.pagina-perfil .perfil-card {
-    background-color: #14552b;
-    border: 2px solid #218b32;
-
-    box-shadow:
-        0 0 8px rgba(20, 85, 43, 0.3),
-        0 0 18px rgba(20, 85, 43, 0.2);
-}
-
-
-/* TITULO MI PERFIL */
-
-body.modo-claro.pagina-perfil .perfil-titulo {
-    color: #ffffff;
-}
-
-
-/* NOMBRE DE USUARIO */
-
-body.modo-claro.pagina-perfil .perfil-nombre {
-    color: #e1f5df;
-}
-
-
-/* FOTO DE PERFIL */
-
-body.modo-claro.pagina-perfil .perfil-avatar {
-    border-color: #8cdb8b;
-}
-
-
-/* TARJETA DE COLECCION */
-
+/* Modo claro */
+body.modo-claro.pagina-perfil .perfil-card,
 body.modo-claro.pagina-perfil .tarjetas-card {
-    background-color: #14552b;
-    border: 2px solid #218b32;
-
-    box-shadow:
-        0 0 8px rgba(20, 85, 43, 0.3),
-        0 0 18px rgba(20, 85, 43, 0.2);
+    background: #14552b;
+    border-color: #218b32;
+    box-shadow: 0 0 18px rgba(20,85,43,.2);
 }
+body.modo-claro.pagina-perfil .perfil-titulo,
+body.modo-claro.pagina-perfil .tarjetas-titulo { color: #fff; }
+body.modo-claro.pagina-perfil .perfil-nombre { color: #e1f5df; }
+body.modo-claro.pagina-perfil .btn-perfil-verde { background: #218b32; border-color: #48ad49; color: #fff; }
+body.modo-claro.pagina-perfil .btn-perfil-verde:hover { background: #8cdb8b; color: #14552b; }
+body.modo-claro.pagina-perfil .btn-perfil-rojo { background: #d1263a; border-color: #ed5969; }
+body.modo-claro.pagina-perfil .btn-perfil-rojo:hover { background: #ed5969; }
+body.modo-claro.pagina-perfil .btn-perfil-outline { border-color: #8cdb8b; color: #fff; }
+body.modo-claro.pagina-perfil .btn-perfil-outline:hover { background: #8cdb8b; color: #14552b; }
+body.modo-claro.pagina-perfil .carrusel-flecha { background: #218b32; border-color: #48ad49; }
+body.modo-claro.pagina-perfil .carrusel-flecha:hover { background: #8cdb8b; color: #14552b; }
+body.modo-claro.pagina-perfil .tarjetas-dots .dot { background: #8cdb8b; }
+body.modo-claro.pagina-perfil .tarjetas-dots .dot-activo { background: #fff; border-color: #fff; }
+body.modo-claro.pagina-perfil .modal-logout-contenido { background: #14552b; border: 2px solid #218b32; }
+body.modo-claro.pagina-perfil .modal-logout-contenido p { color: #e1f5df; }
+body.modo-claro.pagina-perfil .btn-cancelar { border: 2px solid #8cdb8b; }
+body.modo-claro.pagina-perfil .btn-cancelar:hover { background: #8cdb8b; color: #14552b; }
+body.modo-claro.pagina-perfil .btn-confirmar { background: #d1263a; border: 2px solid #ed5969; }
+body.modo-claro.pagina-perfil .btn-confirmar:hover { background: #ed5969; }
 
-
-/* TITULO TARJETAS COLECCIONADAS */
-
-body.modo-claro.pagina-perfil .tarjetas-titulo {
-    color: #ffffff;
+/* Tablet y móvil: el grid evita desplazamientos acumulados */
+@media (max-width: 900px) {
+    body.pagina-perfil .perfil-layout {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 740px;
+        padding: 155px 20px 55px;
+        gap: 22px;
+    }
+    .perfil-card, .tarjetas-card { width: 100%; max-width: none; }
+    .perfil-botones-fila .ima { justify-content: center; }
 }
-
-
-/* BOTONES VERDES */
-
-body.modo-claro.pagina-perfil .btn-perfil-verde {
-    background-color: #218b32;
-    border: 2px solid #48ad49;
-    color: #ffffff;
+@media (max-width: 600px) {
+    body.pagina-perfil .perfil-layout {
+        width: 100%;
+        max-width: none;
+        padding: 115px 12px 40px;
+        margin-inline: auto;
+        gap: 20px;
+    }
+    .perfil-card { padding: 25px 18px; border-radius: 16px; }
+    .tarjetas-card { padding: 25px 12px; border-radius: 16px; }
+    .perfil-titulo { font-size: clamp(22px, 6vw, 28px); }
+    .tarjetas-titulo { font-size: clamp(19px, 5.5vw, 26px); }
+    .perfil-avatar { width: 150px; height: 150px; padding: 10px; }
+    .perfil-nombre { font-size: clamp(17px, 5vw, 22px); }
+    .perfil-botones-fila, .perfil-botones-fila .ima { flex-direction: column; }
+    .btn-perfil { flex: none; width: 100%; min-height: 46px; padding: 12px 10px; }
+    .tarjetas-carrusel-contenedor { gap: 6px; }
+    .tarjetas-track { gap: 12px; }
+    .tarjeta-coleccion, .tarjeta-coleccion-grande {
+        flex-basis: clamp(120px, 39vw, 175px);
+        width: clamp(120px, 39vw, 175px);
+        height: clamp(175px, 55vw, 240px);
+    }
+    .tarjetas-carrusel-contenedor .carrusel-flecha {
+        flex-basis: 32px;
+        width: 32px;
+        height: 36px;
+        border-radius: 8px;
+    }
+    .modal-logout { padding: 16px; }
+    .modal-logout-contenido { padding: 28px 20px; }
+    .modal-logout-contenido h2 { font-size: 20px; }
+    .modal-logout-botones { flex-direction: column; }
+    .modal-logout-botones form, .btn-cancelar { width: 100%; }
 }
-
-body.modo-claro.pagina-perfil .btn-perfil-verde:hover {
-    background-color: #8cdb8b;
-    color: #14552b;
-}
-
-
-/* BOTON CERRAR SESION */
-
-body.modo-claro.pagina-perfil .btn-perfil-rojo {
-    background-color: #d1263a;
-    border: 2px solid #ed5969;
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .btn-perfil-rojo:hover {
-    background-color: #ed5969;
-    color: #ffffff;
-}
-
-
-/* BOTON ESCANEAR */
-
-body.modo-claro.pagina-perfil .btn-perfil-outline {
-    background-color: transparent;
-    border: 2px solid #8cdb8b;
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .btn-perfil-outline:hover {
-    background-color: #8cdb8b;
-    color: #14552b;
-}
-
-
-/* FLECHAS DEL CARRUSEL */
-
-body.modo-claro.pagina-perfil .carrusel-flecha {
-    background-color: #218b32;
-    border: 2px solid #48ad49;
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .carrusel-flecha:hover {
-    background-color: #8cdb8b;
-    color: #14552b;
-}
-
-
-/* INDICADORES DEL CARRUSEL */
-
-body.modo-claro.pagina-perfil .tarjetas-dots .dot {
-    background-color: #8cdb8b;
-}
-
-body.modo-claro.pagina-perfil .tarjetas-dots .dot-activo {
-    background-color: #ffffff;
-}
-
-
-/* VENTANA DE CERRAR SESION */
-
-body.modo-claro.pagina-perfil .modal-logout-contenido {
-    background-color: #14552b;
-    border: 2px solid #218b32;
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .modal-logout-contenido h2 {
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .modal-logout-contenido p {
-    color: #e1f5df;
-}
-
-
-/* BOTON CANCELAR */
-
-body.modo-claro.pagina-perfil .btn-cancelar {
-    background-color: transparent;
-    border: 2px solid #8cdb8b;
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .btn-cancelar:hover {
-    background-color: #8cdb8b;
-    color: #14552b;
-}
-
-
-/* BOTON CONFIRMAR CIERRE DE SESION */
-
-body.modo-claro.pagina-perfil .btn-confirmar {
-    background-color: #d1263a;
-    border: 2px solid #ed5969;
-    color: #ffffff;
-}
-
-body.modo-claro.pagina-perfil .btn-confirmar:hover {
-    background-color: #ed5969;
+@media (prefers-reduced-motion: reduce) {
+    .btn-perfil, .tarjeta-coleccion, .modal-logout-contenido { animation: none; transition: none; }
+    .tarjetas-track { scroll-behavior: auto; }
 }
