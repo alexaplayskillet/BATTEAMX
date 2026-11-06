@@ -47,5 +47,34 @@ document.addEventListener('DOMContentLoaded', () => {
     btnConfeti.addEventListener('click', () => {
         confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
     });
+    
+    const btnGuardar = document.getElementById('btnGuardarColeccion');
+const msgGuardado = document.getElementById('msgGuardado');
 
+btnGuardar.addEventListener('click', async () => {
+    btnGuardar.disabled = true;
+
+    const datos = new FormData();
+    datos.append('equipo', btnGuardar.dataset.equipo);
+
+    try {
+        const resp = await fetch('./PHP/guardar-coleccion.php', { method: 'POST', body: datos });
+        const data = await resp.json();
+
+        if (resp.status === 403) {
+            msgGuardado.textContent = 'Inicia sesión para guardar tu tarjeta.';
+        } else if (data.ok) {
+            btnGuardar.innerHTML = '<i class="icon ion-md-checkmark"></i> GUARDADA EN TU COLECCIÓN';
+            
+            msgGuardado.textContent = data.nueva
+                ? '¡Tarjeta añadida a tu colección!'
+                : 'Ya tenías esta tarjeta.';
+        } else {
+            msgGuardado.textContent = 'No hay tarjeta pendiente. Vuelve a escanear.';
+        }
+    } catch (e) {
+        msgGuardado.textContent = 'No se pudo guardar. Intenta de nuevo.';
+        btnGuardar.disabled = false;
+    }
+});
 });

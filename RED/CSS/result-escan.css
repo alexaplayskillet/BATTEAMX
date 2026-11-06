@@ -210,3 +210,123 @@
     flex-shrink: 0;
 }
 
+/* fila: modelo a la izquierda, tarjeta ganada a la derecha */
+.resultado-fila {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+.resultado-fila .resultado-tarjeta {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.resultado-recompensa {
+    flex: 0 0 260px;
+    background-color: #0c2b0c;
+    border: 2px solid #8e8b3a;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.resultado-recompensa img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.resultado-recompensa p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c4c3d2;
+    margin: 0;
+}
+
+/* mensaje de guardado: misma forma que .btn-resultado, pero sin ser botón */
+.msg-guardado {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 20px;
+    border: 2px solid #8e8b3a;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #c4c3d2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.msg-guardado i {
+    font-size: 16px;
+}
+
+/* sin texto no se muestra el recuadro vacío */
+.msg-guardado:empty {
+    display: none;
+}
+
+/* variantes */
+.msg-guardado.ok {
+    border-color: #3ddc84;
+}
+.msg-guardado.ok i {
+    color: #3ddc84;
+}
+
+.msg-guardado.error {
+    border-color: #e63946;
+}
+.msg-guardado.error i {
+    color: #e63946;
+}
+
+/* el botón de guardar, una vez usado, no debe reaccionar al cursor */
+.btn-resultado:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+.btn-resultado:disabled:hover {
+    background-color: transparent;
+    color: #c4c3d2;
+    transform: none;
+}
+
+/* móvil: la tarjeta pasa debajo del modelo */
+@media (max-width: 768px) {
+    .resultado-fila {
+        flex-direction: column;
+    }
+
+    .resultado-fila .resultado-tarjeta {
+        width: 100%;
+        flex: none;
+    }
+
+    .resultado-recompensa {
+        flex: none;
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .resultado-visor-ar {
+        height: 420px; /* 600px es mucho en pantallas pequeñas */
+    }
+}

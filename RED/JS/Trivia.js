@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-
+const PUNTOS_PARA_TARJETA = 7; // debe coincidir con PUNTOS_TRIVIA en recompensa.php
     const TOTAL_PREGUNTAS = 10;
 
     const bancoPreguntas = [
@@ -672,14 +672,13 @@ function mostrarBienvenida() {
 
         tarjeta.innerHTML = `
             <h2 class="trivia-pregunta">¡TRIVIA COMPLETADA!</h2>
-
-            <p class="trivia-resultado">
-                OBTUVISTE
-                <strong>${puntaje}/${TOTAL_PREGUNTAS}</strong>
-                PUNTOS
-            </p>
-
+            <p class="trivia-resultado">OBTUVISTE <strong>${puntaje}/${TOTAL_PREGUNTAS}</strong> PUNTOS</p>
             <p class="trivia-mensaje">${mensaje}</p>
+
+            <div id="recompensaTrivia" hidden>
+                <img id="imgRecompensa" alt="Tarjeta ganada" style="max-width:220px">
+                <p id="msgRecompensa" class="msg-guardado"></p>
+            </div>
 
             <button id="btnReiniciar" class="btn-reiniciar">
                 <i class="icon ion-md-refresh"></i>
@@ -687,13 +686,48 @@ function mostrarBienvenida() {
             </button>
         `;
 
-        document.getElementById("preguntaContador").innerHTML =
-            "TRIVIA FINALIZADA";
 
-        actualizarIconosProgreso();
+            document.getElementById("preguntaContador").innerHTML =
+        "TRIVIA FINALIZADA";
 
-        document.getElementById("btnReiniciar")
-            .addEventListener("click", iniciarTrivia);
+    actualizarIconosProgreso();
+
+    document.getElementById("btnReiniciar")
+        .addEventListener("click", iniciarTrivia);
+
+    if (puntaje >= PUNTOS_PARA_TARJETA) pedirRecompensa();
+}
+    
+
+    async function pedirRecompensa() {
+        const datos = new FormData();
+        datos.append("origen", "trivia");
+        datos.append("puntos", puntaje);
+
+        const cont = document.getElementById("recompensaTrivia");
+        const img = document.getElementById("imgRecompensa");
+        const msg = document.getElementById("msgRecompensa");
+
+        try {
+            const resp = await fetch("./PHP/recompensa.php", { method: "POST", body: datos });
+            const data = await resp.json();
+
+            if (resp.status === 403) {
+                img.hidden = true;
+                msg.textContent = "Inicia sesión para reclamar tu tarjeta.";
+                cont.hidden = false;
+                return;
+            }
+            if (!data.ok) return;
+
+            img.src = data.src;
+            msg.textContent = data.completa
+                ? "¡Ya tienes toda la colección!"
+                : "¡Nueva tarjeta: " + data.equipo + "!";
+            cont.hidden = false;
+        } catch (e) {
+    console.error("Error al pedir la recompensa:", e);
+} 
     }
 
     tarjeta.addEventListener("click", evento => {

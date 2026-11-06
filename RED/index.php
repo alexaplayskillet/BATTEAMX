@@ -1,3 +1,12 @@
+<?php
+    session_start();//para recordar quién inició sesión
+    require_once "./PHP/conexion.php";
+    //que incluya la conexion antes de hacer nada
+    if (!isset($_SESSION['id_usuario'])) {
+      header("Location: login.php");
+      exit();
+    }
+?>
 <!DOCTYPE HTML>
 <HTML>
     <HEAD>

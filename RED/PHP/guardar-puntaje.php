@@ -44,7 +44,8 @@
     echo json_encode(['ok' => true, 'mejor' => (int)$mejor]);*/
   
     session_start();
-    include("conexion.php");
+    require_once "conexion.php";
+    require_once "funciones_tarjetas.php";
     header('Content-Type: application/json; charset=utf-8');
 
     // puntos necesarios para ganar (debe coincidir con PUNTOS_META en juego-bateo.js)
@@ -95,13 +96,25 @@
     $respuesta = ['ok' => true, 'mejor' => (int)$mejor];
 
     // si ganó, se le premia con una tarjeta al azar
-    if ($gano){
+   /* if ($gano){
         $resultado = mysqli_query($cone, "SELECT id_tarjeta, equipo FROM tarjetas ORDER BY RAND() LIMIT 1");
         $fila = $resultado ? mysqli_fetch_assoc($resultado) : null;
         if ($fila){
             $respuesta['tarjeta'] = [
                 'id' => (int)$fila['id_tarjeta'],
                 'equipo' => $fila['equipo']
+            ];
+        }
+    }*/
+            // si ganó, se le premia con una tarjeta que aún no tenga
+    if ($gano){
+        $tarjeta = otorgar_tarjeta($cone, (int)$id);
+        if ($tarjeta){
+            $respuesta['tarjeta'] = [
+                'id'       => (int)$tarjeta['id_tarjeta'],
+                'equipo'   => $tarjeta['equipo'],
+                'nueva'    => $tarjeta['nueva'],
+                'completa' => $tarjeta['completa']
             ];
         }
     }

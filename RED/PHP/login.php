@@ -25,7 +25,7 @@
         if (mysqli_stmt_fetch($consulta) && password_verify($password, $hash)){
             $_SESSION['id_usuario'] = $id;
             $_SESSION['usuario'] = $usuario;
-            header("Location: ../index.html");
+            header("Location: ../index.php");
             exit();
         }
 

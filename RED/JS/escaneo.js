@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "No se pudo acceder a la cámara. Revisa los permisos.";
     });
 
+    
 
 
 });

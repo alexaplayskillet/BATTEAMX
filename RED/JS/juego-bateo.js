@@ -198,7 +198,7 @@
         });
 }
 
-function mostrarTarjeta(t) {
+/*unction mostrarTarjeta(t) {
     // la tarjeta aparece hasta que la imagen terminó de cargar
     elTarjetaImg.onload = () => {
         elRecompensa.hidden = false;
@@ -212,6 +212,25 @@ function mostrarTarjeta(t) {
     elTarjetaImg.src = RUTA_TARJETA + '?id=' + t.id;
     elTarjetaNombre.textContent = t.equipo;
     pantallaTexto.textContent += ' ¡Ganaste una tarjeta de ' + t.equipo + '!';
+}*/
+function mostrarTarjeta(t) {
+    elTarjetaImg.onload = () => {
+        elRecompensa.hidden = false;
+        pantalla.classList.add('con-tarjeta');
+    };
+    elTarjetaImg.onerror = () => {
+        elRecompensa.hidden = true;
+        pantalla.classList.remove('con-tarjeta');
+    };
+    elTarjetaImg.alt = 'Tarjeta de ' + t.equipo;
+    elTarjetaImg.src = RUTA_TARJETA + '?id=' + t.id;
+    elTarjetaNombre.textContent = t.equipo;
+
+    if (t.completa) {
+        pantallaTexto.textContent += ' ¡Ya tienes toda la colección!';
+    } else {
+        pantallaTexto.textContent += ' ¡Ganaste una tarjeta nueva de ' + t.equipo + '!';
+    }
 }
     // ===== DIBUJO =====
     function dibujarObjetivo(tp, color) {
@@ -299,6 +318,8 @@ function mostrarTarjeta(t) {
         }
         requestAnimationFrame(bucle);
     }
+
+    
 
     // ===== CONTROLES =====
     canvas.addEventListener('pointerdown', golpear);

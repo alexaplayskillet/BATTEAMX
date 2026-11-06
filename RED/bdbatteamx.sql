@@ -262,3 +262,18 @@ WHERE NOT EXISTS (
 );
 
 
+CREATE TABLE coleccion(
+	id_col INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_user INT NOT NULL,
+    id_card INT NOT NULL,
+    
+    FOREIGN KEY (id_user) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_card) REFERENCES tarjetas(id_tarjeta),
+	CONSTRAINT uq_card UNIQUE (id_user, id_card)
+);
+
+insert into coleccion(id_user, id_card) values (1,1);
+
+select * from coleccion;
+
+truncate table coleccion;

@@ -1,4 +1,32 @@
+<?php
+    session_start();//para recordar quién inició sesión
+    
+    //que incluya la conexion antes de hacer nada
+    require_once "./PHP/conexion.php";
 
+    //revisar que el usuario exista
+    if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['usuario'])) {
+      header("Location: login.php");
+      exit();
+    }
+    //revisar que el nopmbre de usuario no sea nulo
+    if(is_null($_SESSION['usuario'])){
+        die("el usuario es nulo");
+    }
+
+    // tarjetas que el usuario tiene (sin traer el BLOB, solo id y equipo)
+    $sql = "SELECT t.id_tarjeta, t.equipo
+            FROM coleccion c
+            INNER JOIN tarjetas t ON t.id_tarjeta = c.id_card
+            WHERE c.id_user = ?
+            ORDER BY t.id_tarjeta";
+    $consulta = mysqli_prepare($cone, $sql);
+    mysqli_stmt_bind_param($consulta, "i", $_SESSION['id_usuario']);
+    mysqli_stmt_execute($consulta);
+    $resultado = mysqli_stmt_get_result($consulta);
+    $tarjetas = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    mysqli_stmt_close($consulta);
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -380,7 +408,8 @@
                     onerror="this.onerror=null;this.src='./resources/usuario.png';">
 
                 <h3 class="perfil-nombre">
-                    NOMBRE USUARIO
+                    <!--NOMBRE USUARIO-->
+                    <?= htmlspecialchars($_SESSION['usuario']) ?>
                 </h3>
 
                 <div class="perfil-botones-fila">
@@ -475,33 +504,13 @@
                     </button>
 
                     <div class="tarjetas-track">
-
-                        <div class="tarjeta-coleccion">
-
-                            <img
-                                src="./resources/historiaSarape.png"
-                                alt="Tarjeta de Saraperos"
+                        <?php foreach ($tarjetas as $tarjeta): ?>
+                            <div class="tarjeta-coleccion">
+                                <img src="./PHP/tarjeta.php?id=<?= (int)$tarjeta['id_tarjeta'] ?>" 
+                                alt="Tarjeta de <?= htmlspecialchars($tarjeta['equipo']) ?>" 
                                 loading="lazy">
-
-                        </div>
-
-                        <div class="tarjeta-coleccion tarjeta-coleccion-grande">
-
-                            <img
-                                src="./resources/historiaToros.png"
-                                alt="Tarjeta de Toros"
-                                loading="lazy">
-
-                        </div>
-
-                        <div class="tarjeta-coleccion">
-
-                            <img
-                                src="./resources/historiaSulta.png"
-                                alt="Tarjeta de Sultanes"
-                                loading="lazy">
-
-                        </div>
+                            </div>
+                            <?php endforeach; ?>
 
                     </div>
 
@@ -639,6 +648,7 @@
 
     <script src="./JS/buttons.js?v=4" defer></script>
     <script src="./JS/tema.js" defer></script>
+    <<script src="./JS/perfilCarrusel.js" defer></script>
 
     <script
         src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js"

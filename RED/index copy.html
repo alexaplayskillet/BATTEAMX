@@ -1,0 +1,431 @@
+
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>Pagina Principal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <!--Aqui iran las ligas de elementos externos como iconos y tipografias-->
+        <!--aqui van las ligas externas-->
+            <link href="./resources/ionicons/css/ionicons.min.css" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.css">
+            
+        <!--Aqui iran las ligas de los elementos de css-->
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/distribucion.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/fondo.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/movil.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/menus.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/posts.css">
+        <LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="./CSS/footer.css">
+        <link rel="stylesheet" href="./CSS/tour.css">
+        <link rel="stylesheet" href="./CSS/tarjetas_carrusel.css">
+        <link rel="stylesheet" href="./CSS/menu_movil.css">
+
+
+    </HEAD>
+    <BODY class="pagina-index">
+        <!--FONDO FIJO: franjas, grano y particulas detras de toda la pagina-->
+        <div class="fondo-fijo">
+            <div class="glow"></div>
+            <div class="grano"></div>
+
+            <div class="lineas">
+                <div class="linea l-verde l1"></div>
+                <div class="linea l-verde l7"></div>
+                <div class="linea l-roja  l2"></div>
+                <div class="linea l-roja  l3"></div>
+                <div class="linea l-azul  l4"></div>
+                <div class="linea l-azul  l5"></div>
+                <div class="linea l-roja  l6"></div>
+                <div class="linea l-verde l8"></div>
+            </div>
+
+            <div class="vineta"></div>
+
+            <div class="particulas">
+                <div class="particula" style="width:3px; height:3px; top:78%; left:12%; animation-duration:6s;   animation-delay:0s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:65%; left:22%; animation-duration:7.5s; animation-delay:1.2s;"></div>
+                <div class="particula" style="width:4px; height:4px; top:90%; left:35%; animation-duration:5.5s; animation-delay:.5s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:60%; left:8%;  animation-duration:8s;   animation-delay:2s;"></div>
+                <div class="particula" style="width:3px; height:3px; top:70%; left:48%; animation-duration:6.5s; animation-delay:.8s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:50%; left:60%; animation-duration:7s;   animation-delay:1.6s;"></div>
+                <div class="particula" style="width:3px; height:3px; top:95%; left:65%; animation-duration:6s;   animation-delay:3s;"></div>
+                <div class="particula" style="width:2px; height:2px; top:80%; left:75%; animation-duration:9s;   animation-delay:.2s;"></div>
+            </div>
+        </div>
+
+        <!-- Menú lateral móvil -->
+     <div class="menu-overlay" id="menuOverlay"></div>
+     <nav class="menu" id="menuMovil" aria-label="Navegación móvil">
+         <div class="menu-cabecera">
+             <div class="menu-marca"><img src="./resources/Logo.png" alt="BatteaMX" class="menu-logo logo-oscuro"><img src="./resources/logoModoclaro.png" alt="BatteaMX" class="menu-logo logo-claro"></div>
+             <button type="button" id="cerrarMenu" class="menu-cerrar" aria-label="Cerrar menú"><i class="icon ion-md-close"></i></button>
+         </div>
+         <ul class="menulist">
+             <li><a href="index.html" class="activo" aria-current="page"><i class="icon ion-md-home"></i> Inicio</a></li>
+             <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadísticas</a></li>
+             <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
+             <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
+             <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
+           <li><a href="juego.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8abf94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;flex-shrink:0;" aria-hidden="true"><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1" fill="#8abf94" stroke="none"/><circle cx="18" cy="13.5" r="1" fill="#8abf94" stroke="none"/><path d="M6.5 6.5h11a4 4 0 0 1 3.9 3.1l1.1 5.2a3 3 0 0 1-4.7 3.1l-2.3-1.8h-7l-2.3 1.8a3 3 0 0 1-4.7-3.1l1.1-5.2a4 4 0 0 1 3.9-3.1z"/></svg><span>Minijuego</span></a></li>
+             <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+         </ul>
+         <div class="menu-inferior">
+             <a href="config.php" class="menu-perfil">
+                 <img src="./PHP/foto.php" alt="Foto de perfil">
+                 <span>Mi perfil</span><i class="icon ion-md-arrow-forward"></i>
+             </a>
+             <div class="menu-apariencia">
+                 
+                 <div class="tema-movil-contenedor" id="temaMovil"></div>
+             </div>
+         </div>
+     </nav>
+
+     <!-- Encabezado: logo y hamburguesa en móvil -->
+     <div class="title">
+         <button id="toggleMenu" class="hamburger" type="button" aria-label="Abrir menú" aria-controls="menuMovil" aria-expanded="false"><i class="icon ion-md-menu"></i></button>
+         <div class="logo-contenedor">
+             <img src="./resources/Logo.png" alt="Logo BatteaMX" class="titulo-imagen logo-oscuro">
+             <img src="./resources/logoModoclaro.png" alt="Logo BatteaMX" class="titulo-imagen logo-claro">
+         </div>
+         <ul class="menuhor">
+             <li><a href="index.html"><i class="icon ion-md-home"></i> Inicio</a></li>
+             <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> Estadísticas</a></li>
+             <li><a href="videos.html"><i class="icon ion-md-videocam"></i> Videos</a></li>
+             <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> Trivia</a></li>
+             <li><a href="escaneo.html"><i class="icon ion-md-qr-scanner"></i> Escaneo</a></li>
+        <li><a href="juego.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8abf94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;flex-shrink:0;" aria-hidden="true"><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1" fill="#8abf94" stroke="none"/><circle cx="18" cy="13.5" r="1" fill="#8abf94" stroke="none"/><path d="M6.5 6.5h11a4 4 0 0 1 3.9 3.1l1.1 5.2a3 3 0 0 1-4.7 3.1l-2.3-1.8h-7l-2.3 1.8a3 3 0 0 1-4.7-3.1l1.1-5.2a4 4 0 0 1 3.9-3.1z"/></svg><span>Minijuego</span></a></li>
+             <li><a href="#" class="abrir-ayuda"><i class="icon ion-md-help-circle"></i> Ayuda</a></li>
+         </ul>
+         <div id="temaEscritorio" class="tema-escritorio-contenedor">
+             <div class="theme-toggle">
+                 <input type="checkbox" id="themeSwitch" class="theme-toggle-input">
+                 <label for="themeSwitch" class="theme-toggle-track">
+                     <span class="theme-toggle-thumb">
+                         <svg class="theme-toggle-icon icon-luna" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                         <svg class="theme-toggle-icon icon-sol" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                     </span>
+                     <span class="theme-toggle-texto texto-claro">MODO OSCURO</span>
+                     <span class="theme-toggle-texto texto-oscuro">MODO CLARO</span>
+                 </label>
+             </div>
+         </div>
+         <a href="config.php" class="profile"><img src="./PHP/foto.php" alt="Foto de perfil del usuario" class="profile-img" onerror="this.onerror=null; this.src='./resources/usuario.png';"></a>
+     </div>
+
+      
+        <!--principal-->
+        <DIV CLASS="body">
+
+                <DIV CLASS="ctr w100">
+            <DIV class="hero-flex">
+                <DIV class="hero-texto">
+                    <h1 class="titulo-principal">
+                        ¡BIENVENIDO A <span class="verde">BAT</span><span>TEA</span><span class="rojo">MX</span><span>!</span>
+                    </h1>
+                    <DIV CLASS="ctr w80">
+                        ¡Explora el emocionante mundo del béisbol con BatteaMX!
+                        Colecciona tus tarjetas favoritas, escanéalas y descubre
+                        las sorpresas que tenemos para ti. Disfruta de contenido
+                        exclusivo, imágenes, videos y conoce más sobre los equipos
+                        de la Zona Norte del béisbol mexicano. Crea tu propia colección
+                        y vive la pasión del béisbol de una forma única, divertida
+                        e interactiva.
+                    </DIV>
+                </DIV>
+
+                <div class="hero-animacion">
+                    <img src="./resources/feedJugador1.png" alt="Jugador bateando" class="hero-imagen jugador-animado">
+                    
+                </div>
+
+            </DIV>
+               
+                <DIV class="contenedor">
+        <DIV CLASS="w50">
+            <DIV class="historia-header">
+                <h2 class="titulo-historia">
+                    HISTORIA <span class="verde">DEL</span> <span class="rojo">BE</span>IS<span class="verde">BOL</span>
+                </h2>
+            </DIV>
+
+            <p>  El béisbol llegó a México durante la segunda mitad del siglo XIX, principalmente a través del contacto con Estados Unidos, 
+                comenzando a ganar popularidad en las regiones del norte y en los puertos del país. Ciudades como Nuevo Laredo, Monterrey y Veracruz 
+                fueron parte de los primeros lugares donde este deporte comenzó a practicarse, dando paso a la formación de equipos y a la organización 
+                de encuentros que despertaron el interés de los aficionados.  <br><br>
+
+                Con el paso del tiempo, el béisbol se extendió a diferentes estados del país, convirtiéndose en una actividad deportiva cada vez más importante.
+                 En 1925 se fundó la Liga Mexicana de Béisbol (LMB), marcando el inicio de una nueva etapa para el desarrollo profesional de este deporte. 
+                 La creación de esta liga permitió organizar competencias y fortalecer la presencia del béisbol en México. <br><br>
+
+                A lo largo de los años, surgieron equipos que se convirtieron en símbolos de sus ciudades, creando grandes rivalidades y reuniendo a miles de 
+                aficionados en los estadios. Actualmente, el béisbol es una parte importante de la cultura deportiva mexicana, especialmente en la Zona Norte, 
+                donde equipos como Sultanes de Monterrey, Saraperos de Saltillo, Toros de Tijuana y Algodoneros de Unión Laguna mantienen viva esta pasión de 
+                generación en generación.</p>
+
+            <DIV class="historia-imagenes">
+                <img src="./resources/fotoE1.jpg" loading="lazy" decoding="async" alt="Imagen 1" class="img-abajo borde-neon">
+                <img src="./resources/fotoE2.jpg" loading="lazy" decoding="async" alt="Imagen 2" class="img-abajo borde-neon">
+            </DIV>
+        </DIV>
+          <img src="./resources/fotoL1.jpg" loading="lazy" decoding="async" alt="Imagen historia" class="img-lateral borde-neon">
+
+          <DIV CLASS="seccion-equipos">
+    <h2 class="titulo-historia titulo-centrado">
+        CONOCE LA HISTORIA DE <span class="verde">NUESTROS EQUIPOS</span>
+    </h2>
+
+    <DIV class="equipos-grid">
+        <DIV class="equipo-card">
+                <img src="./resources/historiaSulta.png" loading="lazy" decoding="async"
+                    alt="Sultanes de Monterrey"
+                    class="equipo-img">
+
+                <a href="historiaEquipo.html?equipo=sultanes" class="btn-historia">
+                    VER HISTORIA
+                    <i class="icon ion-md-arrow-forward"></i>
+                </a>
+        </DIV>
+
+        <DIV class="equipo-card">
+                <img src="./resources/historiaSarape.png" loading="lazy" decoding="async"
+                    alt="Saraperos de Saltillo"
+                    class="equipo-img">
+
+                <a href="historiaEquipo.html?equipo=saraperos" class="btn-historia">
+                    VER HISTORIA
+                    <i class="icon ion-md-arrow-forward"></i>
+                </a>
+        </DIV>
+
+       <DIV class="equipo-card">
+            <img src="./resources/historiaToros.png" loading="lazy" decoding="async"
+                alt="Toros de Tijuana"
+                class="equipo-img">
+
+            <a href="historiaEquipo.html?equipo=toros" class="btn-historia">
+                VER HISTORIA
+                <i class="icon ion-md-arrow-forward"></i>
+            </a>
+         </DIV>
+
+
+      <DIV class="equipo-card">
+            <img src="./resources/hisotriaUnion.png" loading="lazy" decoding="async"
+                alt="Algodoneros de Unión Laguna"
+                class="equipo-img">
+
+            <a href="historiaEquipo.html?equipo=algodoneros" class="btn-historia">
+                VER HISTORIA
+                <i class="icon ion-md-arrow-forward"></i>
+            </a>
+    </DIV>
+    </DIV>
+</DIV>
+        </DIV>
+
+                <!-- CARRUSEL DE TARJETAS COLECCIONABLES -->
+                <section class="seccion-tarjetas" aria-label="Tarjetas coleccionables de la Zona Norte">
+                    <div class="tarjetas-encabezado">
+                        <h2 class="titulo-historia titulo-centrado">
+                            TARJETAS <span class="verde">COLECCIONABLES</span>
+                            DE LA <span class="rojo">ZONA NORTE</span>
+                        </h2>
+                        <p>Descubre las tarjetas de los equipos de la Zona Norte del béisbol mexicano. ¡Explora nuestra colección!</p>
+                    </div>
+
+                    <div class="carrusel-tarjetas">
+                        <button class="tarjetas-flecha anterior" id="tarjetasAnterior" type="button" aria-label="Tarjeta anterior">
+                            <i class="icon ion-md-arrow-back"></i>
+                        </button>
+                        <div class="tarjetas-ventana">
+                            <div class="tarjetas-pista" id="tarjetasPista">
+                                <!-- El archivo JS/tarjetasCarrusel.js carga resources/1.png a resources/12.png -->
+                            </div>
+                        </div>
+                        <button class="tarjetas-flecha siguiente" id="tarjetasSiguiente" type="button" aria-label="Tarjeta siguiente">
+                            <i class="icon ion-md-arrow-forward"></i>
+                        </button>
+                    </div>
+                    <div class="tarjetas-indicadores" id="tarjetasIndicadores"></div>
+                </section>
+
+            </DIV>
+        </DIV>
+   
+
+    
+<FOOTER class="footer-battea">
+
+    <DIV class="footer-contenido">
+
+        <DIV class="footer-columna footer-info">
+
+            <h2 class="footer-logo">
+                BATTEA<span>MX</span>
+            </h2>
+
+            <DIV class="footer-redes">
+
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="icon ion-logo-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="icon ion-logo-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="icon ion-logo-youtube"></i>
+                </a>
+
+            </DIV>
+              
+<DIV class="footer-contacto">
+
+    <h3 class="footer-titulo-contacto">CONTÁCTANOS</h3>
+
+    <DIV class="footer-integrante">
+
+        <h4>Arantza De La Vega</h4>
+        <span class="footer-rol">Diseñadora UI/UX y Artista 3D</span>
+
+        <a href="arantza.deg@unal.edu.mx">
+            <i class="icon ion-md-mail"></i>
+           arantza.deg@uanl.edu.mx
+        </a>
+
+        <a href="tel:+528343094868">
+            <i class="icon ion-md-call"></i>
+            +52 83 4309 4868
+        </a>
+
+    </DIV>
+
+    <DIV class="footer-integrante">
+
+        <h4>Alexandra Cardenas</h4>
+        <span class="footer-rol">Desarrolladora Web y Artista 3D</span>
+
+        <a href="correo2@ejemplo.com">
+            <i class="icon ion-md-mail"></i>
+            correo2@ejemplo.com
+        </a>
+
+        <a href="tel:+528100000002">
+            <i class="icon ion-md-call"></i>
+            +52 81 0000 0002
+        </a>
+
+    </DIV>
+
+
+</DIV>
+
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">EXPLORA</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="estadisticas.php">Estadísticas</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="juego.html">Minijuego</a></li>
+            </ul>
+
+        </DIV>
+
+        <DIV class="footer-columna">
+
+            <h3 class="footer-titulo">MÁS SOBRE BATTEAMX</h3>
+
+            <ul class="footer-enlaces">
+                <li><a href="index.html">Historia del béisbol</a></li>
+                <li><a href="estadisticas.php">Equipos mexicanos</a></li>
+                <li><a href="escaneo.html">Escaneo</a></li>
+                <li><a href="#" class="abrir-ayuda">Ayuda</a></li>
+            </ul>
+
+        </DIV>
+
+    </DIV>
+
+    <button class="footer-subir"
+            id="btnSubir"
+            aria-label="Volver arriba">
+        <i class="icon ion-md-arrow-up"></i>
+    </button>
+
+
+</FOOTER>
+
+<!-- Ventana flotante de ayuda -->
+<div class="ayuda-overlay" id="ayudaOverlay">
+
+    <div class="ayuda-modal">
+
+        <button class="ayuda-cerrar"
+                id="cerrarAyuda"
+                aria-label="Cerrar ayuda">
+            <i class="icon ion-md-close"></i>
+        </button>
+
+        <div class="ayuda-icono">
+            <i class="icon ion-md-help-circle"></i>
+        </div>
+
+        <h2>¡Bienvenido a BATTEAMX!</h2>
+
+        <p>
+            Descubre cómo navegar por nuestra plataforma,
+            consultar estadísticas, explorar videos,
+            participar en trivias y mucho más.
+        </p>
+
+        <button class="ayuda-iniciar" id="iniciarTour">
+            <i class="icon ion-md-play"></i>
+            Comenzar recorrido
+        </button>
+
+        <span class="ayuda-nota">
+            Puedes cerrar el recorrido cuando quieras.
+        </span>
+
+    </div>
+
+</div>
+
+        <!--colocar los scripts-->
+        <script src="./JS/buttons.js?v=4" defer></script>
+<script src="./JS/tema.js" defer></script>
+<script src="./JS/tarjetaCarrusel.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.4.0/dist/driver.js.iife.js" defer></script>
+
+<script src="./JS/scroll_reveal.js" defer></script>
+<script src="./JS/tour.js" defer></script>
+</BODY>
+</HTML>
