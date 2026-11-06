@@ -69,7 +69,7 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
         <button type="button" id="cerrarMenu" class="menu-cerrar" aria-label="Cerrar menú"><i class="icon ion-md-close"></i></button>
     </div>
     <ul class="menulist">
-                <li><a href="index.html"><i class="icon ion-md-home"></i> <span>Inicio</span></a></li>
+                <li><a href="index.php"><i class="icon ion-md-home"></i> <span>Inicio</span></a></li>
                 <li><a href="estadisticas.php" class="activo" aria-current="page"><i class="icon ion-md-stats"></i> <span>Estadísticas</span></a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> <span>Videos</span></a></li>
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> <span>Trivia</span></a></li>
@@ -90,7 +90,7 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
         <img src="./resources/logoModoclaro.png" alt="Logo BatteaMX" class="titulo-imagen logo-claro">
     </div>
     <ul class="menuhor">
-                <li><a href="index.html"><i class="icon ion-md-home"></i> <span>Inicio</span></a></li>
+                <li><a href="index.php"><i class="icon ion-md-home"></i> <span>Inicio</span></a></li>
                 <li><a href="estadisticas.php"><i class="icon ion-md-stats"></i> <span>Estadísticas</span></a></li>
                 <li><a href="videos.html"><i class="icon ion-md-videocam"></i> <span>Videos</span></a></li>
                 <li><a href="trivia.html"><i class="icon ion-md-bulb"></i> <span>Trivia</span></a></li>
@@ -285,7 +285,7 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
             <h3 class="footer-titulo">EXPLORA</h3>
 
             <ul class="footer-enlaces">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="estadisticas.php">Estadísticas</a></li>
                 <li><a href="videos.html">Videos</a></li>
                 <li><a href="trivia.html">Trivia</a></li>
@@ -299,7 +299,7 @@ require_once __DIR__ . "/PHP/consultar_partidos.php";
             <h3 class="footer-titulo">MÁS SOBRE BATTEAMX</h3>
 
             <ul class="footer-enlaces">
-                <li><a href="index.html">Historia del béisbol</a></li>
+                <li><a href="index.php">Historia del béisbol</a></li>
                 <li><a href="estadisticas.php">Equipos mexicanos</a></li>
                 <li><a href="escaneo.html">Escaneo</a></li>
                 <li><a href="#" class="abrir-ayuda">Ayuda</a></li>

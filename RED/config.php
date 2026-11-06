@@ -125,7 +125,7 @@
         <ul class="menulist">
 
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <i class="icon ion-md-home"></i>
                     Inicio
                 </a>
@@ -269,7 +269,7 @@
         <ul class="menuhor">
 
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <i class="icon ion-md-home"></i>
                     Inicio
                 </a>
