@@ -204,4 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
         actualizarBoton();
     }
 
+    // Botón escanear
+
+const btnEscanear = document.getElementById("btnEscanear");
+
+if (btnEscanear) {
+    btnEscanear.addEventListener("click", () => {
+        window.location.href = "escaneo.html";
+    });
+}
 });
